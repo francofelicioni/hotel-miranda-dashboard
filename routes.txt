@@ -3,31 +3,29 @@ Login
 
 Dashboard
 /dashboard
+/dashboard/reviews
+/dashboard/reviews/published
+/dashboard/reviews/archived
 
 Rooms
-/rooms/room_list
+/rooms/room-list
 /rooms/active
 /rooms/inactive
-/rooms/new_room
+/rooms/new-room
 /rooms/room/:id
 /rooms/room/edit/:id
 
 Bookings
 /bookings
 
-Guest
-/guest/guest_list
-/guest/guest_details
+Guests
+/guests
+/guests/guest/:id
 
 Users
-/users/users_list
+/users
 /users/active
 /users/inactive
-/users/new_user
+/users/new-user
 /users/user/:id
 /users/user/edit/:id
-
-Contact
-/contact/messages
-
-
