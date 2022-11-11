@@ -6,6 +6,8 @@ import Login from "./components/Login/Login";
 
 import PrivateRoutes from "./utils/privateRoutes";
 
+import MainContainer from "./components/MainContainer/MainContainer";
+
 import Header from "./components/Header/Header";
 import SideMenu from "./components/SideMenu/SideMenu";
 import Dashboard from "./views/Dashboard/Dashboard";
@@ -22,13 +24,6 @@ import NotFound from "./views/NotFound/NotFound";
 import styled from "styled-components";
 import Contact from "./views/Contact/Contact";
 
-const RenderContainer = styled.div`
-  position: relative;
-  /* right: 20%;
-  top: 134px; */
-  /* right: 0px;
-  top: 0px; */
-`;
 
 function AppTest() {
   return (
@@ -36,7 +31,7 @@ function AppTest() {
       {/* <BrowserRouter> */}
       <Header />
       <SideMenu />
-      <RenderContainer className="renderContainer">
+      <MainContainer className="renderContainer">
         <Routes>
           <Route path="/login" element={<Login />} />
 
@@ -82,7 +77,7 @@ function AppTest() {
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
-      </RenderContainer>
+      </MainContainer>
       {/* </BrowserRouter> */}
     </>
   );
