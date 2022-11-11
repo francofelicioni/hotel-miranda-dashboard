@@ -9,7 +9,7 @@ const Table = styled.table`
   width: 100%;
 `;
 
-const CheckBox = styled.checkbox`
+const CheckBox = styled.input`
   width: 24px;
   height: 24px;
 `;
