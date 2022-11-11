@@ -1,242 +1,224 @@
 [
-  {
-    "id": "dc9ec007-712b-4028-9e10-1cb4ec36f09c",
-    "number": 1,
-    "image": "http://dummyimage.com/191x100.png/dddddd/000000",
-    "type": [{}, {}, {}],
-    "price": "€563,87",
-    "status": true,
-    "description": "Spondylopathy in diseases classified elsewhere, site unsp",
-    "offer": true,
-    "discount": 22,
-    "cancellation": "Bi post-trauma osteoarth of first carpometacarp joints"
-  },
-  {
-    "id": "017f71a2-dc94-4895-b639-bb3c5f175439",
-    "number": 2,
-    "image": "http://dummyimage.com/242x100.png/cc0000/ffffff",
-    "type": [{}, {}, {}],
-    "price": "€791,47",
-    "status": false,
-    "description": "Toxic effect of venom of oth snake, undetermined, init",
-    "offer": false,
-    "discount": 72,
-    "cancellation": "Poisoning by oth drugs acting on muscles, accidental, init"
-  },
-  {
-    "id": "75b60100-1d2d-4cf0-906d-57fbd07b2fcb",
-    "number": 3,
-    "image": "http://dummyimage.com/160x100.png/dddddd/000000",
-    "type": [{}, {}],
-    "price": "€987,15",
-    "status": true,
-    "description": "Other infective (teno)synovitis, right wrist",
-    "offer": false,
-    "discount": 18,
-    "cancellation": "Unspecified sprain of right shoulder joint, init encntr"
-  },
-  {
-    "id": "267695e6-1245-4ed2-94bd-bc86272a10a8",
-    "number": 4,
-    "image": "http://dummyimage.com/145x100.png/5fa2dd/ffffff",
-    "type": [{}, {}, {}, {}, {}],
-    "price": "€491,12",
-    "status": false,
-    "description": "War op w indirect blast effect of nuclear weapon, civilian",
-    "offer": true,
-    "discount": 38,
-    "cancellation": "Pressure ulcer of right lower back, stage 1"
-  },
-  {
-    "id": "4e02018f-8fe8-4aba-a4d7-ddb7e8bac412",
-    "number": 5,
-    "image": "http://dummyimage.com/147x100.png/ff4444/ffffff",
-    "type": [{}, {}, {}, {}, {}, {}],
-    "price": "€676,71",
-    "status": false,
-    "description": "Matern care for known or susp placntl insuff, 1st tri, fts3",
-    "offer": true,
-    "discount": 70,
-    "cancellation": "Person injured in clsn betw car and bus, nontraf, sequela"
-  },
-  {
-    "id": "b0fa1660-f59e-4dd3-9df9-96b7e2988f5e",
-    "number": 6,
-    "image": "http://dummyimage.com/133x100.png/cc0000/ffffff",
-    "type": [{}, {}, {}, {}],
-    "price": "€893,39",
-    "status": false,
-    "description": "Abrasion of left wrist",
-    "offer": true,
-    "discount": 12,
-    "cancellation": "Unspecified Eustachian salpingitis, unspecified ear"
-  },
-  {
-    "id": "58bb68fe-df3d-49af-b6e3-87e3d8189111",
-    "number": 7,
-    "image": "http://dummyimage.com/121x100.png/ff4444/ffffff",
-    "type": [{}, {}, {}],
-    "price": "€535,90",
-    "status": true,
-    "description": "Central cord syndrome at C6 level of cervical spinal cord",
-    "offer": true,
-    "discount": 71,
-    "cancellation": "Otosclerosis w oval window, nonobliterative, right ear"
-  },
-  {
-    "id": "96f73142-8090-42d3-bccf-cb7cb149fef4",
-    "number": 8,
-    "image": "http://dummyimage.com/234x100.png/5fa2dd/ffffff",
-    "type": [{}, {}, {}],
-    "price": "€660,23",
-    "status": true,
-    "description": "Dislocation of interphalangeal joint of unsp toe(s), sequela",
-    "offer": true,
-    "discount": 20,
-    "cancellation": "Nondisp fx of cuboid bone of r foot, subs for fx w nonunion"
-  },
-  {
-    "id": "2278318e-e710-4fad-a11a-8d502630d00d",
-    "number": 9,
-    "image": "http://dummyimage.com/211x100.png/5fa2dd/ffffff",
-    "type": [{}, {}, {}, {}, {}, {}],
-    "price": "€312,77",
-    "status": true,
-    "description": "Other fracture of occiput, unspecified side, 7thB",
-    "offer": true,
-    "discount": 8,
-    "cancellation": "Nondisp fx of base of nk of r femr, 7thN"
-  },
-  {
-    "id": "5a78641b-6ce6-4c5e-97f9-1b11bcc884c4",
-    "number": 10,
-    "image": "http://dummyimage.com/125x100.png/5fa2dd/ffffff",
-    "type": [{}, {}, {}, {}],
-    "price": "€781,97",
-    "status": true,
-    "description": "Subluxation of distal end of right ulna",
-    "offer": false,
-    "discount": 71,
-    "cancellation": "Displ oblique fx shaft of unsp ulna, 7thB"
-  },
-  {
-    "id": "072123c4-ea5d-41c1-8cf7-044496902212",
-    "number": 11,
-    "image": "http://dummyimage.com/122x100.png/ff4444/ffffff",
-    "type": [{}],
-    "price": "€319,25",
-    "status": true,
-    "description": "Other injury of unsp intra-abdominal organ, init encntr",
-    "offer": true,
-    "discount": 60,
-    "cancellation": "Oth traum nondisp spondylolysis of 2nd cervcal vert, 7thD"
-  },
-  {
-    "id": "a0c2e87d-a7c3-459d-bb4f-86086c1afe6e",
-    "number": 12,
-    "image": "http://dummyimage.com/223x100.png/ff4444/ffffff",
-    "type": [{}],
-    "price": "€549,34",
-    "status": true,
-    "description": "Blister (nonthermal) of thigh",
-    "offer": false,
-    "discount": 34,
-    "cancellation": "Meniere's disease, left ear"
-  },
-  {
-    "id": "36fd6a53-33a5-46e5-918b-1966ded0a915",
-    "number": 13,
-    "image": "http://dummyimage.com/222x100.png/dddddd/000000",
-    "type": [{}],
-    "price": "€833,28",
-    "status": false,
-    "description": "Burn of second degree of abdominal wall, sequela",
-    "offer": false,
-    "discount": 46,
-    "cancellation": "Displ suprcndl fx w intrcndl extn lower end of l femur, init"
-  },
-  {
-    "id": "d928559a-a025-4270-a788-082586078323",
-    "number": 14,
-    "image": "http://dummyimage.com/174x100.png/5fa2dd/ffffff",
-    "type": [{}, {}, {}, {}, {}, {}],
-    "price": "€951,18",
-    "status": false,
-    "description": "Poisn by succinimides and oxazolidinediones, self-harm, subs",
-    "offer": false,
-    "discount": 41,
-    "cancellation": "Legal intervnt w unsp gas, law enforc offl injured, sequela"
-  },
-  {
-    "id": "d3f91f8f-5529-4578-8839-2684f4a0bd19",
-    "number": 15,
-    "image": "http://dummyimage.com/173x100.png/5fa2dd/ffffff",
-    "type": [{}, {}, {}, {}],
-    "price": "€401,90",
-    "status": false,
-    "description": "Drug-induced chronic gout, multiple sites",
-    "offer": false,
-    "discount": 6,
-    "cancellation": "Nondisp osteochon fx l patella, 7thN"
-  },
-  {
-    "id": "495594f4-65cf-435e-a277-acdacf406240",
-    "number": 16,
-    "image": "http://dummyimage.com/237x100.png/ff4444/ffffff",
-    "type": [{}, {}, {}, {}, {}],
-    "price": "€416,27",
-    "status": true,
-    "description": "Oth fracture of fourth metacarpal bone, left hand, init",
-    "offer": true,
-    "discount": 68,
-    "cancellation": "Laceration w/o fb of pharynx and cervical esophagus"
-  },
-  {
-    "id": "0d7c13d2-1c78-42d9-b586-af8436b5763c",
-    "number": 17,
-    "image": "http://dummyimage.com/206x100.png/ff4444/ffffff",
-    "type": [{}, {}, {}],
-    "price": "€871,26",
-    "status": true,
-    "description": "Wedge compression fracture of first lumbar vertebra",
-    "offer": true,
-    "discount": 47,
-    "cancellation": "Corrosion of unspecified degree of back of hand"
-  },
-  {
-    "id": "ad7245be-1009-470d-9c76-24dca380f16f",
-    "number": 18,
-    "image": "http://dummyimage.com/185x100.png/cc0000/ffffff",
-    "type": [{}, {}, {}, {}],
-    "price": "€906,89",
-    "status": false,
-    "description": "External constriction, unspecified lower leg",
-    "offer": false,
-    "discount": 46,
-    "cancellation": "Toxic effect of other pesticides, intentional self-harm"
-  },
-  {
-    "id": "d123cadf-c755-4fff-a883-10d269af5f11",
-    "number": 19,
-    "image": "http://dummyimage.com/177x100.png/ff4444/ffffff",
-    "type": [{}, {}],
-    "price": "€488,69",
-    "status": true,
-    "description": "Age-rel osteopor w current path fracture, r low leg, sequela",
-    "offer": true,
-    "discount": 25,
-    "cancellation": "Toxic effect of venom of other Australian snake, assault"
-  },
-  {
-    "id": "4d285e62-0e5e-469e-982f-fe874985c92b",
-    "number": 20,
-    "image": "http://dummyimage.com/187x100.png/ff4444/ffffff",
-    "type": [{}, {}],
-    "price": "€455,15",
-    "status": true,
-    "description": "Urinary tract infection fol an ectopic and molar pregnancy",
-    "offer": true,
-    "discount": 9,
-    "cancellation": "Disp fx of greater trochanter of l femr, 7thK"
-  }
+    {
+        "id": 0,
+        "images": {
+            "img": ""
+        },
+        "bed_type": "suite",
+        "room_number": 584,
+        "description": "Cillum aute sunt aliqua deserunt et eu culpa nisi magna. Elit aliquip ullamco qui incididunt duis consequat ea ex cillum. Aute eu nostrud nisi nulla amet nostrud amet eiusmod proident ea dolore tempor mollit consequat.",
+        "price": "94,50 €",
+        "offer": true,
+        "offer_price": 19,
+        "cancellation": "Tempor reprehenderit deserunt quis cillum. Irure aliquip occaecat dolore enim. Qui eu commodo Lorem tempor adipisicing qui ad esse incididunt.",
+        "amenities": [
+            "AC",
+            "Bath",
+            "Sea View",
+            "Late Checkout",
+            "City Tour",
+            "Led TV",
+            "Wifi"
+        ],
+        "status_available": false
+    },
+    {
+        "id": 1,
+        "images": {
+            "img": ""
+        },
+        "bed_type": "double",
+        "room_number": 667,
+        "description": "Est id labore fugiat in excepteur labore Lorem incididunt laborum velit duis cupidatat exercitation eiusmod. Consequat deserunt duis duis dolore tempor culpa labore consequat nostrud adipisicing deserunt. Mollit duis voluptate ullamco reprehenderit veniam ut et pariatur consequat ea in laboris. Laborum fugiat id aliqua dolor dolor ad.",
+        "price": "796,40 €",
+        "offer": true,
+        "offer_price": 47,
+        "cancellation": "Deserunt esse et enim consequat aute sit enim nulla esse ea ullamco est velit.",
+        "amenities": [
+            "AC",
+            "Bath",
+            "Late Checkout",
+            "Led TV",
+            "Wifi"
+        ],
+        "status_available": true
+    },
+    {
+        "id": 2,
+        "images": {
+            "img": ""
+        },
+        "bed_type": "suite",
+        "room_number": 715,
+        "description": "Nostrud ipsum minim commodo irure non exercitation nostrud duis sit sint occaecat quis laborum id.",
+        "price": "197,98 €",
+        "offer": true,
+        "offer_price": 18,
+        "cancellation": "Enim reprehenderit sint ea adipisicing laborum reprehenderit mollit sit aliquip minim minim consectetur Lorem. Laborum nostrud reprehenderit eu aliquip ipsum sint adipisicing et non. Sint velit voluptate labore occaecat sunt eu cillum aliqua cupidatat.",
+        "amenities": [
+            "AC",
+            "Bath",
+            "Sea View",
+            "Late Checkout",
+            "City Tour",
+            "Led TV",
+            "Wifi"
+        ],
+        "status_available": true
+    },
+    {
+        "id": 3,
+        "images": {
+            "img": ""
+        },
+        "bed_type": "single",
+        "room_number": 588,
+        "description": "Do in ipsum incididunt aute ex tempor aliquip id magna officia. In laborum aute culpa do incididunt consectetur est. Officia amet ullamco consequat sit sit cillum velit exercitation ullamco cupidatat id esse sit ex.",
+        "price": "959,47 €",
+        "offer": true,
+        "offer_price": 1,
+        "cancellation": "Mollit duis est incididunt minim ex ex elit cillum occaecat. Eu anim deserunt tempor nulla. Aute voluptate magna adipisicing eu velit.",
+        "amenities": [
+            "AC",
+            "Bath",
+            "Led TV",
+            "Wifi"
+        ],
+        "status_available": false
+    },
+    {
+        "id": 4,
+        "images": {
+            "img": ""
+        },
+        "bed_type": "double",
+        "room_number": 720,
+        "description": "Elit amet incididunt veniam aute anim reprehenderit dolor sint.",
+        "price": "369,13 €",
+        "offer": false,
+        "offer_price": 42,
+        "cancellation": "Sunt quis esse nostrud minim consectetur amet consequat enim fugiat non. Id aliqua incididunt elit dolor eiusmod magna eu laborum culpa consectetur incididunt duis aliqua aliquip.",
+        "amenities":[
+            "AC",
+            "Bath",
+            "Late Checkout",
+            "Led TV",
+            "Wifi"
+        ],
+        "status_available": false
+    },
+    {
+        "id": 5,
+        "images": {
+            "img": ""
+        },
+        "bed_type": "single",
+        "room_number": 530,
+        "description": "Eiusmod sint enim dolor ut laborum ullamco amet laborum ex.",
+        "price": "850,52 €",
+        "offer": true,
+        "offer_price": 92,
+        "cancellation": "Consectetur ea duis magna ipsum irure exercitation.",
+        "amenities": [
+            "AC",
+            "Bath",
+            "Led TV",
+            "Wifi"
+        ],
+        "status_available": false
+    },
+    {
+        "id": 6,
+        "images": {
+            "img": ""
+        },
+        "bed_type": "suite",
+        "room_number": 536,
+        "description": "Duis sit labore occaecat ipsum exercitation magna fugiat nulla reprehenderit cillum ullamco. Laboris sunt ullamco eu pariatur exercitation incididunt sint veniam est nostrud et esse dolor enim. Commodo veniam duis labore officia nisi dolor id irure culpa. Voluptate laborum aliqua do incididunt excepteur et incididunt magna in aliquip minim.",
+        "price": "914,87 €",
+        "offer": false,
+        "offer_price": 15,
+        "cancellation": "Dolor commodo enim nulla incididunt laboris fugiat incididunt. Ipsum est amet culpa do magna sit sit culpa duis velit ea laborum. Occaecat fugiat sint fugiat proident.",
+        "amenities": [
+            "AC",
+            "Bath",
+            "Sea View",
+            "Late Checkout",
+            "City Tour",
+            "Led TV",
+            "Wifi"
+        ],
+        "status_available": false
+    },
+    {
+        "id": 7,
+        "images": {
+            "img": ""
+        },
+        "bed_type": "double_superior",
+        "room_number": 542,
+        "description": "Quis aliqua amet sit quis consectetur incididunt incididunt ipsum magna. Velit do aute amet culpa amet deserunt officia qui ut dolor minim enim. Quis officia do mollit ea anim reprehenderit ex mollit.",
+        "price": "722,11 €",
+        "offer": true,
+        "offer_price": 11,
+        "cancellation": "In consectetur exercitation minim sit sit eiusmod. Sunt sit excepteur ea minim ad aute nisi reprehenderit irure. Labore exercitation elit fugiat qui laboris pariatur eiusmod elit officia ullamco reprehenderit.",
+        "amenities": [
+            "AC",
+            "Bath",
+            "Sea View",
+            "Late Checkout",
+            "City Tour",
+            "Led TV",
+            "Wifi",
+            "Breakfast"
+        ],
+        "status_available": true
+    },
+    {
+        "id": 8,
+        "images": {
+            "img": ""
+        },
+        "bed_type": "suite",
+        "room_number": 704,
+        "description": "Incididunt amet dolore Lorem deserunt Lorem fugiat. Officia ut incididunt excepteur id aute. Elit enim labore voluptate commodo amet aliquip ex quis veniam ad incididunt dolor labore. Officia proident labore aliqua cillum elit Lorem elit sunt aliquip pariatur occaecat dolor laborum.",
+        "price": "583,45 €",
+        "offer": false,
+        "offer_price": 48,
+        "cancellation": "Ex aliqua in reprehenderit laborum occaecat reprehenderit. Proident laborum non incididunt Lorem in dolor pariatur proident minim duis et. Exercitation anim esse officia eiusmod irure amet adipisicing cupidatat nulla deserunt laborum sit id culpa.",
+        "amenities": [
+            "AC",
+            "Bath",
+            "Sea View",
+            "Late Checkout",
+            "City Tour",
+            "Led TV",
+            "Wifi"
+        ],
+        "status_available": true
+    },
+    {
+        "id": 9,
+        "images": {
+            "img": ""
+        },
+        "bed_type": "double_superior",
+        "room_number": 998,
+        "description": "Labore amet cillum ex et pariatur esse officia fugiat do consectetur fugiat sint. Nisi est duis tempor pariatur eiusmod qui ipsum excepteur reprehenderit quis proident dolore exercitation. Culpa velit anim et tempor officia in.",
+        "price": "958,20 €",
+        "offer": false,
+        "offer_price": 89,
+        "cancellation": "Amet ullamco exercitation fugiat aliqua do excepteur nisi exercitation. Aliqua veniam reprehenderit voluptate aute laborum. Ut enim ut occaecat aliquip nisi sunt veniam occaecat consequat sit do ea sunt.",
+        "amenities": [
+            "AC",
+            "Bath",
+            "Sea View",
+            "Late Checkout",
+            "City Tour",
+            "Led TV",
+            "Wifi",
+            "Breakfast"
+        ],
+        "status_available": true
+    }
 ]
