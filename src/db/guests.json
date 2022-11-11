@@ -1,7 +1,7 @@
 [
     {
         "id": "9f073bc2-0274-4f10-bd36-4eef756ef1ae",
-        "image": "https://this-person-does-not-exist.com/img/avatar-18d835902d9757c359a448788726a668.jpg",
+        "image": "https://i.pravatar.cc/150?img=70",
         "full_name": "Dean Daniel",
         "order_date": "11/09/2021",
         "check_in": "01/01/2022",
@@ -9,14 +9,14 @@
         "special_request": "mollit consect elit cillum proident esse voluptate commodo ulla",
         "room_info": {
             "number": 0,
-            "type": "double"
+            "type": "Double"
         },
         "price": "895,86 €",
-        "state": "check_in"
+        "state": "Check In"
     },
     {
         "id": "b12151f8-98bf-45d1-8976-3f45c649b4c4",
-        "image": "https://this-person-does-not-exist.com/img/avatar-bee5e1c37fff45b5834edf2987582a62.jpg",
+        "image": "https://i.pravatar.cc/150?img=65",
         "full_name": "Glen Reinger",
         "order_date": "18/05/2021",
         "check_in": "03/01/2022",
@@ -24,14 +24,14 @@
         "special_request": "ea suntsunt magna dolorim quis labore eu dolor ",
         "room_info": {
             "number": 1,
-            "type": "single"
+            "type": "Single"
         },
         "price": "878,44 €",
-        "state": "check_in"
+        "state": "Check In"
     },
     {
         "id": "6439ab52-fe25-4192-bb0c-aee04c5ab549",
-        "image": "https://this-person-does-not-exist.com/img/avatar-346c203becca9e8f0187b310a48c78b3.jpg",
+        "image": "https://i.pravatar.cc/150?img=32",
         "full_name": "Patty Rohan",
         "order_date": "10/03/2021",
         "check_in": "04/01/2022",
@@ -39,14 +39,14 @@
         "special_request": "labore eu commodo dolor sunt deserunt eu aliqua do excepte",
         "room_info": {
             "number": 2,
-            "type": "single"
+            "type": "Single"
         },
         "price": "879,70 €",
-        "state": "in_progress"
+        "state": "In Progress"
     },
     {
         "id": "71c5ec92-45c0-464f-8927-9a2866af4431",
-        "image": "https://this-person-does-not-exist.com/img/avatar-ef00447eadb4aa6b8c61725d82e8e2f1.jpg",
+        "image": "https://i.pravatar.cc/150?img=31",
         "full_name": "Nathaniel Mohr",
         "order_date": "08/09/2021",
         "check_in": "11/01/2022",
@@ -54,14 +54,14 @@
         "special_request": "aliqua eu laborum velit velit e",
         "room_info": {
             "number": 3,
-            "type": "double_superior"
+            "type": "Double Superior"
         },
         "price": "809,27 €",
-        "state": "check_in"
+        "state": "Check in"
     },
     {
         "id": "e2a09791-c0ab-4542-af5e-b3b9d4c3642e",
-        "image": "https://this-person-does-not-exist.com/img/avatar-f76065a20f7e6d619fa6216ced7e5efa.jpg",
+        "image": "https://i.pravatar.cc/150?img=47",
         "full_name": "Cecilia Strosin",
         "order_date": "21/08/2021",
         "check_in": "12/01/2022",
@@ -69,14 +69,14 @@
         "special_request": "sint proident laborum occaecat occaecat.",
         "room_info": {
             "number": 4,
-            "type": "double_superior"
+            "type": "Double Superior"
         },
         "price": "452,40 €",
-        "state": "check_out"
+        "state": "Check Out"
     },
     {
         "id": "b58c99c6-839f-4ea4-89a8-5500b62badb6",
-        "image": "https://this-person-does-not-exist.com/img/avatar-669433597b6e0cde5ce24331323997eb.jpg",
+        "image": "https://i.pravatar.cc/150?img=15",
         "full_name": "Pat Spencer",
         "order_date": "22/12/2020",
         "check_in": "17/01/2022",
@@ -84,14 +84,14 @@
         "special_request": "do labore velit Lorem deserunt enim aliquip vo",
         "room_info": {
             "number": 5,
-            "type": "suite"
+            "type": "Suite"
         },
         "price": "651,43 €",
-        "state": "check_out"
+        "state": "Check Out"
     },
     {
         "id": "f0ac63e7-1a67-46b5-b76d-476f774bbeda",
-        "image": "https://this-person-does-not-exist.com/img/avatar-01f726844f05183d24e10f5270bcea56.jpg",
+        "image": "https://i.pravatar.cc/150?img=42",
         "full_name": "Sabrina Keeling",
         "order_date": "14/02/2021",
         "check_in": "21/01/2022",
@@ -99,9 +99,9 @@
         "special_request": "magna animp laborum consectetur labore elit fu.",
         "room_info": {
             "number": 6,
-            "type": "double"
+            "type": "Double"
         },
         "price": "281,99 €",
-        "state": "check_in"
+        "state": "Check In"
     }
 ]
