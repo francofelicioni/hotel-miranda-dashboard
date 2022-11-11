@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const UsersContainer = styled.div`
-  position: absolute;
+  /* position: absolute;
   width: 80%;
   right: 0;
-  bottom: -750px;
+  bottom: -750px; */
 `;
 
 const Table = styled.table`
