@@ -1,27 +1,22 @@
 import styled from "styled-components";
 
-const UsersContainer = styled.div`
-  /* position: absolute;
-  width: 80%;
-  right: 0;
-  bottom: -750px; */
-`;
+const UsersContainer = styled.div``;
 
 const Table = styled.table`
   border-collapse: collapse;
   background-color: #ffffff;
   border-radius: 20px;
   width: 100%;
+`;
 
-  .checkbox {
-    width: 24px;
-    height: 24px;
-  }
+const CheckBox = styled.checkbox`
+  width: 24px;
+  height: 24px;
 `;
 
 const HeaderTitle = styled.th`
   font-weight: 600;
-  text-align:left;
+  text-align: left;
 `;
 
 const Row = styled.tr`
@@ -33,46 +28,55 @@ const Row = styled.tr`
 
 const UserDataName = styled.div`
   display: flex;
+`;
 
-  .user__info {
-    padding: 0 1rem;
+const UserInfo = styled.div`
+  padding: 0 1rem;
+`;
 
-    &-name {
-      font-size: 1rem;
-      color: #393939;
-      opacity: 1;
-    }
+const UserName = styled.p`
+  font-size: 1rem;
+  color: #393939;
+  opacity: 1;
+  font-size: 1rem;
+  color: #393939;
+  opacity: 1;
+`;
 
-    &-id {
-      text-align: left;
-      font-size: 14px;
-      color: #799283;
-    }
-  }
+const UserId = styled.p`
+  text-align: left;
+  font-size: 14px;
+  color: #799283;
+`;
+
+const UserDate = styled.p`
+  text-align: left;
+  font-size: 14px;
+  color: #393939;
 `;
 
 const UserData = styled.div`
   width: 200px;
+`;
 
-  .data__contact {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
+const DataContact = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`;
 
-  .userData-container__button {
-    padding-right: 30px;
-  }
+const ButtonContainer = styled.div`
+  padding-right: 30px;
+`;
 
-  button{
-        background-color: transparent;
-        border: none;
+const Button = styled.button`
+  background-color: transparent;
+  border: none;
+`;
 
-        .delete_icon{
-            width: 25px;
-            height: 25px;
-        }
-    }
+const DeleteIcon = styled.button`
+  width: 25px;
+  height: 25px;
 `;
 
 const CheckboxContainer = styled.div`
@@ -88,10 +92,19 @@ const UserStatus = styled.p`
 export {
   UsersContainer,
   Table,
+  CheckBox,
   HeaderTitle,
   Row,
   UserDataName,
+  UserInfo,
+  UserName,
+  UserId,
+  UserDate,
   UserData,
+  DataContact,
+  ButtonContainer,
+  Button,
+  DeleteIcon,
   CheckboxContainer,
   UserStatus,
 };

@@ -9,10 +9,19 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import {
   UsersContainer,
   Table,
+  CheckBox,
   HeaderTitle,
   Row,
-  UserData,
   UserDataName,
+  UserInfo,
+  UserName,
+  UserId,
+  UserDate,
+  UserData,
+  DataContact,
+  ButtonContainer,
+  Button,
+  DeleteIcon,
   CheckboxContainer,
   UserStatus,
 } from "./Users_sc";
@@ -28,7 +37,7 @@ const Users = ({}) => {
           <thead>
             <tr>
               <HeaderTitle style={{ width: "100px" }}>
-                <input className="checkbox" type="checkbox"></input>
+                <CheckBox type="checkbox"></CheckBox>
               </HeaderTitle>
               <HeaderTitle>Name</HeaderTitle>
               <HeaderTitle>Job Desk</HeaderTitle>
@@ -54,13 +63,11 @@ const Users = ({}) => {
                       alt=""
                       style={{ width: "80px", height: "80px" }}
                     />
-                    <div className="user__info">
-                      <p className="user__info-name">{user.full_name}</p>
-                      <p className="user__info-id"># {user.id}</p>
-                      <p className="user__info-date">
-                        Joined on {user.start_date}
-                      </p>
-                    </div>
+                    <UserInfo>
+                      <UserName>{user.full_name} </UserName>
+                      <UserId># {user.id}</UserId>
+                      <UserDate>Joined on {user.start_date}</UserDate>
+                    </UserInfo>
                   </UserDataName>
                 </td>
 
