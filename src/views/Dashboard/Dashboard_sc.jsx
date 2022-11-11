@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
 const DashBoardContainer = styled.div`
-  position: absolute;
-  width: 80%;
-  right: 0;
-  bottom: 500px;
-  /* background-color: red; */
 `;
 
 const InsightsCardsContainer = styled.div`

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const RoomsContainer = styled.div`
-  position: absolute;
+  /* position: absolute;
   width: 80%;
   right: 0;
-  bottom: -10px;
+  bottom: -10px; */
 `;
 
 const Table = styled.table`
