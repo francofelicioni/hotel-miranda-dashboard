@@ -21,61 +21,79 @@ import {
   FooterCopyrigth,
   FooterDescription,
 } from "./SideMenu_sc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 const SideMenu = () => {
+  const location = useLocation();
   return (
-    <Container>
-      <SideIconContainer>
-        <Link to="/" style={{textDecoration: 'none', color: 'var(--color-greenGrey)'}}>
-          <IconContainer>
-            <MdOutlineDashboard />
-            <IconDesc>Dashboard</IconDesc>
-          </IconContainer>
-        </Link>
-        <Link to="/bookings" style={{textDecoration: 'none', color: 'var(--color-greenGrey)'}}>
-          <IconContainer>
-            <AiOutlineCalendar />
-            <IconDesc>Bookings</IconDesc>
-          </IconContainer>
-        </Link>
-        <Link to="/rooms" style={{textDecoration: 'none', color: 'var(--color-greenGrey)'}}>
-          <IconContainer>
-            <BiKey />
-            <IconDesc>Rooms</IconDesc>
-          </IconContainer>
-        </Link>
-        <Link to="/contact" style={{textDecoration: 'none', color: 'var(--color-greenGrey)'}}>
-          <IconContainer>
-            <BsPerson />
-            <IconDesc>Contact</IconDesc>
-          </IconContainer>
-        </Link>
-        {/* <Link to="/guest" style={{textDecoration: 'none', color: 'var(--color-greenGrey)'}}>
+    location.pathname != "/login" && (
+      <Container>
+        <SideIconContainer>
+          <Link
+            to="/"
+            style={{ textDecoration: "none", color: "var(--color-greenGrey)" }}
+          >
+            <IconContainer>
+              <MdOutlineDashboard />
+              <IconDesc>Dashboard</IconDesc>
+            </IconContainer>
+          </Link>
+          <Link
+            to="/bookings"
+            style={{ textDecoration: "none", color: "var(--color-greenGrey)" }}
+          >
+            <IconContainer>
+              <AiOutlineCalendar />
+              <IconDesc>Bookings</IconDesc>
+            </IconContainer>
+          </Link>
+          <Link
+            to="/rooms"
+            style={{ textDecoration: "none", color: "var(--color-greenGrey)" }}
+          >
+            <IconContainer>
+              <BiKey />
+              <IconDesc>Rooms</IconDesc>
+            </IconContainer>
+          </Link>
+          <Link
+            to="/contact"
+            style={{ textDecoration: "none", color: "var(--color-greenGrey)" }}
+          >
+            <IconContainer>
+              <BsPerson />
+              <IconDesc>Contact</IconDesc>
+            </IconContainer>
+          </Link>
+          {/* <Link to="/guest" style={{textDecoration: 'none', color: 'var(--color-greenGrey)'}}>
           <IconContainer>
             <BsPerson />
             <IconDesc>Guest</IconDesc>
           </IconContainer>
         </Link> */}
-        <Link to='/users' style={{textDecoration: 'none', color: 'var(--color-greenGrey)'}}>
-          <IconContainer>
-            <FaRegUserCircle />
-            <IconDesc>Users</IconDesc>
-          </IconContainer>
-        </Link>
-      </SideIconContainer>
-      <Card>
-        <Image />
-        <CardTitle> Franco Felicioni</CardTitle>
-        <CardEmail> franco@hotelmiranda.com</CardEmail>
-        <Button>Edit</Button>
-      </Card>
-      <Footer>
-        <FooterTitle> HM Admin Dashboard</FooterTitle>
-        <FooterCopyrigth> © 2022 All Rights Reserved</FooterCopyrigth>
-        <FooterDescription> Made with ♥ by Fran</FooterDescription>
-      </Footer>
-    </Container>
+          <Link
+            to="/users"
+            style={{ textDecoration: "none", color: "var(--color-greenGrey)" }}
+          >
+            <IconContainer>
+              <FaRegUserCircle />
+              <IconDesc>Users</IconDesc>
+            </IconContainer>
+          </Link>
+        </SideIconContainer>
+        <Card>
+          <Image />
+          <CardTitle> Franco Felicioni</CardTitle>
+          <CardEmail> franco@hotelmiranda.com</CardEmail>
+          <Button>Edit</Button>
+        </Card>
+        <Footer>
+          <FooterTitle> HM Admin Dashboard</FooterTitle>
+          <FooterCopyrigth> © 2022 All Rights Reserved</FooterCopyrigth>
+          <FooterDescription> Made with ♥ by Fran</FooterDescription>
+        </Footer>
+      </Container>
+    )
   );
 };
 
