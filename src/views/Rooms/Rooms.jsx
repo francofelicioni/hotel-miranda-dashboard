@@ -24,24 +24,9 @@ import rooms from "../../db/rooms.json";
 console.log(rooms);
 
 const Rooms = () => {
-  const [bed, setBed] = useState("");
 
-  const setBedType = (room) => {
-    console.log("room que llega", room.bed_type);
-    if (room.bed_type === "suite") {
-      setBed("Suite");
-      return bed;
-    } else if (room.bed_type === "double") {
-      setBed("Double Bed");
-      return bed;
-    } else if (room.bed_type === "single") {
-      setBed("Single Bed");
-      return bed;
-    } else if (room.bed_type === "double_superior") {
-      setBed("Double Superior");
-      return bed;
-    }
-  };
+
+  
 
   return (
     <>
