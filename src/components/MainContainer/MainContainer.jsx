@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Container = styled.div`
   position: absolute;
   width: ${(props) => (props.path === "/login" ? "100%" : "82%")};
-  top: ${(props) => (props.path === "/login" ? "0" : "5rem")};
+  top: ${(props) => (props.path === "/login" ? "0" : "7rem")};
   right: 0;
   padding: ${(props) => (props.path === '/login' ? '0' : '1.875rem')};
   background-color: var(--color-greyF8);
