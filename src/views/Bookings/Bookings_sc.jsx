@@ -1,38 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const BookingContainer = styled.div`
-`;
-
-const Table = styled.table`
-  border-collapse: collapse;
-  background-color: #ffffff;
-  border-radius: 20px;
-  width: 100%;
-`;
-
-const TableTitle = styled.th`
-  font-weight: 600;
-  text-align: start;
-  padding: 20px 0 20px 30px;
-`;
-
-const Row = styled.tr`
-  border-bottom: 1px solid var(--color-greyD4);
-  border-top: 1px solid var(--color-greyD4);
-
-  &:hover {
-    box-shadow: 0px 4px 30px #00000014;
-  }
-`;
-
-const CheckboxContainer = styled.div`
-  width: 20px;
-
-  .checkbox {
-    width: 24px;
-    height: 24px;
-  }
-`;
+// const BookingContainer = styled.div``;
 
 const GuestContainer = styled.div`
   display: flex;
@@ -68,43 +36,71 @@ const Text = styled.p`
   color: var(--color-grey39);
   font-size: 1rem;
   max-width: 300px;
-  padding-left: 30px;
+  /* padding-left: 30px; */
 `;
 
 const NotesButton = styled.button`
   /* background: transparent; */
+  width: 160px;
+  height: 48px;
+  background: var(--color-greenExtraLigth);
+  border-radius: 12px;
   max-width: 200px;
+  color: var(--color-black21);
+  font-family: var(--font-main);
+  font-weight: 600;
+  border: none;
+
+  &:hover {
+    background: transparent;
+    color: var(--color-greenGrey);
+    border: 1px solid var(--color-greenGrey);
+  }
 `;
 
-const Button = styled.button`
-  background-color: transparent;
-  border: none;
-  margin-left: 60px;
-  margin-top: 15px;
-  width: 24px;
-  height: 24px;
-`;
 
 const Status = styled.p`
-  padding: 13px 25px;
+  padding: 10px 5px;
   border-radius: 12px;
   text-align: center;
-  margin-left: 30px;
+
+  ${(props) => {
+    switch (props.$typeStatus) {
+      case "Check In":
+        return css`
+          background-color: var(--color-greenExtraLigth2);
+          color: var(--color-greenLight);
+          font-weight: 600;
+        `;
+      case "Check Out":
+        return css`
+          color: var(--color-red);
+          background-color: var(--color-backGroundRed);
+          font-weight: 600;
+        `;
+      case "In Progress":
+        return css`
+          color: var(--color-organgeStatus);
+          background-color: #FFF5E8;
+          font-weight: 600;
+        `;
+      default: 
+        return css`
+        background-color: transparent;
+        color: var(--color-black);
+        `
+    }
+  }}
 `;
 
 export {
-  BookingContainer,
-  Table,
-  TableTitle,
-  Row,
+  // BookingContainer,
   GuestContainer,
-  CheckboxContainer,
   Img,
   Name,
   Id,
   DataContainer,
   Text,
-  Button,
   NotesButton,
   Status,
 };

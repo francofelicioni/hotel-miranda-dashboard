@@ -5,28 +5,35 @@ import guest from "../../db/guests.json";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
 import {
-  BookingContainer,
   Table,
-  TableTitle,
   Row,
-  GuestContainer,
+  TableTitle,
   CheckboxContainer,
+  Checkbox,
+  Button,
+} from "../../components/TableBlocks/TableBlocks";
+
+import {
+  // BookingContainer,
+  GuestContainer,
   Img,
   Name,
   Id,
   DataContainer,
   Text,
-  Button,
   NotesButton,
   Status,
-} from './Bookings_sc';
+} from "./Bookings_sc";
 
-const Bookings = () => {
+const Bookings = (props) => {
   return (
-    <BookingContainer>
-      <Table>
+    // <BookingContainer>
+    <Table>
+      <thead>
         <tr>
-          <TableTitle></TableTitle>
+          <TableTitle style={{ paddingLeft: "10px" }}>
+            <Checkbox type="checkbox" />
+          </TableTitle>
           <TableTitle>Guest</TableTitle>
           <TableTitle>Order Date</TableTitle>
           <TableTitle>Check In</TableTitle>
@@ -35,11 +42,16 @@ const Bookings = () => {
           <TableTitle>Room Type</TableTitle>
           <TableTitle>Status</TableTitle>
         </tr>
+      </thead>
+
+      <tbody>
         {guest.map((guest) => (
           <Row>
-            <CheckboxContainer>
-              <input className="checkbox" type="checkbox"></input>
-            </CheckboxContainer>
+            <td style={{ paddingLeft: "10px" }}>
+              <CheckboxContainer className="checkBocContainer">
+                <Checkbox type="checkbox" />
+              </CheckboxContainer>
+            </td>
             <td>
               <GuestContainer>
                 <Img src={guest.image} alt="Guest Image" />
@@ -59,7 +71,8 @@ const Bookings = () => {
               <Text>{guest.check_out}</Text>
             </DataContainer>
             <td>
-              <NotesButton> {guest.special_request} </NotesButton>
+              {/* <NotesButton> {guest.special_request} </NotesButton> */}
+              <NotesButton> View Notes </NotesButton>
             </td>
             <DataContainer>
               <Text>
@@ -67,7 +80,7 @@ const Bookings = () => {
               </Text>
             </DataContainer>
             <td>
-              <Status> {guest.state}</Status>
+              <Status $typeStatus={guest.state}> {guest.state}</Status>
             </td>
             <DataContainer>
               <Button>
@@ -76,8 +89,9 @@ const Bookings = () => {
             </DataContainer>
           </Row>
         ))}
-      </Table>
-    </BookingContainer>
+      </tbody>
+    </Table>
+    // </BookingContainer>
   );
 };
 
