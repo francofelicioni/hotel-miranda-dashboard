@@ -1,30 +1,4 @@
-import styled from "styled-components";
-
-const UsersContainer = styled.div``;
-
-const Table = styled.table`
-  border-collapse: collapse;
-  background-color: #ffffff;
-  border-radius: 20px;
-  width: 100%;
-`;
-
-const CheckBox = styled.input`
-  width: 24px;
-  height: 24px;
-`;
-
-const HeaderTitle = styled.th`
-  font-weight: 600;
-  text-align: left;
-`;
-
-const Row = styled.tr`
-  border-bottom: 1px solid var(--color-greyD4);
-  border-top: 1px solid var(--color-greyD4);
-  justify-content: center;
-  align-items: center;
-`;
+import styled, { css } from "styled-components";
 
 const UserDataName = styled.div`
   display: flex;
@@ -36,23 +10,22 @@ const UserInfo = styled.div`
 
 const UserName = styled.p`
   font-size: 1rem;
-  color: #393939;
+  color: var(--color-grey39);
   opacity: 1;
   font-size: 1rem;
-  color: #393939;
   opacity: 1;
 `;
 
 const UserId = styled.p`
   text-align: left;
   font-size: 14px;
-  color: #799283;
+  color: var(--color-greenGrey);
 `;
 
 const UserDate = styled.p`
   text-align: left;
   font-size: 14px;
-  color: #393939;
+  color: var(--color-grey39);
 `;
 
 const UserData = styled.div`
@@ -69,11 +42,6 @@ const ButtonContainer = styled.div`
   padding-right: 30px;
 `;
 
-const Button = styled.button`
-  background-color: transparent;
-  border: none;
-`;
-
 const DeleteIcon = styled.button`
   width: 25px;
   height: 25px;
@@ -83,18 +51,33 @@ const CheckboxContainer = styled.div`
   width: 20px;
 `;
 
-const UserStatus = styled.p`
+const Status = styled.p`
   font-size: 14px;
   font-weight: 600;
   text-align: left;
+
+  ${(props) => {
+    switch (props.$typeStatus) {
+      case true:
+        return css`
+          color: var(--color-greenLight);
+          font-weight: 600;
+        `;
+      case false:
+        return css`
+        color: var(--color-red);
+        font-weight: 600;
+      `;
+      default:
+        return css`
+          color: var(--color-black);
+          font-weight: 600;
+        `;
+    }
+  }}
 `;
 
 export {
-  UsersContainer,
-  Table,
-  CheckBox,
-  HeaderTitle,
-  Row,
   UserDataName,
   UserInfo,
   UserName,
@@ -103,8 +86,8 @@ export {
   UserData,
   DataContact,
   ButtonContainer,
-  Button,
+  // Button,
   DeleteIcon,
   CheckboxContainer,
-  UserStatus,
+  Status,
 };
