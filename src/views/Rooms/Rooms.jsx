@@ -3,11 +3,16 @@ import React, { useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
 import {
-  RoomsContainer,
   Table,
-  TableTitle,
   Row,
+  TableTitle,
   CheckboxContainer,
+  Checkbox,
+  Button,
+} from "../../components/TableBlocks/TableBlocks";
+
+import {
+  RoomsContainer,
   NameContainer,
   Image,
   NameInfo,
@@ -15,8 +20,7 @@ import {
   Number,
   RoomData,
   Info,
-  RoomStatus,
-  Button,
+  Status,
 } from "./Rooms_sc";
 
 import rooms from "../../db/rooms.json";
@@ -24,17 +28,15 @@ import rooms from "../../db/rooms.json";
 console.log(rooms);
 
 const Rooms = () => {
-
-
-  
-
   return (
     <>
-      <RoomsContainer>
+      {/* <RoomsContainer> */}
         <Table>
           <thead>
             <tr>
-              <TableTitle><input className='checkbox' type="checkbox"></input></TableTitle>
+              <TableTitle style={{ paddingLeft: "10px" }}>
+                <Checkbox type="checkbox"></Checkbox>
+              </TableTitle>
               <TableTitle> Room Name </TableTitle>
               <TableTitle> Room Type </TableTitle>
               <TableTitle> Amenities </TableTitle>
@@ -47,12 +49,11 @@ const Rooms = () => {
           <tbody>
             {rooms.map((room) => (
               <Row key={room.id}>
-                <td>
+                <td style={{paddingLeft: '10px'}}>
                   <CheckboxContainer>
-                    <input className="checkbox" type="checkbox"></input>
+                    <Checkbox type="checkbox"></Checkbox>
                   </CheckboxContainer>
                 </td>
-
 
                 <td>
                   <NameContainer>
@@ -88,9 +89,9 @@ const Rooms = () => {
                   </RoomData>
                 </td>
                 <td>
-                  <RoomStatus>
-                    {room.status_available ? "Available" : "Booked"}
-                  </RoomStatus>
+                  <Status $typeStatus={room.status}>
+                    {room.status ? "Available" : "Booked"}
+                  </Status>
                 </td>
                 <RoomData>
                   <Button>
@@ -102,7 +103,7 @@ const Rooms = () => {
             ))}
           </tbody>
         </Table>
-      </RoomsContainer>
+      {/* </RoomsContainer> */}
     </>
   );
 };

@@ -1,34 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const RoomsContainer = styled.div`
-`;
+const RoomsContainer = styled.div``;
 
-const Table = styled.table`
-  border-collapse: collapse;
-  background-color: #ffffff;
-  border-radius: 20px;
-  width: 100%;
-
-  .checkbox {
-    width: 24px;
-    height: 24px;
-  }
-`;
-
-const TableTitle = styled.th`
-  font-weight: 600;
-  text-align: start;
-  padding: 20px 0 20px 30px;
-`;
-
-const Row = styled.tr`
-  border-bottom: 1px solid var(--color-greyD4);
-  border-top: 1px solid var(--color-greyD4);
-`;
-
-const CheckboxContainer = styled.div`
-  width: 20px;
-`;
 
 const NameContainer = styled.div`
   display: flex;
@@ -41,6 +14,7 @@ const Image = styled.img`
   width: 150px;
   height: 77px;
   object-fit: cover;
+  margin: .5rem 0;
 `;
 
 const NameInfo = styled.div`
@@ -71,30 +45,40 @@ const Info = styled.p`
   color: var(--color-grey39);
   font-size: 1rem;
   max-width: 300px;
-  padding-left: 30px;
+  /* padding-left: 30px; */
 `;
 
-const RoomStatus = styled.p`
-  /* color: white; */
-  padding: 13px 25px;
+const Status = styled.p`
+  padding: 10px 5px;
   border-radius: 12px;
   text-align: center;
-  margin-left: 30px;
-`;
 
-const Button = styled.button`
-  background-color: transparent;
-  border: none;
-  margin-left: 60px;
-  margin-top: 15px;
+  ${(props)=>  {
+    switch (props.$typeStatus) {
+      case true:
+        return css`
+          color: var(--color-white);
+          background-color: var(--color-greenLight);
+          font-weight: 600;
+        `;
+      case false:
+        return css`
+         color: var(--color-white);
+         background-color: var(--color-red);
+         font-weight: 600;
+        `;
+      default:
+        return css`
+          background-color: transparent;
+          color: var(--color-black);
+          font-weight: 600;
+        `
+    }
+  }}
 `;
 
 export {
   RoomsContainer,
-  Table,
-  TableTitle,
-  Row,
-  CheckboxContainer,
   NameContainer,
   Image,
   NameInfo,
@@ -102,6 +86,5 @@ export {
   Number,
   RoomData,
   Info,
-  RoomStatus,
-  Button,
+  Status,
 };
