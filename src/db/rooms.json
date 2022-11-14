@@ -20,7 +20,7 @@
             "Led TV",
             "Wifi"
         ],
-        "status_available": false
+        "status": false
     },
     {
         "id": 1,
@@ -41,7 +41,7 @@
             "Led TV",
             "Wifi"
         ],
-        "status_available": true
+        "status": true
     },
     {
         "id": 2,
@@ -64,7 +64,7 @@
             "Led TV",
             "Wifi"
         ],
-        "status_available": true
+        "status": true
     },
     {
         "id": 3,
@@ -84,7 +84,7 @@
             "Led TV",
             "Wifi"
         ],
-        "status_available": false
+        "status": false
     },
     {
         "id": 4,
@@ -105,7 +105,7 @@
             "Led TV",
             "Wifi"
         ],
-        "status_available": false
+        "status": false
     },
     {
         "id": 5,
@@ -125,7 +125,7 @@
             "Led TV",
             "Wifi"
         ],
-        "status_available": false
+        "status": false
     },
     {
         "id": 6,
@@ -148,7 +148,7 @@
             "Led TV",
             "Wifi"
         ],
-        "status_available": false
+        "status": false
     },
     {
         "id": 7,
@@ -172,7 +172,7 @@
             "Wifi",
             "Breakfast"
         ],
-        "status_available": true
+        "status": true
     },
     {
         "id": 8,
@@ -195,7 +195,7 @@
             "Led TV",
             "Wifi"
         ],
-        "status_available": true
+        "status": true
     },
     {
         "id": 9,
@@ -219,6 +219,6 @@
             "Wifi",
             "Breakfast"
         ],
-        "status_available": true
+        "status": true
     }
 ]
