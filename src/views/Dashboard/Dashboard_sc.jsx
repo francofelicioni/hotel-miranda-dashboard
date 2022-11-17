@@ -5,7 +5,6 @@ const DashBoardContainer = styled.div`
 
 const InsightsCardsContainer = styled.div`
   display: grid;
-  /* align-items: center; */
   justify-content: center;
   grid-template-columns: repeat(4, 300px);
   gap: 2rem;
@@ -16,7 +15,6 @@ const InsightsCardsContainer = styled.div`
 
 const ReviewsContainer = styled.div`
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   gap: 1rem;
 `;
