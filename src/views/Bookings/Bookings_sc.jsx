@@ -1,7 +1,5 @@
 import styled, { css } from "styled-components";
 
-// const BookingContainer = styled.div``;
-
 const GuestContainer = styled.div`
   display: flex;
   align-items: center;
@@ -36,28 +34,38 @@ const Text = styled.p`
   color: var(--color-grey39);
   font-size: 1rem;
   max-width: 300px;
-  /* padding-left: 30px; */
 `;
 
 const NotesButton = styled.button`
-  /* background: transparent; */
-  width: 160px;
-  height: 48px;
-  background: var(--color-greenExtraLigth);
-  border-radius: 12px;
-  max-width: 200px;
-  color: var(--color-black21);
-  font-family: var(--font-main);
-  font-weight: 600;
-  border: none;
-
-  &:hover {
-    background: transparent;
-    color: var(--color-greenGrey);
-    border: 1px solid var(--color-greenGrey);
-  }
+  ${(props) => {
+    if (props.$special_request != "") {
+      return css`
+        width: 160px;
+        height: 48px;
+        background: var(--color-greenExtraLigth);
+        border-radius: 12px;
+        max-width: 200px;
+        color: var(--color-black21);
+        font-family: var(--font-main);
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+      `;
+    } else {
+      return css`
+        width: 160px;
+        height: 48px;
+        background: transparent;
+        border-radius: 12px;
+        max-width: 200px;
+        color: var(--color-greenGrey);
+        font-family: var(--font-main);
+        font-weight: 600;
+        border: 1px solid var(--color-greenGrey);
+      `;
+    }
+  }}
 `;
-
 
 const Status = styled.p`
   padding: 10px 5px;
@@ -81,20 +89,19 @@ const Status = styled.p`
       case "In Progress":
         return css`
           color: var(--color-organgeStatus);
-          background-color: #FFF5E8;
+          background-color: #fff5e8;
           font-weight: 600;
         `;
-      default: 
+      default:
         return css`
-        background-color: transparent;
-        color: var(--color-black);
-        `
+          background-color: transparent;
+          color: var(--color-black);
+        `;
     }
   }}
 `;
 
 export {
-  // BookingContainer,
   GuestContainer,
   Img,
   Name,

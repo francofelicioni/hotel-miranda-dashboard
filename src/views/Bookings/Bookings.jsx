@@ -4,6 +4,8 @@ import guest from "../../db/guests.json";
 
 import { BsThreeDotsVertical } from "react-icons/bs";
 
+import Swal from "sweetalert2";
+
 import {
   Table,
   Row,
@@ -14,7 +16,6 @@ import {
 } from "../../components/TableBlocks/TableBlocks";
 
 import {
-  // BookingContainer,
   GuestContainer,
   Img,
   Name,
@@ -25,9 +26,24 @@ import {
   Status,
 } from "./Bookings_sc";
 
-const Bookings = (props) => {
+const Bookings = () => {
+
+  const handleClick = (special_request) => {
+    if (special_request) {
+      Swal.fire({
+        title: `${special_request}`,
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
+    } 
+  }
+
+  console.log(guest);
   return (
-    // <BookingContainer>
     <Table>
       <thead>
         <tr>
@@ -46,7 +62,7 @@ const Bookings = (props) => {
 
       <tbody>
         {guest.map((guest) => (
-          <Row>
+          <Row key={guest.id}>
             <td style={{ paddingLeft: "10px" }}>
               <CheckboxContainer className="checkBocContainer">
                 <Checkbox type="checkbox" />
@@ -71,8 +87,7 @@ const Bookings = (props) => {
               <Text>{guest.check_out}</Text>
             </DataContainer>
             <td>
-              {/* <NotesButton> {guest.special_request} </NotesButton> */}
-              <NotesButton> View Notes </NotesButton>
+              <NotesButton $special_request={guest.special_request} onClick={()=>handleClick(guest.special_request)}> View Notes </NotesButton>
             </td>
             <DataContainer>
               <Text>
@@ -91,7 +106,6 @@ const Bookings = (props) => {
         ))}
       </tbody>
     </Table>
-    // </BookingContainer>
   );
 };
 
