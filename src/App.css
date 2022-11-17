@@ -1,25 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 :root {
+  /* FONTS VARIABLES */
+  --font-main: "Poppins", sans-serif;
+
   /* Colors */
   /* Whites */
   --color-white: #ffffff;
   --color-whiteFC: #fcfcfc;
   --color-silver: #ebf1ef;
   --color-white33: #ffffff33;
-  
+
   /* Greys */
   --color-greyDC: #ebf1ef;
   --color-greyF8: #f8f8f8;
   --color-greyEB: #ebebeb;
   --color-greyDC: #dcdcdc;
-  --color-backGroundGrey: #E2E2E2;
+  --color-backGroundGrey: #e2e2e2;
   --color-greyD4: #d4d4d4;
   --color-greyC5: #c5c5c5;
   --color-greyB2: #b2b2b2;
   --color-greyA1: #a1a1a1;
   --color-grey78: #787878;
   --color-grey6E: #6e6e6e;
-  --color-grey6D: #6D6D6D;
+  --color-grey6D: #6d6d6d;
   --color-grey4E: #4e4e4e;
   --color-grey39: #393939;
   --color-grey26: #262626;
@@ -29,23 +32,20 @@
 
   /* Greens */
   --color-greenExtraLigth: #eef9f2;
-  --color-greenExtraLigth2: #E8FFEE;
+  --color-greenExtraLigth2: #e8ffee;
   --color-greenGrey: #799283;
   --color-greenLight: #5ad07a;
   --color-greenDark: #135846;
 
   /*Reds*/
-  --color-backGroundRed: #FFEDEC;
+  --color-backGroundRed: #ffedec;
   --color-organgeStatus: #ffbb00;
   --color-orangeLight: #fb9f44;
   --color-orangeDark: #ff9c3a;
   --color-red: #e23428;
-  
+
   /* Darks */
   --color-brown: #5d5449;
   --color-black21: #212121;
   --color-black: #000000;
-  
-  /* FONTS VARIABLES */
-  --font-main: 'Poppins', sans-serif;
 }
