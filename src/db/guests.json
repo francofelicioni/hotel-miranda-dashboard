@@ -36,7 +36,7 @@
         "order_date": "10/03/2021",
         "check_in": "04/01/2022",
         "check_out": "14/01/2022",
-        "special_request": "labore eu commodo dolor sunt deserunt eu aliqua do excepte",
+        "special_request": "",
         "room_info": {
             "number": 2,
             "type": "Single"
@@ -96,7 +96,7 @@
         "order_date": "14/02/2021",
         "check_in": "21/01/2022",
         "check_out": "30/01/2022",
-        "special_request": "magna animp laborum consectetur labore elit fu.",
+        "special_request":"",
         "room_info": {
             "number": 6,
             "type": "Double"
