@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { BsThreeDotsVertical } from "react-icons/bs";
 
@@ -12,7 +12,6 @@ import {
 } from "../../components/TableBlocks/TableBlocks";
 
 import {
-  RoomsContainer,
   NameContainer,
   Image,
   NameInfo,
@@ -30,7 +29,6 @@ console.log(rooms);
 const Rooms = () => {
   return (
     <>
-      {/* <RoomsContainer> */}
         <Table>
           <thead>
             <tr>
@@ -103,7 +101,6 @@ const Rooms = () => {
             ))}
           </tbody>
         </Table>
-      {/* </RoomsContainer> */}
     </>
   );
 };

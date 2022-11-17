@@ -45,7 +45,6 @@ const Info = styled.p`
   color: var(--color-grey39);
   font-size: 1rem;
   max-width: 300px;
-  /* padding-left: 30px; */
 `;
 
 const Status = styled.p`
