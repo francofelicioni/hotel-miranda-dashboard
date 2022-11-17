@@ -23,7 +23,7 @@ const LoginLeft = styled.div`
 
   @media (max-width: 768px) {
     padding: 2rem;
-    gap:0;
+    gap: 0;
   }
 
   @media (max-width: 368px) {
@@ -60,10 +60,9 @@ const FormContent = styled.div`
   gap: 1rem 0;
 
   @media (max-width: 768px) {
-    gap: .5;
+    gap: 0.5;
   }
 `;
-
 
 const FormItem = styled.div`
   display: flex;
