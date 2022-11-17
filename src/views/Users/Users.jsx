@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import users from "../../db/users.json";
 
@@ -23,14 +22,10 @@ import {
   UserDate,
   UserData,
   DataContact,
-  // ButtonContainer,
-  // Button,
-  // DeleteIcon,
-  // CheckboxContainer,
   Status,
 } from "./Users_sc";
 
-const Users = ({}) => {
+const Users = () => {
   return (
     <>
       <Table>
@@ -100,7 +95,7 @@ const Users = ({}) => {
 
               <td>
                 <UserData className="userData-container__button">
-                  <Button>
+                  <Button style={{margin: '0'}}>
                     <BsThreeDotsVertical className="delete_icon" />
                   </Button>
                 </UserData>
@@ -109,7 +104,6 @@ const Users = ({}) => {
           ))}
         </tbody>
       </Table>
-      {/* </UsersContainer> */}
     </>
   );
 };

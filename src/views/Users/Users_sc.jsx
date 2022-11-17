@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 const UserDataName = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 const UserInfo = styled.div`
@@ -65,9 +66,9 @@ const Status = styled.p`
         `;
       case false:
         return css`
-        color: var(--color-red);
-        font-weight: 600;
-      `;
+          color: var(--color-red);
+          font-weight: 600;
+        `;
       default:
         return css`
           color: var(--color-black);
