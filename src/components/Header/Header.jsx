@@ -5,12 +5,10 @@ import {
   Left,
   Logo,
   Center,
-  Container,
   Title,
   SearchContainer,
   Input,
   Rigth,
-  IconContainer,
 } from "./Header_sc";
 
 import { AiOutlineSearch, AiOutlineBell } from "react-icons/ai";
@@ -36,17 +34,12 @@ const Header = () => {
     } else if(location.pathname  === '/contact') {
       setTitle('Contact') 
     } else if (location.pathname  === '/users') {
-      setTitle('Rooms')
+      setTitle('Users')
     };
   },[location])
 
-
-
-  console.log('title', title)
-
-
   return (
-    location.pathname != "/login" && (
+    location.pathname !== "/login" && (
       <Navbar>
         <Left>
           <Link to='/'><Logo src="/icons/hotelMiranda.svg" /></Link>
