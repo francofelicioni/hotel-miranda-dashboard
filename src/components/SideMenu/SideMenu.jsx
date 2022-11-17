@@ -21,12 +21,12 @@ import {
   FooterCopyrigth,
   FooterDescription,
 } from "./SideMenu_sc";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const SideMenu = () => {
   const location = useLocation();
   return (
-    location.pathname != "/login" && (
+    location.pathname !== "/login" && (
       <Container>
         <SideIconContainer>
           <Link
