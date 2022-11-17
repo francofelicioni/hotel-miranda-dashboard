@@ -2,7 +2,6 @@ import React from "react";
 
 import {
   Container,
-  Title,
   CardContainer,
   Card,
   Description,
