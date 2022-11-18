@@ -21,7 +21,7 @@ describe("Login Authentication", () => {
     cy.visit("/login");
   });
 
-  it("succesfully loads", () => {
+  specify("succesfully loads, but the authentication is failed ", () => {
     cy.get(".user").type("something wrong").should("have.class", "user");
     cy.get(".password").type("password").should("have.value", "password");
 
