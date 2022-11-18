@@ -57,11 +57,11 @@ const Login = () => {
               <label for="user" style={{ width: "124px", height: "25px" }}>
                 Enter user:
               </label>
-              <input type="text" name="user" onChange={handleChange} />
+              <input className="user" type="text" name="user" onChange={handleChange} />
             </FormItem>
             <FormItem>
               <label for="password" style={{ height: "25px" }}>Enter password: </label>
-              <input type="password" name="password" onChange={handleChange} />
+              <input className="password" type="password" name="password" onChange={handleChange} />
             </FormItem>
             <FormItem>
               <CheckboxContainer>
@@ -73,7 +73,7 @@ const Login = () => {
               </CheckboxContainer>
             </FormItem>
           </FormContent>
-          <Button type="submit"> Sign In</Button>
+          <Button className="signIn__btn" type="submit" text="Sign In"> Sign In</Button>
         </Form>
       </LoginLeft>
       <LoginRigth className="login-rigth">
