@@ -12,7 +12,7 @@ describe("Login Authentication", () => {
       .should("have.class", "password");
 
     cy.contains("Sign In").click();
-    cy.wait(5000);
+    cy.url().should("include", "/");
   });
 });
 
@@ -26,5 +26,6 @@ describe("Login Authentication", () => {
     cy.get(".password").type("password").should("have.value", "password");
 
     cy.contains("Sign In").click();
+    cy.url().should("include", "/login");
   });
 });
