@@ -15,13 +15,13 @@ import {
   Image,
   CardTitle,
   CardEmail,
-  Button,
   Footer,
   FooterTitle,
   FooterCopyrigth,
   FooterDescription,
 } from "./SideMenu_sc";
 import { Link, useLocation } from "react-router-dom";
+import { Button } from "../Blocks/Button";
 
 const SideMenu = () => {
   const location = useLocation();
@@ -85,7 +85,7 @@ const SideMenu = () => {
           <Image />
           <CardTitle> Franco Felicioni</CardTitle>
           <CardEmail> franco@hotelmiranda.com</CardEmail>
-          <Button>Edit</Button>
+          <Button $type='sidemenu'>Edit</Button>
         </Card>
         <Footer>
           <FooterTitle> HM Admin Dashboard</FooterTitle>

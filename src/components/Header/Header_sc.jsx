@@ -4,16 +4,17 @@ const Navbar = styled.header`
   width: 100%;
   height: 120px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex:1;
+  /* align-items: center; */
 `;
 
 const Left = styled.div`
   display: flex;
   align-items: center;
-  flex: 1;
+  /* flex: .5; */
   padding: 0 2rem;
   gap: 5rem;
+  flex:1;
 `;
 
 const Logo = styled.img`
@@ -22,11 +23,11 @@ const Logo = styled.img`
 `;
 
 const Center = styled.div`
-  flex: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+  flex:1;
 `;
 const Container = styled.div`
   display: flex;
@@ -50,11 +51,12 @@ const Input = styled.input`
   height: 20px;
 `;
 const Rigth = styled.div`
-  flex: 1;
+  /* flex: 1; */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  flex:1;
 `;
 
 const IconContainer = styled.div``;

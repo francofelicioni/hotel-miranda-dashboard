@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Card = styled.div`
-  width: 300px;
+  max-width: 300px;
   height: 125px;
   box-shadow: 0px 16px 30px #00000014;
   border-radius: 12px;

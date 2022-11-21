@@ -64,16 +64,6 @@ const CardEmail = styled.h3`
   opacity: 1;
 `;
 
-const Button = styled.button`
-  width: 158px;
-  height: 47px;
-  background: var(--color-greyDC) 0% 0% no-repeat padding-box;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 14px;
-  color: var(--color-greenDark);
-`;
-
 const Footer = styled.div`
     display: flex;
     flex-direction: column;
@@ -117,7 +107,6 @@ export {
   Image,
   CardTitle,
   CardEmail,
-  Button,
   Footer,
   FooterTitle,
   FooterCopyrigth,

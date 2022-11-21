@@ -19,10 +19,8 @@ import { Link, useLocation } from "react-router-dom";
 const Header = () => {
 
   const [title, setTitle] = useState ('');
-
   const location = useLocation();
 
-  console.log(location.pathname);
 
   useEffect (()=> {
     if (location.pathname === '/' ) {
@@ -43,10 +41,10 @@ const Header = () => {
       <Navbar>
         <Left>
           <Link to='/'><Logo src="/icons/hotelMiranda.svg" /></Link>
-          <FaArrowsAltH style={{ width: "22px", height: "30px" }} />
         </Left>
 
         <Center>
+          <FaArrowsAltH style={{ width: "22px", height: "30px" }} />
           <Title> {title} </Title>
           <SearchContainer>
             <Input />
