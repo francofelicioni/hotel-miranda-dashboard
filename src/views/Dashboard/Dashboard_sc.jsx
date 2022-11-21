@@ -5,9 +5,9 @@ const DashBoardContainer = styled.div`
 
 const InsightsCardsContainer = styled.div`
   display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(4, 300px);
-  gap: 2rem;
+  justify-content: left;
+  grid-template-columns: repeat(4, 400px);
+  gap: 1rem;
   padding-top: 2rem;
   width: 100%;
   height: 100%;

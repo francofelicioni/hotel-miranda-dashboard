@@ -1,7 +1,6 @@
 import React from "react";
 
 import guest from "../../db/guests.json";
-
 import { BsThreeDotsVertical } from "react-icons/bs";
 
 import Swal from "sweetalert2";
@@ -12,8 +11,7 @@ import {
   TableTitle,
   CheckboxContainer,
   Checkbox,
-  Button,
-} from "../../components/TableBlocks/TableBlocks";
+} from "../../components/Blocks/TableBlocks";
 
 import {
   GuestContainer,
@@ -22,27 +20,30 @@ import {
   Id,
   DataContainer,
   Text,
-  NotesButton,
-  Status,
 } from "./Bookings_sc";
 
-const Bookings = () => {
 
+import { Button } from "../../components/Blocks/Button";
+import { Status } from "../../components/Blocks/Status";
+
+
+const Bookings = () => {
+  
   const handleClick = (special_request) => {
+
     if (special_request) {
       Swal.fire({
         title: `${special_request}`,
         showClass: {
-          popup: 'animate__animated animate__fadeInDown'
+          popup: "animate__animated animate__fadeInDown",
         },
         hideClass: {
-          popup: 'animate__animated animate__fadeOutUp'
-        }
-      })
-    } 
-  }
+          popup: "animate__animated animate__fadeOutUp",
+        },
+      });
+    }
+  };
 
-  console.log(guest);
   return (
     <Table>
       <thead>
@@ -87,18 +88,18 @@ const Bookings = () => {
               <Text>{guest.check_out}</Text>
             </DataContainer>
             <td>
-              <NotesButton $special_request={guest.special_request} onClick={()=>handleClick(guest.special_request)}> View Notes </NotesButton>
+              <Button $type='notes' $special_request={guest.special_request} onClick={()=>handleClick(guest.special_request)}>View Notes</Button>
             </td>
             <DataContainer>
-              <Text>
+              <Text style={{fontWeight: 600}}>
                 {guest.room_info.type} - {guest.room_info.number}
               </Text>
             </DataContainer>
             <td>
-              <Status $typeStatus={guest.state}> {guest.state}</Status>
+              <Status $type='bookings' $typeStatus={guest.state}> {guest.state}</Status>
             </td>
             <DataContainer>
-              <Button>
+              <Button $type='delete'>
                 <BsThreeDotsVertical />
               </Button>
             </DataContainer>

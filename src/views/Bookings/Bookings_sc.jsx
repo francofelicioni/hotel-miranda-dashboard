@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const GuestContainer = styled.div`
   display: flex;
@@ -36,71 +36,6 @@ const Text = styled.p`
   max-width: 300px;
 `;
 
-const NotesButton = styled.button`
-  ${(props) => {
-    if (props.$special_request != "") {
-      return css`
-        width: 160px;
-        height: 48px;
-        background: var(--color-greenExtraLigth);
-        border-radius: 12px;
-        max-width: 200px;
-        color: var(--color-black21);
-        font-family: var(--font-main);
-        font-weight: 600;
-        border: none;
-        cursor: pointer;
-      `;
-    } else {
-      return css`
-        width: 160px;
-        height: 48px;
-        background: transparent;
-        border-radius: 12px;
-        max-width: 200px;
-        color: var(--color-greenGrey);
-        font-family: var(--font-main);
-        font-weight: 600;
-        border: 1px solid var(--color-greenGrey);
-      `;
-    }
-  }}
-`;
-
-const Status = styled.p`
-  padding: 10px 5px;
-  border-radius: 12px;
-  text-align: center;
-
-  ${(props) => {
-    switch (props.$typeStatus) {
-      case "Check In":
-        return css`
-          background-color: var(--color-greenExtraLigth2);
-          color: var(--color-greenLight);
-          font-weight: 600;
-        `;
-      case "Check Out":
-        return css`
-          color: var(--color-red);
-          background-color: var(--color-backGroundRed);
-          font-weight: 600;
-        `;
-      case "In Progress":
-        return css`
-          color: var(--color-organgeStatus);
-          background-color: #fff5e8;
-          font-weight: 600;
-        `;
-      default:
-        return css`
-          background-color: transparent;
-          color: var(--color-black);
-        `;
-    }
-  }}
-`;
-
 export {
   GuestContainer,
   Img,
@@ -108,6 +43,4 @@ export {
   Id,
   DataContainer,
   Text,
-  NotesButton,
-  Status,
 };

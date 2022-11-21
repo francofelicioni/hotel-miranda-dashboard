@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const UserDataName = styled.div`
   display: flex;
@@ -6,6 +6,7 @@ const UserDataName = styled.div`
 `;
 
 const UserInfo = styled.div`
+  width: 200px;
   padding: 0 1rem;
 `;
 
@@ -52,32 +53,6 @@ const CheckboxContainer = styled.div`
   width: 20px;
 `;
 
-const Status = styled.p`
-  font-size: 14px;
-  font-weight: 600;
-  text-align: left;
-
-  ${(props) => {
-    switch (props.$typeStatus) {
-      case true:
-        return css`
-          color: var(--color-greenLight);
-          font-weight: 600;
-        `;
-      case false:
-        return css`
-          color: var(--color-red);
-          font-weight: 600;
-        `;
-      default:
-        return css`
-          color: var(--color-black);
-          font-weight: 600;
-        `;
-    }
-  }}
-`;
-
 export {
   UserDataName,
   UserInfo,
@@ -87,8 +62,6 @@ export {
   UserData,
   DataContact,
   ButtonContainer,
-  // Button,
   DeleteIcon,
   CheckboxContainer,
-  Status,
 };

@@ -1,7 +1,4 @@
-import styled, { css } from "styled-components";
-
-const RoomsContainer = styled.div``;
-
+import styled  from "styled-components";
 
 const NameContainer = styled.div`
   display: flex;
@@ -14,7 +11,7 @@ const Image = styled.img`
   width: 150px;
   height: 77px;
   object-fit: cover;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 `;
 
 const NameInfo = styled.div`
@@ -44,46 +41,8 @@ const Info = styled.p`
   font-weight: 500;
   color: var(--color-grey39);
   font-size: 1rem;
-  max-width: 300px;
+  max-width: 100px;
+  text-align: left;
 `;
 
-const Status = styled.p`
-  padding: 10px 5px;
-  border-radius: 12px;
-  text-align: center;
-
-  ${(props)=>  {
-    switch (props.$typeStatus) {
-      case true:
-        return css`
-          color: var(--color-white);
-          background-color: var(--color-greenLight);
-          font-weight: 600;
-        `;
-      case false:
-        return css`
-         color: var(--color-white);
-         background-color: var(--color-red);
-         font-weight: 600;
-        `;
-      default:
-        return css`
-          background-color: transparent;
-          color: var(--color-black);
-          font-weight: 600;
-        `
-    }
-  }}
-`;
-
-export {
-  RoomsContainer,
-  NameContainer,
-  Image,
-  NameInfo,
-  Id,
-  Number,
-  RoomData,
-  Info,
-  Status,
-};
+export { NameContainer, Image, NameInfo, Id, Number, RoomData, Info };

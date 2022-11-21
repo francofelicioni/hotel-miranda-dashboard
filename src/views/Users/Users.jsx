@@ -11,8 +11,7 @@ import {
   TableTitle,
   CheckboxContainer,
   Checkbox,
-  Button,
-} from "../../components/TableBlocks/TableBlocks";
+} from "../../components/Blocks/TableBlocks";
 
 import {
   UserDataName,
@@ -22,8 +21,10 @@ import {
   UserDate,
   UserData,
   DataContact,
-  Status,
 } from "./Users_sc";
+
+import { Status } from '../../components/Blocks/Status';
+import { Button } from "../../components/Blocks/Button";
 
 const Users = () => {
   return (
@@ -86,16 +87,16 @@ const Users = () => {
               </td>
 
               <td>
-                <UserData>
-                  <Status $typeStatus={user.status}>
+                <UserData style={{maxWidth:'100px'}}>
+                  <Status $type='users' $typeStatus={user.status}>
                     {user.status ? "ACTIVE" : "INACTIVE"}
                   </Status>
                 </UserData>
               </td>
 
               <td>
-                <UserData className="userData-container__button">
-                  <Button style={{margin: '0'}}>
+                <UserData style={{maxWidth:'10px', marginRight: '10px'}} className="userData-container__button">
+                  <Button $type='delete' style={{margin: '0'}}>
                     <BsThreeDotsVertical className="delete_icon" />
                   </Button>
                 </UserData>

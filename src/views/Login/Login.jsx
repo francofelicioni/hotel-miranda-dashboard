@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Button } from "../../components/Blocks/Button";
 
 import {
   Container,
@@ -11,8 +12,6 @@ import {
   Form,
   FormContent,
   FormItem,
-  CheckboxContainer,
-  Button,
   LoginRigth,
   Image,
   Desc,
@@ -63,7 +62,7 @@ const Login = () => {
               <label for="password" style={{ height: "25px" }}>Enter password: </label>
               <input type="password" name="password" onChange={handleChange} />
             </FormItem>
-            <FormItem>
+            {/* <FormItem>
               <CheckboxContainer>
                 <input type="checkbox" id="rememberMeCheckbox" />
                 <label for="rememberMeCheckbox" id="checkboxLabel">
@@ -71,9 +70,10 @@ const Login = () => {
                   Remember me{" "}
                 </label>
               </CheckboxContainer>
-            </FormItem>
+            </FormItem> */}
           </FormContent>
-          <Button type="submit"> Sign In</Button>
+          {/* <Button type="submit"> Sign In</Button> */}
+          <Button $type='login' type="submit"> Login </Button>
         </Form>
       </LoginLeft>
       <LoginRigth className="login-rigth">

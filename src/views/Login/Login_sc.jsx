@@ -58,6 +58,7 @@ const FormContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem 0;
+  padding-bottom: 2rem;
 
   @media (max-width: 768px) {
     gap: 0.5;
@@ -74,26 +75,6 @@ const CheckboxContainer = styled.div`
   display: flex;
   gap: 0.5rem;
   width: 300px;
-`;
-
-const Button = styled.button`
-  border: none;
-  /* background: linear-gradient(45deg, var(--color-black), var(--color-red)); */
-  background: var(--color-black);
-  color: white;
-  padding: 0 1rem;
-  border-radius: 100px;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 1.5rem;
-  height: 40px;
-  cursor: pointer;
-  margin-top: 2rem;
-
-  @media (max-width: 768px) {
-    margin-top: 2rem;
-  }
 `;
 
 const LoginRigth = styled.div`
@@ -133,7 +114,6 @@ export {
   FormContent,
   FormItem,
   CheckboxContainer,
-  Button,
   LoginRigth,
   Image,
   Desc,

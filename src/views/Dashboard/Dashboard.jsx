@@ -12,12 +12,12 @@ const Dashboard = () => {
         <InsightsCardsContainer>
           <InsightsCards />
           <InsightsCards />
-          <InsightsCards />
-          <InsightsCards />
+          {/* <InsightsCards /> */}
+          {/* <InsightsCards /> */}
         </InsightsCardsContainer>
         <ReviewsContainer>
           <Reviews />
-          <Reviews />
+          {/* <Reviews /> */}
           <Reviews />
         </ReviewsContainer>
       </DashBoardContainer>

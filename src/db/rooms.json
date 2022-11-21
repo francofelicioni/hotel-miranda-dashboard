@@ -4,7 +4,7 @@
         "images": {
             "img": ""
         },
-        "bed_type": "suite",
+        "bed_type": "Suite",
         "room_number": 584,
         "description": "Cillum aute sunt aliqua deserunt et eu culpa nisi magna. Elit aliquip ullamco qui incididunt duis consequat ea ex cillum. Aute eu nostrud nisi nulla amet nostrud amet eiusmod proident ea dolore tempor mollit consequat.",
         "price": "94,50 €",
@@ -27,7 +27,7 @@
         "images": {
             "img": ""
         },
-        "bed_type": "double",
+        "bed_type": "Double",
         "room_number": 667,
         "description": "Est id labore fugiat in excepteur labore Lorem incididunt laborum velit duis cupidatat exercitation eiusmod. Consequat deserunt duis duis dolore tempor culpa labore consequat nostrud adipisicing deserunt. Mollit duis voluptate ullamco reprehenderit veniam ut et pariatur consequat ea in laboris. Laborum fugiat id aliqua dolor dolor ad.",
         "price": "796,40 €",
@@ -48,7 +48,7 @@
         "images": {
             "img": ""
         },
-        "bed_type": "suite",
+        "bed_type": "Suite",
         "room_number": 715,
         "description": "Nostrud ipsum minim commodo irure non exercitation nostrud duis sit sint occaecat quis laborum id.",
         "price": "197,98 €",
@@ -71,7 +71,7 @@
         "images": {
             "img": ""
         },
-        "bed_type": "single",
+        "bed_type": "Single",
         "room_number": 588,
         "description": "Do in ipsum incididunt aute ex tempor aliquip id magna officia. In laborum aute culpa do incididunt consectetur est. Officia amet ullamco consequat sit sit cillum velit exercitation ullamco cupidatat id esse sit ex.",
         "price": "959,47 €",
@@ -91,7 +91,7 @@
         "images": {
             "img": ""
         },
-        "bed_type": "double",
+        "bed_type": "Double",
         "room_number": 720,
         "description": "Elit amet incididunt veniam aute anim reprehenderit dolor sint.",
         "price": "369,13 €",
@@ -112,7 +112,7 @@
         "images": {
             "img": ""
         },
-        "bed_type": "single",
+        "bed_type": "Single",
         "room_number": 530,
         "description": "Eiusmod sint enim dolor ut laborum ullamco amet laborum ex.",
         "price": "850,52 €",
@@ -132,7 +132,7 @@
         "images": {
             "img": ""
         },
-        "bed_type": "suite",
+        "bed_type": "Suite",
         "room_number": 536,
         "description": "Duis sit labore occaecat ipsum exercitation magna fugiat nulla reprehenderit cillum ullamco. Laboris sunt ullamco eu pariatur exercitation incididunt sint veniam est nostrud et esse dolor enim. Commodo veniam duis labore officia nisi dolor id irure culpa. Voluptate laborum aliqua do incididunt excepteur et incididunt magna in aliquip minim.",
         "price": "914,87 €",
@@ -155,7 +155,7 @@
         "images": {
             "img": ""
         },
-        "bed_type": "double_superior",
+        "bed_type": "Double Superior",
         "room_number": 542,
         "description": "Quis aliqua amet sit quis consectetur incididunt incididunt ipsum magna. Velit do aute amet culpa amet deserunt officia qui ut dolor minim enim. Quis officia do mollit ea anim reprehenderit ex mollit.",
         "price": "722,11 €",
@@ -179,7 +179,7 @@
         "images": {
             "img": ""
         },
-        "bed_type": "suite",
+        "bed_type": "Suite",
         "room_number": 704,
         "description": "Incididunt amet dolore Lorem deserunt Lorem fugiat. Officia ut incididunt excepteur id aute. Elit enim labore voluptate commodo amet aliquip ex quis veniam ad incididunt dolor labore. Officia proident labore aliqua cillum elit Lorem elit sunt aliquip pariatur occaecat dolor laborum.",
         "price": "583,45 €",
@@ -202,7 +202,7 @@
         "images": {
             "img": ""
         },
-        "bed_type": "double_superior",
+        "bed_type": "Double Superior",
         "room_number": 998,
         "description": "Labore amet cillum ex et pariatur esse officia fugiat do consectetur fugiat sint. Nisi est duis tempor pariatur eiusmod qui ipsum excepteur reprehenderit quis proident dolore exercitation. Culpa velit anim et tempor officia in.",
         "price": "958,20 €",
