@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Button } from "../../components/Blocks/Button";
+
+import { login, updateEmail, updatePassword } from '../../context/actions';
+
+import { LoginContext } from "../../context/LoginContext";
 
 import {
   Container,
@@ -19,20 +23,23 @@ import {
 
 const Login = () => {
   const navigate = useNavigate();
+  const [state, dispatch] = useContext(LoginContext);
 
-  const [user, setUser] = useState({});
-
-  const handleChange = (e) => {
-    setUser({
-      ...user,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const saveLocalStorage = (user) => {
+    if (!localStorage.getItem('authenticated')) {
+      return localStorage.setItem("authenticated", JSON.stringify(user));
+    } else {
+      const currentUser = JSON.parse(localStorage.getItem("authenticated"));
+      currentUser.isAuth = true;
+      localStorage.setItem("authenticated", JSON.stringify(currentUser));
+    }
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (user.user === "fran.felicioni" && user.password === "1234") {
-      localStorage.setItem("authenticated", JSON.stringify(user));
+    if (state.user.email === "fran.felicioni" && state.user.password === "1234") {
+      dispatch(login({isAuth: true, user: {email: state.user.email, password: state.user.password}}))
+      saveLocalStorage({...state, isAuth: true})
       navigate("/");
     } else {
       Swal.fire({
@@ -53,26 +60,16 @@ const Login = () => {
         <Form onSubmit={handleSubmit}>
           <FormContent>
             <FormItem>
-              <label for="user" style={{ width: "124px", height: "25px" }}>
+              <label style={{ width: "124px", height: "25px" }}>
                 Enter user:
               </label>
-              <input type="text" name="user" onChange={handleChange} />
+              <input type="text" name="email" value={state.user.email} onChange={(e)=> dispatch(updateEmail(e.target.value))} />
             </FormItem>
             <FormItem>
-              <label for="password" style={{ height: "25px" }}>Enter password: </label>
-              <input type="password" name="password" onChange={handleChange} />
+              <label style={{ height: "25px" }}>Enter password: </label>
+              <input type="password" name="password" value={state.user.password} onChange={(e)=>dispatch(updatePassword(e.target.value))} />
             </FormItem>
-            {/* <FormItem>
-              <CheckboxContainer>
-                <input type="checkbox" id="rememberMeCheckbox" />
-                <label for="rememberMeCheckbox" id="checkboxLabel">
-                  {" "}
-                  Remember me{" "}
-                </label>
-              </CheckboxContainer>
-            </FormItem> */}
           </FormContent>
-          {/* <Button type="submit"> Sign In</Button> */}
           <Button $type='login' type="submit"> Login </Button>
         </Form>
       </LoginLeft>

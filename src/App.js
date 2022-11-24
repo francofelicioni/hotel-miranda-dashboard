@@ -1,83 +1,80 @@
 import "./App.css";
 
-import React from "react";
+import React, { useState, useContext, useReducer } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Navigate, Outlet } from "react-router-dom";
 
 import Login from "./views/Login/Login";
-
-// import PrivateRoutes from "./utils/privateRoutes";
-
-import MainContainer from "./components/MainContainer/MainContainer";
-
-import Header from "./components/Header/Header";
-import SideMenu from "./components/SideMenu/SideMenu";
 import Dashboard from "./views/Dashboard/Dashboard";
 import Rooms from "./views/Rooms/Rooms";
 import Bookings from "./views/Bookings/Bookings";
 import Users from "./views/Users/Users";
-
 import NotFound from "./views/NotFound/NotFound";
-
 import Contact from "./views/Contact/Contact";
 
+import { LoginContext, initialState } from "./context/LoginContext";
+
+import { LoginReducer } from './context/LoginReducer';
+
+
 function App() {
+  const LOCAL_AUTH = "authenticated";
 
+  const contextValue = useReducer(LoginReducer, initialState)
 
-
-  const PrivateRoutes = () => {
-
-    const LOCAL_AUTH = "authenticated";
-    // const [auth, setAuth] = useState(
-      
-    return JSON.parse(localStorage.getItem(LOCAL_AUTH)) !== null ? <Outlet /> : <Navigate to="/login" />;
-
-    // return auth ? <Outlet /> : <Navigate to="/login" />;
+  const userLogged = () => {
+    const isLogged = JSON.parse(localStorage.getItem(LOCAL_AUTH))
+    // console.log('isLogged', isLogged);
+    return isLogged ? isLogged.isAuth : false 
   }
+  
+  const PrivateRoutes = ({auth}) => {
+    return auth ? <Outlet /> : <Navigate to="/login" />;
+  };
 
   return (
     <>
-      <BrowserRouter>
-        <Header />
-        <SideMenu />
-        <MainContainer className="renderContainer">
+      <LoginContext.Provider value={contextValue}>
+        <BrowserRouter>
           <Routes>
-            <Route exact path="/login" element={<Login />} />
+            <Route path="/login" element={<Login />} />
 
-            <Route element={<PrivateRoutes />}>
-              <Route exact path="/" element={<Navigate to='/dashboard' replace />} />
-              <Route exact path="/dashboard" element={<Dashboard />} />
-              <Route exact path="/dashboard/reviews" element={<Dashboard />} />
+            <Route element={<PrivateRoutes auth={userLogged()} />}>
               <Route
-                exact
+                path="/" element={<Dashboard/>}
+              />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/dashboard/reviews" element={<Dashboard />} />
+              <Route
+              
                 path="/dashboard/reviews/published"
                 element={<Dashboard />}
               />
               <Route
-                exact
+              
                 path="/dashboard/reviews/archived"
                 element={<Dashboard />}
               />
 
-              <Route exact path="/rooms" element={<Rooms />} />
-              <Route exact path="/rooms/active" element={<Rooms />} />
-              <Route exact path="/rooms/inactive" element={<Rooms />} />
-              <Route exact path="/rooms/new-room" element={<Rooms />} />
+              <Route path="/rooms" element={<Rooms />} />
+              <Route path="/rooms/active" element={<Rooms />} />
+              <Route path="/rooms/inactive" element={<Rooms />} />
+              <Route path="/rooms/new-room" element={<Rooms />} />
 
-              <Route path="/bookings" element={<Bookings />} exact />
+              <Route path="/bookings" element={<Bookings />} />
 
-              <Route exact path="/users" element={<Users />} />
-              <Route exact path="/users/active" element={<Users />} />
-              <Route exact path="/users/inactive" element={<Users />} />
-              <Route exact path="/users/new-user" element={<Users />} />
+              <Route path="/users" element={<Users />} />
+              <Route path="/users/active" element={<Users />} />
+              <Route path="/users/inactive" element={<Users />} />
+              <Route path="/users/new-user" element={<Users />} />
 
-              <Route exact path="/contact" element={<Contact />} />
+              <Route path="/contact" element={<Contact />} />
 
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
-        </MainContainer>
-      </BrowserRouter>
+        </BrowserRouter>
+      </LoginContext.Provider>
     </>
   );
 }
