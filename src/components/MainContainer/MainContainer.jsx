@@ -2,6 +2,9 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
+import Header from '../Header/Header';
+import SideMenu from '../SideMenu/SideMenu';
+
 const Container = styled.div`
   position: absolute;
   width: ${(props) => (props.path === "/login" ? "100%" : "82%")};
@@ -15,9 +18,13 @@ const MainContainer = ({ children }) => {
   const { pathname } = useLocation();
 
   return (
-    <Container class="mainContainer" path={pathname}>
+    <>
+    <Header />
+    <SideMenu />
+    <Container className="mainContainer" path={pathname}>
       {children}
     </Container>
+    </>
   );
 };
 
