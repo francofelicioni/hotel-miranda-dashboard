@@ -24,7 +24,6 @@ function App() {
 
   const userLogged = () => {
     const isLogged = JSON.parse(localStorage.getItem(LOCAL_AUTH))
-    // console.log('isLogged', isLogged);
     return isLogged ? isLogged.isAuth : false 
   }
   
