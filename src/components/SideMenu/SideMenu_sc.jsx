@@ -1,21 +1,28 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  /* display: flex; */
-  /* flex-direction: column; */
   width: 250px;
-  height: 100vh;
+  height: 100%;
+  background: white;
 `;
 
 const SideIconContainer = styled.div`
   padding: 2rem 2rem;
 `;
 
+const User = styled.div`
+  width: 90%;
+  display: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const IconContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 `;
 const IconDesc = styled.p`
   font-family: var(--font-main);
@@ -29,7 +36,7 @@ const IconDesc = styled.p`
 `;
 
 const Card = styled.div`
-  width: 233px;
+  width: 200px;
   /* height: 300px; */
   display: flex;
   flex-direction: column;
@@ -37,8 +44,9 @@ const Card = styled.div`
   gap: 1rem;
   box-shadow: 0px 20px 30px #00000014;
   border-radius: 18px;
-  padding: 2rem 0;
-  margin: 0 auto; 
+  padding: 1rem 0;
+  margin: 0 auto;
+  background: white;
 `;
 
 const Image = styled.div`
@@ -65,11 +73,11 @@ const CardEmail = styled.h3`
 `;
 
 const Footer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem;
-    gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 0.5rem;
 `;
 
 const FooterTitle = styled.p`
@@ -101,6 +109,7 @@ const FooterDescription = styled.p`
 export {
   Container,
   SideIconContainer,
+  User,
   IconContainer,
   IconDesc,
   Card,
@@ -110,5 +119,5 @@ export {
   Footer,
   FooterTitle,
   FooterCopyrigth,
-  FooterDescription
+  FooterDescription,
 };

@@ -9,6 +9,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 import {
   Container,
   SideIconContainer,
+  User,
   IconContainer,
   IconDesc,
   Card,
@@ -65,12 +66,6 @@ const SideMenu = () => {
               <IconDesc>Contact</IconDesc>
             </IconContainer>
           </Link>
-          {/* <Link to="/guest" style={{textDecoration: 'none', color: 'var(--color-greenGrey)'}}>
-          <IconContainer>
-            <BsPerson />
-            <IconDesc>Guest</IconDesc>
-          </IconContainer>
-        </Link> */}
           <Link
             to="/users"
             style={{ textDecoration: "none", color: "var(--color-greenGrey)" }}
@@ -81,17 +76,19 @@ const SideMenu = () => {
             </IconContainer>
           </Link>
         </SideIconContainer>
-        <Card>
-          <Image />
-          <CardTitle> Franco Felicioni</CardTitle>
-          <CardEmail> franco@hotelmiranda.com</CardEmail>
-          <Button $type='sidemenu'>Edit</Button>
-        </Card>
-        <Footer>
-          <FooterTitle> HM Admin Dashboard</FooterTitle>
-          <FooterCopyrigth> © 2022 All Rights Reserved</FooterCopyrigth>
-          <FooterDescription> Made with ♥ by Fran</FooterDescription>
-        </Footer>
+        <User>
+          <Card>
+            <Image />
+            <CardTitle> Franco Felicioni</CardTitle>
+            <CardEmail> franco@hotelmiranda.com</CardEmail>
+            <Button $type="sidemenu">Edit</Button>
+          </Card>
+          <Footer>
+            <FooterTitle> HM Admin Dashboard</FooterTitle>
+            <FooterCopyrigth> © 2022 All Rights Reserved</FooterCopyrigth>
+            <FooterDescription> Made with ♥ by Fran</FooterDescription>
+          </Footer>
+        </User>
       </Container>
     )
   );

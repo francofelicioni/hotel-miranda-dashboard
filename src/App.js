@@ -19,10 +19,6 @@ import PrivateRoutes from "./utils/PrivateRoutes";
 function App() {
   const contextValue = useReducer(LoginReducer, initialState)
 
-  // const PrivateRoutes = ({auth}) => {
-  //   return auth ? <Outlet /> : <Navigate to="/login" />;
-  // };
-
   return (
     <>
       <LoginContext.Provider value={contextValue}>

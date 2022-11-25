@@ -26,6 +26,7 @@ import {
   RoomData,
   Info,
 } from "./Rooms_sc";
+import ViewsNavigation from "../../components/Blocks/ViewsNavigation";
 
 const Rooms = () => {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ const Rooms = () => {
   return (
     <>
       <MainContainer>
+      <ViewsNavigation a='All Rooms' b='Active Employee' c='Inactive Employee' d='+ New Room' e='Newest'/>
         <Table>
           <thead>
             <tr>

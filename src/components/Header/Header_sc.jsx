@@ -5,6 +5,7 @@ const Navbar = styled.header`
   height: 120px;
   display: flex;
   flex:1;
+  background: white;
   /* align-items: center; */
 `;
 

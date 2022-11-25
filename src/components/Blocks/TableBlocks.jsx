@@ -5,6 +5,8 @@ const Table = styled.table`
   background-color: #ffffff;
   border-radius: 20px;
   width: 100%;
+
+  
 `;
 
 const Row = styled.tr`

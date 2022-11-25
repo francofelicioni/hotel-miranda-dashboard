@@ -63,12 +63,16 @@ const Button = styled.button`
           color: var(--color-greenDark);
         `;
 
-      // case "delete":
-      //   return css`
-      //     background: transparent;
-      //     border: none;
-      //     margin: 0 1rem;
-      //   `;
+      case "new":
+        return css`
+          width: 158px;
+          height: 47px;
+          background: #135846;
+          border-radius: 8px;
+          font-weight: 600;
+          font-size: 14px;
+          color: white;
+        `;
 
       default: {
         return css`

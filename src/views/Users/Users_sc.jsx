@@ -10,6 +10,13 @@ const UserInfo = styled.div`
   padding: 0 1rem;
 `;
 
+const Image = styled.img`
+width: 80px;
+height: 80px;
+margin: .5rem 0;
+border-radius: 10px;
+`
+
 const UserName = styled.p`
   font-size: 1rem;
   color: var(--color-grey39);
@@ -55,6 +62,7 @@ const CheckboxContainer = styled.div`
 
 export {
   UserDataName,
+  Image,
   UserInfo,
   UserName,
   UserId,

@@ -20,6 +20,7 @@ import { Button } from "../../components/Blocks/Button";
 
 import {
   UserDataName,
+  Image,
   UserInfo,
   UserName,
   UserId,
@@ -27,6 +28,7 @@ import {
   UserData,
   DataContact,
 } from "./Users_sc";
+import ViewsNavigation from "../../components/Blocks/ViewsNavigation";
 
 const Users = () => {
   
@@ -40,6 +42,7 @@ const Users = () => {
   return (
     <>
       <MainContainer>
+        <ViewsNavigation a='ALl Users' b='Active Users' c='Inactive Users' d='+ New Room' e='Newest' />
         <Table>
           <thead>
             <tr>
@@ -65,11 +68,7 @@ const Users = () => {
 
                 <td>
                   <UserDataName>
-                    <img
-                      src={user.image}
-                      alt=""
-                      style={{ width: "80px", height: "80px" }}
-                    />
+                   <Image src={user.image}/>
                     <UserInfo>
                       <UserName>{user.full_name} </UserName>
                       <UserId># {user.id}</UserId>

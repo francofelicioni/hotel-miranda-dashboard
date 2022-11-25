@@ -23,14 +23,20 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  width: 431px;
+
+  @media (min-width: 1200px) {
+    width: 300px;
+  }
 `;
 const Description = styled.p`
-  width: 371px;
+  width: 100%;
   height: 107px;
   text-align: left;
   font-size: 16px;
   letter-spacing: 0px;
   color: var(--color-grey4E);
+  overflow: hidden;
 `;
 
 const CardInfoContainer = styled.div`

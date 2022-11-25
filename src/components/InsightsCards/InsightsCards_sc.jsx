@@ -5,26 +5,42 @@ const Card = styled.div`
   height: 125px;
   box-shadow: 0px 16px 30px #00000014;
   border-radius: 12px;
+
+  @media (min-width: 1200px) {
+    width: 220px;
+    height: 100px;
+  }
 `;
 
 const Container = styled.div`
   display: flex;
-  padding: 2rem;
-  gap: 2rem;
+  padding: 1.5rem 1.2rem;
+  gap: 1rem;
 `;
 
 const Icon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 65px;
   height: 65px;
   background: #ffedec 0% 0% no-repeat padding-box;
   border-radius: 8px;
+
+  @media (min-width: 1200px) {
+    width: 45px;
+    height: 45px;
+  }
 `;
 
 const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* padding: 2rem; */
-  /* gap: 1rem; */
+`;
+
+const GeneralInsights = styled.div`
+  height: 30%;
+  width: 50%;
 `;
 
 const Number = styled.h2`
@@ -38,13 +54,18 @@ const Number = styled.h2`
   color: #393939;
 `;
 
-const Description = styled.h3`
+const Title = styled.h3`
   width: 118px;
   height: 20px;
   text-align: left;
   font-weight: 300;
   font-size: 14px;
   color: #787878;
+
+  @media (min-width: 1200px) {
+    width: 100%;
+    height: 15px;
+  }
 `;
 
-export { Card, Container, Icon, InfoContainer, Number, Description };
+export { Card, Container, Icon, InfoContainer, GeneralInsights, Number, Title };

@@ -14,23 +14,19 @@ import {
 } from "./Reviews_sc";
 import { AiOutlineCheckCircle, AiOutlineCloseCircle } from "react-icons/ai";
 
-const Reviews = () => {
+const Reviews = ({description, image, name, time }) => {
   return (
     <Container>
       {/* <Title> Latest Review by Customers </Title> */}
       <CardContainer>
         <Card>
-          <Description>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam
-          </Description>
+          <Description>{description}</Description>
           <CardInfoContainer>
             <CardInfo>
-              <Image />
+              <Image src={image} />
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <Name>Kusnaidi Anderson</Name>
-                <Time>4m ago</Time>
+                <Name>{name}</Name>
+                <Time>{time}</Time>
               </div>
             </CardInfo>
             <CardButtons>

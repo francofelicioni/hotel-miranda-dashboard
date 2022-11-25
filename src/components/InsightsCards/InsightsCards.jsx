@@ -1,18 +1,25 @@
 import React from "react";
 
-import { Card, Container, Icon, InfoContainer, Number, Description } from "./InsightsCards_sc";
+import {
+  Card,
+  Container,
+  Icon,
+  InfoContainer,
+  Number,
+  Title,
+} from "./InsightsCards_sc";
 
-const InsightsCards = () => {
+const InsightsCards = ({ icon, number, title }) => {
   return (
     <Card>
       <Container>
-        <Icon />
+        <Icon>{icon}</Icon>
         <InfoContainer>
-          <Number> 213 </Number>
-          <Description> New Booking </Description>
+          <Number> {number} </Number>
+          <Title> {title} </Title>
         </InfoContainer>
       </Container>
-    </Card>
+    </Card> 
   );
 };
 

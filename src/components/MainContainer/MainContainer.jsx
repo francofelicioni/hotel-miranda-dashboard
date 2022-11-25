@@ -10,8 +10,16 @@ const Container = styled.div`
   width: ${(props) => (props.path === "/login" ? "100%" : "82%")};
   top: ${(props) => (props.path === "/login" ? "0" : "7rem")};
   right: 0;
-  padding: ${(props) => (props.path === '/login' ? '0' : '2.875rem')};
+  padding: ${(props) => (props.path === '/login' ? '0' : '1rem')};
+  margin: ${(props) => (props.path === '/login' ? '0' : '1rem')};
+  display: flex;
+  flex-direction:column;
   background-color: var(--color-greyF8);
+  border-radius: 10px;
+  @media (max-width: 1200px) {
+    padding: 0;
+  }
+
 `;
 
 const MainContainer = ({ children }) => {
