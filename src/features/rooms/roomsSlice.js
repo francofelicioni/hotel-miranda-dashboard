@@ -1,14 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import fetchFrom from "../../utils/fetchFrom";
 
-import rooms from '../../db/rooms.json';
+// import rooms from '../../db/rooms.json';
 
 export const fetchRooms = createAsyncThunk(
   "rooms/fetchRooms",
 
   async () => {
     const response = await fetchFrom("rooms");
-    console.log("Fetch Rooms", response);
     return response;
   }
 );
@@ -30,7 +29,6 @@ export const roomsSlice = createSlice({
       .addCase(fetchRooms.fulfilled, (state, action) => {
         state.isLoading = false;
         state.rooms = action.payload;
-        console.log(action);
       })
       .addCase(fetchRooms.rejected, (state) => {
         state.isLoading = true;
@@ -40,4 +38,4 @@ export const roomsSlice = createSlice({
 });
 
 export default roomsSlice.reducer;
-export const selectRooms = (state) => state.roomsList.rooms;
+export const selectRooms = (state) => state.rooms.rooms;

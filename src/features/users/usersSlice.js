@@ -6,7 +6,6 @@ export const fetchUsers = createAsyncThunk(
 
   async () => {
     const response = await fetchFrom("users");
-    console.log("Fetch users", response);
     return response;
   }
 );
@@ -28,7 +27,6 @@ export const usersSlice = createSlice({
       .addCase(fetchUsers.fulfilled, (state, action) => {
         state.isLoading = false;
         state.users = action.payload;
-        console.log(action);
       })
       .addCase(fetchUsers.rejected, (state) => {
         state.isLoading = true;
@@ -38,4 +36,4 @@ export const usersSlice = createSlice({
 });
 
 export default usersSlice.reducer;
-export const selectUsers = (state) => state.usersList.users;
+export const selectUsers = (state) => state.users.users;

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 
 import {
   Navbar,
@@ -49,7 +49,6 @@ const Header = () => {
   }
 
   const handleClick = () => {
-    console.log('logout')
       dispatch(logout({isAuth: false}))
       saveLocalStorage({...state, isAuth: false})
   }

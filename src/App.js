@@ -1,8 +1,7 @@
 import "./App.css";
 
-import React, { useState, useContext, useReducer } from "react";
+import React, { useReducer } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Navigate, Outlet } from "react-router-dom";
 
 import Login from "./views/Login/Login";
 import Dashboard from "./views/Dashboard/Dashboard";
@@ -15,21 +14,14 @@ import Contact from "./views/Contact/Contact";
 import { LoginContext, initialState } from "./context/LoginContext";
 
 import { LoginReducer } from './context/LoginReducer';
-
+import PrivateRoutes from "./utils/PrivateRoutes";
 
 function App() {
-  const LOCAL_AUTH = "authenticated";
-
   const contextValue = useReducer(LoginReducer, initialState)
 
-  const userLogged = () => {
-    const isLogged = JSON.parse(localStorage.getItem(LOCAL_AUTH))
-    return isLogged ? isLogged.isAuth : false 
-  }
-  
-  const PrivateRoutes = ({auth}) => {
-    return auth ? <Outlet /> : <Navigate to="/login" />;
-  };
+  // const PrivateRoutes = ({auth}) => {
+  //   return auth ? <Outlet /> : <Navigate to="/login" />;
+  // };
 
   return (
     <>
@@ -38,7 +30,7 @@ function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
 
-            <Route element={<PrivateRoutes auth={userLogged()} />}>
+            <Route element={<PrivateRoutes/>}>
               <Route
                 path="/" element={<Dashboard/>}
               />

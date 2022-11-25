@@ -6,7 +6,6 @@ export const fetchBookings = createAsyncThunk(
 
   async () => {
     const response = await fetchFrom("guests");
-    console.log("fetchBookings", response);
     return response;
   }
 );
@@ -28,7 +27,6 @@ export const bookingsSlice = createSlice({
       .addCase(fetchBookings.fulfilled, (state, action) => {
         state.isLoading = false;
         state.bookings = action.payload;
-        console.log(action);
       })
       .addCase(fetchBookings.rejected, (state) => {
         state.isLoading = true;
@@ -38,5 +36,5 @@ export const bookingsSlice = createSlice({
 });
 
 export default bookingsSlice.reducer;
-export const selectBookings = (state) => state.bookingsList.bookings;
+export const selectBookings = (state) => state.bookings.bookings;
 

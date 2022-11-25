@@ -4,7 +4,6 @@ function randomDelay(data) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(data);
-      console.log('resolve', data)
     }, randomTime);
   });
 }

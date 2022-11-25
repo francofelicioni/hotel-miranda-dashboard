@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT, UPDATE_EMAIL, UPDATE_PASSWORD } from "./actionTypes";
+import { LOGIN, LOGOUT, UPDATE_EMAIL, UPDATE_NAME } from "./actionTypes";
 
 export const LoginReducer = (state, { type, payload }) => {
 
@@ -6,7 +6,7 @@ export const LoginReducer = (state, { type, payload }) => {
     case LOGIN:
       return { ...state, ...payload };
     case LOGOUT:
-      return { ...state, isAuth: payload };
+      return { isAuth: payload };
     case UPDATE_EMAIL:
       return {
         ...state,
@@ -15,12 +15,12 @@ export const LoginReducer = (state, { type, payload }) => {
           email: payload,
         },
       };
-    case UPDATE_PASSWORD:
+    case UPDATE_NAME:
       return {
         ...state,
         user: {
           ...state.user,
-          password: payload,
+          name: payload,
         },
       };
     default:

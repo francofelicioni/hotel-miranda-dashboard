@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { updateEmail, updateName, login } from "../../context/actions";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { LoginContext } from "../../context/LoginContext";
 
 import {
   Container,
@@ -18,10 +20,10 @@ import {
   Desc,
 } from "./Login_sc";
 
-const Login = () => {
+const Login = ({ setAuth }) => {
+  const LOCAL_AUTH = "authenticated";
   const navigate = useNavigate();
-
-  const [user, setUser] = useState({});
+  const [state, dispatch] = useContext(LoginContext);
 
   const handleChange = (e) => {
     setUser({
@@ -32,18 +34,40 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (user.user === "fran.felicioni" && user.password === "1234") {
-      localStorage.setItem("authenticated", JSON.stringify(user));
+    if (state.user.email === "fran@test.com" && state.user.name === "Fran") {
+      // localStorage.setItem("authenticated", JSON.stringify(user));
+      // navigate("/");
+      // console.log("Successful Authentication");
+      dispatch(
+        login({
+          isAuth: true,
+          user: {
+            name: state.user.name,
+            email: state.user.email,
+          },
+        })
+      );
+      toLocalStorage({
+        ...state,
+        isAuth: true,
+      });
       navigate("/");
-      console.log("Successful Authentication");
     } else {
       Swal.fire({
         icon: "error",
         title: "Failed authentication",
         text: "Wrong username or password",
       });
+    }
+  };
 
-      console.log("Successful Failed");
+  const toLocalStorage = (user) => {
+    if (!localStorage.getItem(LOCAL_AUTH)) {
+      return localStorage.getItem(LOCAL_AUTH, JSON.stringify(user));
+    } else {
+      const currentUser = JON.parse(localStorage.getItem(LOCAL_AUTH));
+      currentUser.isAuth = true;
+      localStorage.setItem(LOCAL_AUTH, JSON.stringify(currentUser));
     }
   };
 
@@ -57,21 +81,26 @@ const Login = () => {
         <Form onSubmit={handleSubmit}>
           <FormContent>
             <FormItem>
-              <label for="user" style={{width: '110px'}}>Enter user:</label>
-              <input type="text" name="user" onChange={handleChange} />
+              <label for="name" style={{ width: "110px" }}>
+                Enter user:
+              </label>
+              <input
+                type="text"
+                placeholder="User name"
+                name="name"
+                value={state.user?.name}
+                onChange={(e) => dispatch(updateName(e.target.value))}
+              />
             </FormItem>
             <FormItem>
-              <label for="password">Enter password: </label>
-              <input type="password" name="password" onChange={handleChange} />
-            </FormItem>
-            <FormItem>
-              <CheckboxContainer>
-                <input type="checkbox" id="rememberMeCheckbox" />
-                <label for="rememberMeCheckbox" id="checkboxLabel">
-                  {" "}
-                  Remember me{" "}
-                </label>
-              </CheckboxContainer>
+              <label for="email">Enter password: </label>
+              <input
+                type="password"
+                placeholder="Email"
+                name="email"
+                value={state.user?.email}
+                onChange={(e) => dispatch(updateEmail(e.target.value))}
+              />
             </FormItem>
           </FormContent>
           <Button type="submit"> Sign In</Button>

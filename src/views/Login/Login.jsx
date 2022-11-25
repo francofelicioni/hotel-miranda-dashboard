@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Button } from "../../components/Blocks/Button";
 
-import { login, updateEmail, updatePassword } from '../../context/actions';
+import { login, updateEmail, updateName } from "../../context/actions";
 
 import { LoginContext } from "../../context/LoginContext";
 
@@ -26,20 +26,25 @@ const Login = () => {
   const [state, dispatch] = useContext(LoginContext);
 
   const saveLocalStorage = (user) => {
-    if (!localStorage.getItem('authenticated')) {
+    if (!localStorage.getItem("authenticated")) {
       return localStorage.setItem("authenticated", JSON.stringify(user));
     } else {
       const currentUser = JSON.parse(localStorage.getItem("authenticated"));
       currentUser.isAuth = true;
       localStorage.setItem("authenticated", JSON.stringify(currentUser));
     }
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (state.user.email === "fran.felicioni" && state.user.password === "1234") {
-      dispatch(login({isAuth: true, user: {email: state.user.email, password: state.user.password}}))
-      saveLocalStorage({...state, isAuth: true})
+    if (state.user.email === "fran@test.com" && state.user.name === "Fran") {
+      dispatch(
+        login({
+          isAuth: true,
+          user: { email: state.user.email, name: state.user.name },
+        })
+      );
+      saveLocalStorage({ ...state, isAuth: true });
       navigate("/");
     } else {
       Swal.fire({
@@ -60,17 +65,30 @@ const Login = () => {
         <Form onSubmit={handleSubmit}>
           <FormContent>
             <FormItem>
-              <label style={{ width: "124px", height: "25px" }}>
-                Enter user:
+              <label style={{ width: "94px", height: "25px" }}>
+                Enter email:
               </label>
-              <input type="text" name="email" value={state.user.email} onChange={(e)=> dispatch(updateEmail(e.target.value))} />
+              <input
+                type="text"
+                name="email"
+                value={state.user.email}
+                onChange={(e) => dispatch(updateEmail(e.target.value))}
+              />
             </FormItem>
             <FormItem>
-              <label style={{ height: "25px" }}>Enter password: </label>
-              <input type="password" name="password" value={state.user.password} onChange={(e)=>dispatch(updatePassword(e.target.value))} />
+              <label style={{ height: "25px" }}>Enter name: </label>
+              <input
+                type="name"
+                name="name"
+                value={state.user.name}
+                onChange={(e) => dispatch(updateName(e.target.value))}
+              />
             </FormItem>
           </FormContent>
-          <Button $type='login' type="submit"> Login </Button>
+          <Button $type="login" type="submit">
+            {" "}
+            Login{" "}
+          </Button>
         </Form>
       </LoginLeft>
       <LoginRigth className="login-rigth">

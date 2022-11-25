@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import MainContainer from "../../components/MainContainer/MainContainer";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   fetchBookings,
-  selectBookings,
 } from "../../features/bookings/bookingsSlice";
 
 import guest from "../../db/guests.json";
@@ -31,8 +30,6 @@ import {
 
 const Bookings = () => {
   const dispatch = useDispatch();
-  // const bookingsResult = useSelector(selectBookings);
-  // console.log("BL", bookingsList);
 
   useEffect(() => {
     dispatch(fetchBookings());
