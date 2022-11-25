@@ -41,7 +41,7 @@ const Info = styled.p`
   font-weight: 500;
   color: var(--color-grey39);
   font-size: 1rem;
-  max-width: 100px;
+  max-width: 200px;
   text-align: left;
 `;
 

@@ -1,12 +1,15 @@
 import React from "react";
+import MainContainer from "../../components/MainContainer/MainContainer";
 
-import {ContactContainer} from './Contact_sc';
+import { ContactContainer } from "./Contact_sc";
 
 const Contact = () => {
   return (
-    <ContactContainer>
-      <div>Contact</div>
-    </ContactContainer>
+    <MainContainer>
+      <ContactContainer>
+        <div>Contact</div>
+      </ContactContainer>
+    </MainContainer>
   );
 };
 
