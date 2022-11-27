@@ -45,17 +45,17 @@ const Select = styled.select`
   cursor: pointer;
 `;
 
-const ViewsNavigation = ({ a, b, c, d, e }) => {
+const ViewsNavigation = ({ n1, n2, n3, b1}) => {
   return (
     <>
       <ViewsNavigationContainer>
         <Container>
-          <Title>{a}</Title>
-          <Title>{b}</Title>
-          <Title>{c}</Title>
+          <Title>{n1}</Title>
+          <Title>{n2}</Title>
+          <Title>{n3}</Title>
         </Container>
         <Container>
-          <Button $type="new">{d}</Button>
+          <Button $type="new">{b1}</Button>
           <Select>
             <option value="newest">Newest</option>
             <option value="A-Z">A-Z</option>

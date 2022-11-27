@@ -25,11 +25,10 @@ const Bookings = () => {
   return (
     <MainContainer>
       <ViewsNavigation
-        a="All Guest"
-        b="Pending"
-        c="Booked"
-        d="1 November 2020 - 30 "
-        e="Newest"
+        n1="All Guest"
+        n2="Pending"
+        n3="Booked"
+        b1="1 November 2020 - 30 "
       ></ViewsNavigation>
       <Table>
         <thead>

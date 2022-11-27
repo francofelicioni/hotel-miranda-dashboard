@@ -25,11 +25,11 @@ const Users = () => {
     <>
       <MainContainer>
         <ViewsNavigation
-          a="ALl Users"
-          b="Active Users"
-          c="Inactive Users"
-          d="+ New Room"
-          e="Newest"
+          n1="All Users"
+          n2="Active Users"
+          n3="Inactive Users"
+          b1="+ New User"
+          b2="Newest"
         />
         <Table>
           <thead>
@@ -47,7 +47,7 @@ const Users = () => {
 
           <tbody>
             {usersResult.map((user) => (
-              <UsersRow id={user.id} user={user} />
+              <UsersRow key={user.id} user={user} />
             ))}
           </tbody>
         </Table>

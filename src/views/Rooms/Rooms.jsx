@@ -6,7 +6,6 @@ import MainContainer from "../../components/MainContainer/MainContainer";
 
 import {
   Table,
-  Row,
   TableTitle,
   Checkbox,
 } from "../../components/Blocks/TableBlocks";
@@ -26,11 +25,10 @@ const Rooms = () => {
     <>
       <MainContainer>
         <ViewsNavigation
-          a="All Rooms"
-          b="Active Employee"
-          c="Inactive Employee"
-          d="+ New Room"
-          e="Newest"
+          n1="All Rooms"
+          n2="Active Employee"
+          n3="Inactive Employee"
+          b1="+ New Room"
         />
         <Table>
           <thead>
