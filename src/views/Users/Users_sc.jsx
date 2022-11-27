@@ -56,10 +56,6 @@ const DeleteIcon = styled.button`
   height: 25px;
 `;
 
-const CheckboxContainer = styled.div`
-  width: 20px;
-`;
-
 export {
   UserDataName,
   Image,
@@ -71,5 +67,4 @@ export {
   DataContact,
   ButtonContainer,
   DeleteIcon,
-  CheckboxContainer,
 };
