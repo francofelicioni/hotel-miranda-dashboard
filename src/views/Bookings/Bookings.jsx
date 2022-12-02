@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import MainContainer from "../../components/MainContainer/MainContainer";
 
-import { useDispatch } from "react-redux";
-import { fetchBookings } from "../../features/bookings/bookingsSlice";
-
-import guest from "../../db/guests.json";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchBookings, selectBookings } from "../../features/bookings/bookingsSlice";
 
 import {
   Table,
@@ -17,6 +15,7 @@ import BookingsRow from "../../components/Blocks/BookingsRow";
 
 const Bookings = () => {
   const dispatch = useDispatch();
+  const bookingsResult = useSelector(selectBookings);
 
   useEffect(() => {
     dispatch(fetchBookings());
@@ -47,7 +46,7 @@ const Bookings = () => {
         </thead>
 
         <tbody>
-          {guest.map((guest) => (
+          {bookingsResult.map((guest) => (
             <BookingsRow key={guest.id} guest={guest} />
           ))}
         </tbody>

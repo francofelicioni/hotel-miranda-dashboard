@@ -22,7 +22,7 @@ const InsightsCardsContainer = styled.div`
 `;
 
 const GeneralInsigths = styled.div`
-  height: 200px;
+  height: 100%;
 `;
 
 const ReviewsContainer = styled.div`
