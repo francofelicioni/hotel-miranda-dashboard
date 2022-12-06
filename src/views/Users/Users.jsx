@@ -1,8 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchUsers, selectUsers } from "../../features/users/usersSlice";
+import {
+  fetchUsers,
+  selectState,
+  selectUsers,
+} from "../../features/users/usersSlice";
 
 import MainContainer from "../../components/MainContainer/MainContainer";
+
+import {
+  ListButtonsContainer,
+  Selectors,
+  Selector,
+} from "../../components/Blocks/FilterButtons";
+
+import UsersButtons from "../../components/Blocks/UsersButtons";
 
 import {
   Table,
@@ -10,27 +22,78 @@ import {
   Checkbox,
 } from "../../components/Blocks/TableBlocks";
 
-import ViewsNavigation from "../../components/Blocks/ViewsNavigation";
 import UsersRow from "../../components/Blocks/UsersRow";
+import Spinner from "../../components/Blocks/Spinner";
 
 const Users = () => {
   const dispatch = useDispatch();
   const usersResult = useSelector(selectUsers);
+  const appState = useSelector(selectState);
+
+  console.log('UR',usersResult)
+
+  const [userStatus, setUserStatus] = useState("");
+  const [lengthFromRedux, setLengthFromRedux] = useState(true);
+  const [filteredUsers, setFilteredUsers] = useState([]);
 
   useEffect(() => {
     dispatch(fetchUsers());
   }, [dispatch]);
 
+  useEffect(() => {
+    const usersToFilter = usersResult;
+    const usersFiltered = usersToFilter.filter(
+      (user) => user.status === userStatus
+    );
+    setFilteredUsers(usersFiltered);
+  }, [userStatus, usersResult]);
+
+  const setAllUsers = () => {
+    setLengthFromRedux(true);
+    dispatch(fetchUsers());
+  };
+  
+  const usersSwitch = () => {
+    if (lengthFromRedux) {
+      return usersResult;
+    } else {
+      return filteredUsers;
+    }
+  }
+
   return (
     <>
       <MainContainer>
-        <ViewsNavigation
-          n1="All Users"
-          n2="Active Users"
-          n3="Inactive Users"
-          b1="+ New User"
-          b2="Newest"
-        />
+        <ListButtonsContainer>
+          <Selectors>
+            <Selector
+              onClick={() => {
+                setAllUsers();
+              }}
+            >
+              {" "}
+              All Users{" "}
+            </Selector>
+            <Selector
+              onClick={() => {
+                setUserStatus(true);
+                setLengthFromRedux(false);
+              }}
+            >
+              Active Users
+            </Selector>
+            <Selector
+              onClick={() => {
+                setUserStatus(false);
+                setLengthFromRedux(false);
+              }}
+            >
+              Inactive Users
+            </Selector>
+          </Selectors>
+          <UsersButtons />
+        </ListButtonsContainer>
+
         <Table>
           <thead>
             <tr>
@@ -45,11 +108,19 @@ const Users = () => {
             </tr>
           </thead>
 
-          <tbody>
-            {usersResult.map((user) => (
-              <UsersRow key={user.id} user={user} />
-            ))}
-          </tbody>
+          {appState === "pending" && (
+            <tbody>
+              <Spinner />
+            </tbody>
+          )}
+
+          {appState === "fulfilled" && (
+            <tbody>
+              {usersSwitch().map((user) => (
+                <UsersRow key={user.id} user={user} />
+              ))}
+            </tbody>
+          )}
         </Table>
       </MainContainer>
     </>

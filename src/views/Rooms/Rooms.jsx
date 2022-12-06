@@ -1,41 +1,98 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
-import { fetchRooms, selectRooms } from "../../features/rooms/roomsSlice";
+
+import {
+  fetchRooms,
+  selectRooms,
+  roomsStatus,
+} from "../../features/rooms/roomsSlice";
 
 import MainContainer from "../../components/MainContainer/MainContainer";
 
-import {
-  Table,
-  TableTitle,
-  Checkbox,
-} from "../../components/Blocks/TableBlocks";
+import { Table, TableTitle } from "../../components/Blocks/TableBlocks";
 
-import ViewsNavigation from "../../components/Blocks/ViewsNavigation";
+import {
+  ListButtonsContainer,
+  Selectors,
+  Selector,
+} from "../../components/Blocks/FilterButtons";
+
+import RoomsButtons from "../../components/Blocks/RoomsButtons";
+
 import RoomsRow from "../../components/Blocks/RoomsRow";
+import Spinner from "../../components/Blocks/Spinner";
 
 const Rooms = () => {
   const dispatch = useDispatch();
   const roomsResult = useSelector(selectRooms);
+  const appState = useSelector(roomsStatus);
+
+  const [roomStatus, setRoomStatus] = useState("");
+  const [lengthFromRedux, setLengthFromRedux] = useState(true);
+  const [roomsFiltered, setRoomsFiltered] = useState([]);
 
   useEffect(() => {
     dispatch(fetchRooms());
   }, [dispatch]);
 
+  const setAllRooms = () => {
+    setLengthFromRedux(true);
+    dispatch(fetchRooms());
+  };
+
+  console.log("ROOMS RESULT", roomsResult);
+
+  useEffect(() => {
+    const roomsToFilter = roomsResult;
+    const roomsFiltered = roomsToFilter.filter(
+      (room) => room.status === roomStatus
+    );
+    setRoomsFiltered(roomsFiltered);
+  }, [roomStatus, roomsResult]);
+
+  const roomsSwitch = () => {
+    if (lengthFromRedux) {
+      return roomsResult;
+    } else {
+      return roomsFiltered;
+    }
+  };
+
   return (
     <>
       <MainContainer>
-        <ViewsNavigation
-          n1="All Rooms"
-          n2="Active Employee"
-          n3="Inactive Employee"
-          b1="+ New Room"
-        />
+        <ListButtonsContainer>
+          <Selectors>
+            <Selector
+              onClick={() => {
+                setAllRooms();
+              }}
+            >
+              All Rooms
+            </Selector>
+            <Selector
+              onClick={() => {
+                setRoomStatus(true);
+                setLengthFromRedux(false);
+              }}
+            >
+              Available
+            </Selector>
+            <Selector
+              onClick={() => {
+                setRoomStatus(false);
+                setLengthFromRedux(false);
+              }}
+            >
+              Booked
+            </Selector>
+          </Selectors>
+          <RoomsButtons />
+        </ListButtonsContainer>
         <Table>
           <thead>
             <tr>
-              <TableTitle style={{ paddingLeft: "10px" }}>
-                <Checkbox type="checkbox"></Checkbox>
-              </TableTitle>
               <TableTitle> Room Name </TableTitle>
               <TableTitle> Room Type </TableTitle>
               <TableTitle> Amenities </TableTitle>
@@ -45,11 +102,19 @@ const Rooms = () => {
             </tr>
           </thead>
 
-          <tbody>
-            {roomsResult.map((room) => (
-              <RoomsRow key={room.id} room={room} />
-            ))}
-          </tbody>
+          {appState === "pending" && (
+            <tbody>
+              <Spinner />
+            </tbody>
+          )}
+
+          {appState === "fulfilled" && (
+            <tbody>
+              {roomsSwitch().map((room) => (
+                <RoomsRow key={room.id} room={room} />
+              ))}
+            </tbody>
+          )}
         </Table>
       </MainContainer>
     </>

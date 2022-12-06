@@ -10,7 +10,7 @@ import {
 } from "../../views/Bookings/Bookings_sc";
 import { Button } from "./Button";
 import { Status } from "./Status";
-import { Checkbox, CheckboxContainer, Row } from "./TableBlocks";
+import { Row } from "./TableBlocks";
 
 const BookingsRow = ({ guest }) => {
   const handleClick = (special_request) => {
@@ -29,20 +29,13 @@ const BookingsRow = ({ guest }) => {
 
   return (
     <Row key={guest.id}>
-      <td style={{ paddingLeft: "10px" }}>
-        <CheckboxContainer className="checkBocContainer">
-          <Checkbox type="checkbox" />
-        </CheckboxContainer>
-      </td>
-      <td>
-        <GuestContainer>
-          <Img src={guest.image} alt="Guest Image" />
-          <div>
-            <Name>{guest.full_name}</Name>
-            <Id># {guest.id}</Id>
-          </div>
-        </GuestContainer>
-      </td>
+      <GuestContainer>
+        <Img src={guest.image} alt="Guest Image" />
+        <div>
+          <Name>{guest.full_name}</Name>
+          <Id># {guest.id}</Id>
+        </div>
+      </GuestContainer>
       <DataContainer>
         <Text>{guest.order_date}</Text>
       </DataContainer>

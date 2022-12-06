@@ -1,8 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import fetchFrom from "../../utils/fetchFrom";
 
-// import rooms from '../../db/rooms.json';
-
 export const fetchRooms = createAsyncThunk(
   "rooms/fetchRooms",
 
@@ -14,6 +12,8 @@ export const fetchRooms = createAsyncThunk(
 
 const initialState = {
   rooms: [],
+  singleRoom: {},
+  status: 'idle',
 };
 
 export const roomsSlice = createSlice({
@@ -23,15 +23,15 @@ export const roomsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchRooms.pending, (state) => {
-        state.isLoading = true;
+        state.status = 'pending';
         console.log("Loading...");
       })
       .addCase(fetchRooms.fulfilled, (state, action) => {
-        state.isLoading = false;
         state.rooms = action.payload;
+        state.status = 'fulfilled';
       })
       .addCase(fetchRooms.rejected, (state) => {
-        state.isLoading = true;
+        state.status = 'rejected';
         console.log("Failure while fetching the requested data!");
       });
   },
@@ -39,3 +39,4 @@ export const roomsSlice = createSlice({
 
 export default roomsSlice.reducer;
 export const selectRooms = (state) => state.rooms.rooms;
+export const roomsStatus = (state) => state.rooms.status;

@@ -1,40 +1,102 @@
-import React, { useEffect } from "react";
-import MainContainer from "../../components/MainContainer/MainContainer";
+import React, { useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import { fetchBookings, selectBookings } from "../../features/bookings/bookingsSlice";
 
 import {
-  Table,
-  TableTitle,
-  Checkbox,
-} from "../../components/Blocks/TableBlocks";
+  fetchBookings,
+  selectBookings,
+  bookingsStatus,
+} from "../../features/bookings/bookingsSlice";
 
-import ViewsNavigation from "../../components/Blocks/ViewsNavigation";
+import MainContainer from "../../components/MainContainer/MainContainer";
+
+import {
+  ListButtonsContainer,
+  Selectors,
+  Selector,
+} from '../../components/Blocks/FilterButtons'
+
+import BookingButtons from "../../components/Blocks/BookingButtons";
+
+import { Table, TableTitle } from "../../components/Blocks/TableBlocks";
+
+import Spinner from "../../components/Blocks/Spinner";
+
 import BookingsRow from "../../components/Blocks/BookingsRow";
 
 const Bookings = () => {
   const dispatch = useDispatch();
   const bookingsResult = useSelector(selectBookings);
+  const appState = useSelector(bookingsStatus);
+
+  const [bookingStatus, setBookingStatus] = useState("");
+  const [lengthFromRedux, setLengthFromRedux] = useState(true);
+  const [bookingsFiltered, setBookingsFiltered] = useState([]);
 
   useEffect(() => {
     dispatch(fetchBookings());
   }, [dispatch]);
 
+  const setAllBookings = () => {
+      setLengthFromRedux(true);
+      dispatch(fetchBookings())
+  }
+
+  useEffect(()=> {
+    const bookingsToFilter = bookingsResult;
+    const bookingsFiltered = bookingsToFilter.filter((booking) => booking.state === bookingStatus)
+    setBookingsFiltered(bookingsFiltered)
+  }, [bookingStatus, bookingsResult]);
+
+  const bookingsSwitch = () => {
+    if (lengthFromRedux) {
+      return bookingsResult;
+    } else {
+      return bookingsFiltered;
+    }
+  }
+
   return (
     <MainContainer>
-      <ViewsNavigation
-        n1="All Guest"
-        n2="Pending"
-        n3="Booked"
-        b1="1 November 2020 - 30 "
-      ></ViewsNavigation>
+      <ListButtonsContainer>
+        <Selectors>
+          <Selector
+            onClick={() => {
+              setAllBookings();
+            }}
+          >
+            All Bookings
+          </Selector>
+          <Selector
+            onClick={() => {
+              setBookingStatus('Check In');
+              setLengthFromRedux(false);
+            }}
+          >
+            Check In
+          </Selector>
+          <Selector
+            onClick={() => {
+              setBookingStatus('Check Out');
+              setLengthFromRedux(false);;
+            }}
+          >
+            Check Out
+          </Selector>
+          <Selector
+            onClick={() => {
+              setBookingStatus('In Progress');
+              setLengthFromRedux(false);
+            }}
+          >
+            In Progress
+          </Selector>
+        </Selectors>
+        <BookingButtons select="01/11/2022 - 30/11/2022" />
+      </ListButtonsContainer>
       <Table>
         <thead>
           <tr>
-            <TableTitle style={{ paddingLeft: "10px" }}>
-              <Checkbox type="checkbox" />
-            </TableTitle>
             <TableTitle>Guest</TableTitle>
             <TableTitle>Order Date</TableTitle>
             <TableTitle>Check In</TableTitle>
@@ -45,11 +107,19 @@ const Bookings = () => {
           </tr>
         </thead>
 
-        <tbody>
-          {bookingsResult.map((guest) => (
-            <BookingsRow key={guest.id} guest={guest} />
-          ))}
-        </tbody>
+        {appState === "pending" && (
+          <tbody>
+            <Spinner />
+          </tbody>
+        )}
+
+        {appState === "fulfilled" && (
+          <tbody>
+            {bookingsSwitch().map((guest) => (
+              <BookingsRow key={guest.id} guest={guest} />
+            ))}
+          </tbody>
+        )}
       </Table>
     </MainContainer>
   );

@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-const GuestContainer = styled.div`
+const GuestContainer = styled.td`
   display: flex;
   align-items: center;
   gap: 1.75rem;
+  padding: 1rem;
 `;
 
 const Img = styled.img`
@@ -27,7 +28,7 @@ const Id = styled.p`
 
 const DataContainer = styled.td`
   vertical-align: center;
-  padding: 1rem 0;
+  padding: 1rem;
 `;
 
 const Text = styled.p`

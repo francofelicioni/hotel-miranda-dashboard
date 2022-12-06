@@ -5,8 +5,6 @@ const Table = styled.table`
   background-color: #ffffff;
   border-radius: 20px;
   width: 100%;
-
-  
 `;
 
 const Row = styled.tr`
@@ -20,14 +18,14 @@ const Row = styled.tr`
 
 const TableTitle = styled.th`
   font-weight: 600;
-  text-align: start;
-  padding: 20px 0;
+  padding: 1rem .5rem;
   text-align: left;
 `;
 
-const CheckboxContainer = styled.div`
-  width: 20px;
+const CheckboxContainer = styled.td`
+  /* width: 20px; */
   padding-right: 35px;
+  padding-left: 10px;
 `;
 
 const Checkbox = styled.input`

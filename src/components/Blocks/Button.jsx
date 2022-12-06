@@ -6,7 +6,6 @@ const Button = styled.button`
       case "login":
         return css`
           border: none;
-          /* background: linear-gradient(45deg, var(--color-black), var(--color-red)); */
           background: var(--color-black);
           color: white;
           padding: 0 1rem;
@@ -65,7 +64,7 @@ const Button = styled.button`
 
       case "new":
         return css`
-          width: 158px;
+          width: 200px;
           height: 47px;
           background: #135846;
           border-radius: 8px;

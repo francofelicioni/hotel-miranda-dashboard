@@ -1,9 +1,11 @@
 import styled  from "styled-components";
 
-const NameContainer = styled.div`
+const NameContainer = styled.td`
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   gap: 1.75rem;
+  padding: 1rem;
 `;
 
 const Image = styled.img`
@@ -17,7 +19,7 @@ const Image = styled.img`
 const NameInfo = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
 `;
 
 const Id = styled.p`
@@ -34,7 +36,7 @@ const Number = styled.p`
 
 const RoomData = styled.td`
   vertical-align: center;
-  padding: 1rem 0;
+  padding: 1rem;
 `;
 
 const Info = styled.p`

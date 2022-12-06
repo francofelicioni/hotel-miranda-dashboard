@@ -1,12 +1,15 @@
 import styled, { css } from "styled-components";
 
-const Status = styled.p`
-  width: 109px;
+const Status = styled.button`
+  width: 100px;
   border-radius: 12px;
-  text-align: Center;
+  /* text-align: center; */
   font-size: 16px;
   font-weight: 600;
   padding: 1rem 0;
+  border: none;
+  vertical-align: center;
+  background: transparent;
 
   ${(props) => {
     switch (props.$type) {

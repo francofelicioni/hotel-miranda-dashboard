@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-const UserDataName = styled.div`
+const UserDataName = styled.td`
   display: flex;
   align-items: center;
 `;
 
 const UserInfo = styled.div`
-  width: 200px;
+  width: 100%;
   padding: 0 1rem;
 `;
 
@@ -37,8 +37,8 @@ const UserDate = styled.p`
   color: var(--color-grey39);
 `;
 
-const UserData = styled.div`
-  width: 200px;
+const UserData = styled.td`
+  width: 220px;
 `;
 
 const DataContact = styled.div`

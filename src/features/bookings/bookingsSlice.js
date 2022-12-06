@@ -1,8 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import fetchFrom from "../../utils/fetchFrom";
 
-export const fetchBookings = createAsyncThunk(
-  "bookings/fetchBookings",
+export const fetchBookings = createAsyncThunk("bookings/fetchBookings",
 
   async () => {
     const response = await fetchFrom("guests");
@@ -12,6 +11,8 @@ export const fetchBookings = createAsyncThunk(
 
 const initialState = {
   bookings: [],
+  singleBooking: {},
+  status: 'idle',
 };
 
 export const bookingsSlice = createSlice({
@@ -21,15 +22,15 @@ export const bookingsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchBookings.pending, (state) => {
-        state.isLoading = true;
+        state.status = 'pending';
         console.log("Loading...");
       })
       .addCase(fetchBookings.fulfilled, (state, action) => {
-        state.isLoading = false;
         state.bookings = action.payload;
+        state.status = 'fulfilled';
       })
       .addCase(fetchBookings.rejected, (state) => {
-        state.isLoading = true;
+        state.status = 'rejected';
         console.log("Failure while fetching the requested data!");
       });
   },
@@ -37,4 +38,5 @@ export const bookingsSlice = createSlice({
 
 export default bookingsSlice.reducer;
 export const selectBookings = (state) => state.bookings.bookings;
+export const bookingsStatus = (state) => state.bookings.status;
 

@@ -12,6 +12,8 @@ export const fetchUsers = createAsyncThunk(
 
 const initialState = {
   users: [],
+  singleUser: {},
+  status: 'idle',
 };
 
 export const usersSlice = createSlice({
@@ -21,15 +23,15 @@ export const usersSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchUsers.pending, (state) => {
-        state.isLoading = true;
+        state.status = 'pending';
         console.log("Loading...");
       })
       .addCase(fetchUsers.fulfilled, (state, action) => {
-        state.isLoading = false;
+        state.status = 'fulfilled';
         state.users = action.payload;
       })
       .addCase(fetchUsers.rejected, (state) => {
-        state.isLoading = true;
+        state.status = 'rejected';
         console.log("Failure while fetching the request data!");
       });
   },
@@ -37,3 +39,4 @@ export const usersSlice = createSlice({
 
 export default usersSlice.reducer;
 export const selectUsers = (state) => state.users.users;
+export const selectState = (state) => state.users.status;

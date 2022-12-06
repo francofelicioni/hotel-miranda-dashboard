@@ -40,7 +40,7 @@ const Dashboard = () => {
             <InsightsCards icon={<BiLogOut style={{width:'50', height: '50'}} />} number='516' title='Check Out'/>
           </InsightsCardsContainer>
           <GeneralInsigths>
-            <Stats/>
+            {/* <Stats/> */}
             {/* <ReservationStats2 /> */}
             {/* <Calendar /> */}
           </GeneralInsigths>
