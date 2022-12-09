@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hotel-miranda-dashboard/static/css/main.c87cdef1.css",
+    "main.js": "/hotel-miranda-dashboard/static/js/main.5fbbe53e.js",
+    "index.html": "/hotel-miranda-dashboard/index.html",
+    "main.c87cdef1.css.map": "/hotel-miranda-dashboard/static/css/main.c87cdef1.css.map",
+    "main.5fbbe53e.js.map": "/hotel-miranda-dashboard/static/js/main.5fbbe53e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c87cdef1.css",
+    "static/js/main.5fbbe53e.js"
+  ]
+}
