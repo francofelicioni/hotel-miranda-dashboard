@@ -5,9 +5,12 @@ import { AiOutlineCalendar } from "react-icons/ai";
 import { BiKey } from "react-icons/bi";
 import { BsPerson } from "react-icons/bs";
 import { FaRegUserCircle } from "react-icons/fa";
+import { CiLinkedin } from "react-icons/ci";
 
 import {
   Container,
+  LogoContainer,
+  Logo,
   SideIconContainer,
   User,
   IconContainer,
@@ -29,9 +32,14 @@ const SideMenu = () => {
   return (
     location.pathname !== "/login" && (
       <Container>
+        <LogoContainer>
+          <Link to="/">
+            <Logo src="https://firebasestorage.googleapis.com/v0/b/phgrm-oxygen.appspot.com/o/HotelMiranda%2FhotelMiranda.svg?alt=media&token=d6e58e0f-17a9-4942-9506-d8be448f4121" />
+          </Link>
+        </LogoContainer>
         <SideIconContainer>
           <Link
-            to="/"
+            to="/dashboard"
             style={{ textDecoration: "none", color: "var(--color-greenGrey)" }}
           >
             <IconContainer>
@@ -78,9 +86,13 @@ const SideMenu = () => {
         </SideIconContainer>
         <User>
           <Card>
-            <Image />
+            <Image src="https://firebasestorage.googleapis.com/v0/b/phgrm-oxygen.appspot.com/o/HotelMiranda%2F1591881944995.jpg?alt=media&token=50e30c7a-dcfd-43d1-9c29-65e26884d00f" />
             <CardTitle> Franco Felicioni</CardTitle>
-            <CardEmail> franco@hotelmiranda.com</CardEmail>
+            <CardEmail> fran.felicioni@gmail.com</CardEmail>
+            <Link to="https://www.linkedin.com/in/francofelicioni/">
+              {" "}
+              <CiLinkedin style={{ height: "25px", width: "25px" }} />
+            </Link>
             <Button $type="sidemenu">Edit</Button>
           </Card>
           <Footer>

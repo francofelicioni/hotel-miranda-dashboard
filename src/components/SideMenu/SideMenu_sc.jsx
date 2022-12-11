@@ -4,6 +4,20 @@ const Container = styled.div`
   width: 250px;
   height: 100%;
   background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* display: flex; */
+  /* flex-direction: column; */
+`;
+
+const LogoContainer = styled.div`
+  padding: 2rem 2rem;
+`;
+
+const Logo = styled.img`
+  width: 150px;
+  height: 57px;
 `;
 
 const SideIconContainer = styled.div`
@@ -23,14 +37,17 @@ const IconContainer = styled.div`
   align-items: center;
   gap: 1rem;
   padding: 0.5rem 0;
+
+  :hover {
+    color: red;
+  }
 `;
 const IconDesc = styled.p`
   font-family: var(--font-main);
   color: var(--color-greenGrey);
   font-size: 18px;
   font-weight: 600;
-
-  &-hover {
+  :hover {
     color: red;
   }
 `;
@@ -49,10 +66,10 @@ const Card = styled.div`
   background: white;
 `;
 
-const Image = styled.div`
+const Image = styled.img`
   width: 70px;
   height: 70px;
-  background: #c5c5c5 0% 0% no-repeat padding-box;
+  /* background: #c5c5c5 0% 0% no-repeat padding-box; */
   border-radius: 8px;
   opacity: 1;
 `;
@@ -75,39 +92,36 @@ const CardEmail = styled.h3`
 const Footer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 2rem;
+  align-items: center;
+  padding: 2rem 1rem;
   gap: 0.5rem;
 `;
 
 const FooterTitle = styled.p`
-  /* width: 239px;
-  height: 23px; */
-  text-align: left;
   font-weight: 600;
   font-size: 16px;
   color: #212121;
 `;
 
 const FooterCopyrigth = styled.p`
-  /* width: 239px;
-  height: 23px; */
-  text-align: left;
+  width: 100%;
   font-weight: 300;
   font-size: 14px;
   color: #799283;
 `;
 
 const FooterDescription = styled.p`
-  text-align: left;
+  text-align: center;
   font-weight: 300;
   font-size: 14px;
   color: #799283;
-  padding-top: 2rem;
+  padding-top: 1rem;
 `;
 
 export {
   Container,
+  LogoContainer,
+  Logo,
   SideIconContainer,
   User,
   IconContainer,
