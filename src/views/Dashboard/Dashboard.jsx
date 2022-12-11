@@ -17,7 +17,7 @@ import { AiOutlineCalendar } from 'react-icons/ai';
 import { IoMdExit } from 'react-icons/io';
 import { BiLogOut } from 'react-icons/bi';
 import Calendar from "../../components/Calendar/Calendar";
-import Stats from "../../components/ReservationStats/Stats";
+import ReservationsStats from "../../components/ReservationStats/ReservationsStats";
 
 
 
@@ -40,9 +40,8 @@ const Dashboard = () => {
             <InsightsCards icon={<BiLogOut style={{width:'50', height: '50'}} />} number='516' title='Check Out'/>
           </InsightsCardsContainer>
           <GeneralInsigths>
-            {/* <Stats/> */}
-            {/* <ReservationStats2 /> */}
-            {/* <Calendar /> */}
+            <ReservationsStats />
+            <Calendar />
           </GeneralInsigths>
           <ReviewsContainer>
             <Reviews description={description} name={'Kusnaidi Anderson'} time='4m ago' />

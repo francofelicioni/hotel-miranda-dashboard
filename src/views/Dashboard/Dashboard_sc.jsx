@@ -13,7 +13,7 @@ const InsightsCardsContainer = styled.div`
   height: 100%;
   
 
-  @media (min-width: 1200px) {
+  @media (max-width: 1200px) {
     /* grid-template-columns: repeat(100px, auto); */
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(50px, auto);
@@ -23,6 +23,11 @@ const InsightsCardsContainer = styled.div`
 
 const GeneralInsigths = styled.div`
   height: 100%;
+  display: flex;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
 `;
 
 const ReviewsContainer = styled.div`
@@ -32,7 +37,7 @@ const ReviewsContainer = styled.div`
   grid-auto-rows: minmax(100px, auto);
   gap: 1rem;
 
-  @media (min-width: 1200px) {
+  @media (max-width: 1200px) {
     display: grid;
     grid-auto-rows: minmax(100px, auto);
     padding:0;
