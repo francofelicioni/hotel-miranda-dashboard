@@ -7,14 +7,13 @@
         "bed_type": "Suite",
         "room_number": 584,
         "description": "Cillum aute sunt aliqua deserunt et eu culpa nisi magna. Elit aliquip ullamco qui incididunt duis consequat ea ex cillum. Aute eu nostrud nisi nulla amet nostrud amet eiusmod proident ea dolore tempor mollit consequat.",
-        "price": "94,50 €",
+        "price": 294.50,
         "offer": true,
-        "offer_price": 19,
+        "offer_price": 20,
         "cancellation": "Tempor reprehenderit deserunt quis cillum. Irure aliquip occaecat dolore enim. Qui eu commodo Lorem tempor adipisicing qui ad esse incididunt.",
-        "amenities": [
+        "facilities": [
             "AC",
             "Bath",
-            "Sea View",
             "Late Checkout",
             "City Tour",
             "Led TV",
@@ -30,11 +29,11 @@
         "bed_type": "Double",
         "room_number": 667,
         "description": "Est id labore fugiat in excepteur labore Lorem incididunt laborum velit duis cupidatat exercitation eiusmod. Consequat deserunt duis duis dolore tempor culpa labore consequat nostrud adipisicing deserunt. Mollit duis voluptate ullamco reprehenderit veniam ut et pariatur consequat ea in laboris. Laborum fugiat id aliqua dolor dolor ad.",
-        "price": "796,40 €",
+        "price": 796.40,
         "offer": true,
-        "offer_price": 47,
+        "offer_price": 35,
         "cancellation": "Deserunt esse et enim consequat aute sit enim nulla esse ea ullamco est velit.",
-        "amenities": [
+        "facilities": [
             "AC",
             "Bath",
             "Late Checkout",
@@ -51,11 +50,11 @@
         "bed_type": "Suite",
         "room_number": 715,
         "description": "Nostrud ipsum minim commodo irure non exercitation nostrud duis sit sint occaecat quis laborum id.",
-        "price": "197,98 €",
+        "price": 397.98,
         "offer": true,
-        "offer_price": 18,
+        "offer_price": 15,
         "cancellation": "Enim reprehenderit sint ea adipisicing laborum reprehenderit mollit sit aliquip minim minim consectetur Lorem. Laborum nostrud reprehenderit eu aliquip ipsum sint adipisicing et non. Sint velit voluptate labore occaecat sunt eu cillum aliqua cupidatat.",
-        "amenities": [
+        "facilities": [
             "AC",
             "Bath",
             "Sea View",
@@ -74,11 +73,11 @@
         "bed_type": "Single",
         "room_number": 588,
         "description": "Do in ipsum incididunt aute ex tempor aliquip id magna officia. In laborum aute culpa do incididunt consectetur est. Officia amet ullamco consequat sit sit cillum velit exercitation ullamco cupidatat id esse sit ex.",
-        "price": "959,47 €",
-        "offer": true,
-        "offer_price": 1,
+        "price": 959.47,
+        "offer": false,
+        "offer_price": 0,
         "cancellation": "Mollit duis est incididunt minim ex ex elit cillum occaecat. Eu anim deserunt tempor nulla. Aute voluptate magna adipisicing eu velit.",
-        "amenities": [
+        "facilities": [
             "AC",
             "Bath",
             "Led TV",
@@ -94,11 +93,11 @@
         "bed_type": "Double",
         "room_number": 720,
         "description": "Elit amet incididunt veniam aute anim reprehenderit dolor sint.",
-        "price": "369,13 €",
+        "price": 369.13,
         "offer": false,
-        "offer_price": 42,
+        "offer_price": 0,
         "cancellation": "Sunt quis esse nostrud minim consectetur amet consequat enim fugiat non. Id aliqua incididunt elit dolor eiusmod magna eu laborum culpa consectetur incididunt duis aliqua aliquip.",
-        "amenities":[
+        "facilities":[
             "AC",
             "Bath",
             "Late Checkout",
@@ -115,11 +114,11 @@
         "bed_type": "Single",
         "room_number": 530,
         "description": "Eiusmod sint enim dolor ut laborum ullamco amet laborum ex.",
-        "price": "850,52 €",
+        "price": 850.52,
         "offer": true,
-        "offer_price": 92,
+        "offer_price": 40,
         "cancellation": "Consectetur ea duis magna ipsum irure exercitation.",
-        "amenities": [
+        "facilities": [
             "AC",
             "Bath",
             "Led TV",
@@ -135,15 +134,14 @@
         "bed_type": "Suite",
         "room_number": 536,
         "description": "Duis sit labore occaecat ipsum exercitation magna fugiat nulla reprehenderit cillum ullamco. Laboris sunt ullamco eu pariatur exercitation incididunt sint veniam est nostrud et esse dolor enim. Commodo veniam duis labore officia nisi dolor id irure culpa. Voluptate laborum aliqua do incididunt excepteur et incididunt magna in aliquip minim.",
-        "price": "914,87 €",
+        "price": 914.87,
         "offer": false,
         "offer_price": 15,
         "cancellation": "Dolor commodo enim nulla incididunt laboris fugiat incididunt. Ipsum est amet culpa do magna sit sit culpa duis velit ea laborum. Occaecat fugiat sint fugiat proident.",
-        "amenities": [
+        "facilities": [
             "AC",
             "Bath",
             "Sea View",
-            "Late Checkout",
             "City Tour",
             "Led TV",
             "Wifi"
@@ -158,16 +156,15 @@
         "bed_type": "Double Superior",
         "room_number": 542,
         "description": "Quis aliqua amet sit quis consectetur incididunt incididunt ipsum magna. Velit do aute amet culpa amet deserunt officia qui ut dolor minim enim. Quis officia do mollit ea anim reprehenderit ex mollit.",
-        "price": "722,11 €",
+        "price": 722.11,
         "offer": true,
-        "offer_price": 11,
+        "offer_price": 10,
         "cancellation": "In consectetur exercitation minim sit sit eiusmod. Sunt sit excepteur ea minim ad aute nisi reprehenderit irure. Labore exercitation elit fugiat qui laboris pariatur eiusmod elit officia ullamco reprehenderit.",
-        "amenities": [
+        "facilities": [
             "AC",
             "Bath",
             "Sea View",
             "Late Checkout",
-            "City Tour",
             "Led TV",
             "Wifi",
             "Breakfast"
@@ -182,11 +179,11 @@
         "bed_type": "Suite",
         "room_number": 704,
         "description": "Incididunt amet dolore Lorem deserunt Lorem fugiat. Officia ut incididunt excepteur id aute. Elit enim labore voluptate commodo amet aliquip ex quis veniam ad incididunt dolor labore. Officia proident labore aliqua cillum elit Lorem elit sunt aliquip pariatur occaecat dolor laborum.",
-        "price": "583,45 €",
+        "price": 583.45,
         "offer": false,
-        "offer_price": 48,
+        "offer_price": 50,
         "cancellation": "Ex aliqua in reprehenderit laborum occaecat reprehenderit. Proident laborum non incididunt Lorem in dolor pariatur proident minim duis et. Exercitation anim esse officia eiusmod irure amet adipisicing cupidatat nulla deserunt laborum sit id culpa.",
-        "amenities": [
+        "facilities": [
             "AC",
             "Bath",
             "Sea View",
@@ -205,11 +202,11 @@
         "bed_type": "Double Superior",
         "room_number": 998,
         "description": "Labore amet cillum ex et pariatur esse officia fugiat do consectetur fugiat sint. Nisi est duis tempor pariatur eiusmod qui ipsum excepteur reprehenderit quis proident dolore exercitation. Culpa velit anim et tempor officia in.",
-        "price": "958,20 €",
-        "offer": false,
-        "offer_price": 89,
+        "price": 958.20,
+        "offer": true,
+        "offer_price": 20,
         "cancellation": "Amet ullamco exercitation fugiat aliqua do excepteur nisi exercitation. Aliqua veniam reprehenderit voluptate aute laborum. Ut enim ut occaecat aliquip nisi sunt veniam occaecat consequat sit do ea sunt.",
-        "amenities": [
+        "facilities": [
             "AC",
             "Bath",
             "Sea View",

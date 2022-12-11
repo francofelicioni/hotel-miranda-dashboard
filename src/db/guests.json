@@ -1,107 +1,416 @@
 [
-    {
-        "id": "9f073bc2-0274-4f10-bd36-4eef756ef1ae",
-        "image": "https://i.pravatar.cc/150?img=70",
-        "full_name": "Dean Daniel",
-        "order_date": "11/09/2021",
-        "check_in": "01/01/2022",
-        "check_out": "07/01/2022",
-        "special_request": "mollit consect elit cillum proident esse voluptate commodo ulla",
-        "room_info": {
-            "number": 0,
-            "type": "Double"
-        },
-        "price": "895,86 €",
-        "state": "Check In"
+  {
+    "id": "9f073bc2-0274-4f10-bd36-4eef756ef1ae",
+    "image": "https://i.pravatar.cc/150?img=70",
+    "full_name": "Dean Daniel",
+    "order_date": "11/09/2021",
+    "check_in": "01/01/2022",
+    "check_out": "07/01/2022",
+    "special_request": "mollit consect elit cillum proident esse voluptate commodo ulla",
+    "room_info": {
+      "number": 0,
+      "type": "Double"
     },
-    {
-        "id": "b12151f8-98bf-45d1-8976-3f45c649b4c4",
-        "image": "https://i.pravatar.cc/150?img=65",
-        "full_name": "Glen Reinger",
-        "order_date": "18/05/2021",
-        "check_in": "03/01/2022",
-        "check_out": "08/01/2022",
-        "special_request": "ea suntsunt magna dolorim quis labore eu dolor ",
-        "room_info": {
-            "number": 1,
-            "type": "Single"
-        },
-        "price": "878,44 €",
-        "state": "Check In"
+    "price": "895,86 €",
+    "facilities": [
+      "AC",
+      "Bath",
+      "Sea View",
+      "Late Checkout",
+      "Led TV",
+      "Wifi",
+      "Breakfast"
+    ],
+    "state": "Check In"
+  },
+  {
+    "id": "b12151f8-98bf-45d1-8976-3f45c649b4c4",
+    "image": "https://i.pravatar.cc/150?img=65",
+    "full_name": "Glen Reinger",
+    "order_date": "18/05/2021",
+    "check_in": "03/01/2022",
+    "check_out": "08/01/2022",
+    "special_request": "ea suntsunt magna dolorim quis labore eu dolor ",
+    "room_info": {
+      "number": 1,
+      "type": "Single"
     },
-    {
-        "id": "6439ab52-fe25-4192-bb0c-aee04c5ab549",
-        "image": "https://i.pravatar.cc/150?img=32",
-        "full_name": "Patty Rohan",
-        "order_date": "10/03/2021",
-        "check_in": "04/01/2022",
-        "check_out": "14/01/2022",
-        "special_request": "",
-        "room_info": {
-            "number": 2,
-            "type": "Single"
-        },
-        "price": "879,70 €",
-        "state": "In Progress"
+    "price": "878,44 €",
+    "facilities": ["AC", "Bath", "City Tour", "Led TV", "Wifi", "Breakfast"],
+    "state": "Check In"
+  },
+  {
+    "id": "6439ab52-fe25-4192-bb0c-aee04c5ab549",
+    "image": "https://i.pravatar.cc/150?img=32",
+    "full_name": "Patty Rohan",
+    "order_date": "10/03/2021",
+    "check_in": "04/01/2022",
+    "check_out": "14/01/2022",
+    "special_request": "",
+    "room_info": {
+      "number": 2,
+      "type": "Single"
     },
-    {
-        "id": "71c5ec92-45c0-464f-8927-9a2866af4431",
-        "image": "https://i.pravatar.cc/150?img=31",
-        "full_name": "Nathaniel Mohr",
-        "order_date": "08/09/2021",
-        "check_in": "11/01/2022",
-        "check_out": "20/01/2022",
-        "special_request": "aliqua eu laborum velit velit e",
-        "room_info": {
-            "number": 3,
-            "type": "Double Superior"
-        },
-        "price": "809,27 €",
-        "state": "Check In"
+    "price": "879,70 €",
+    "facilities": ["AC", "Bath", "Sea View", "Led TV", "Wifi"],
+    "state": "In Progress"
+  },
+  {
+    "id": "71c5ec92-45c0-464f-8927-9a2866af4431",
+    "image": "https://i.pravatar.cc/150?img=31",
+    "full_name": "Nathaniel Mohr",
+    "order_date": "08/09/2021",
+    "check_in": "11/01/2022",
+    "check_out": "20/01/2022",
+    "special_request": "aliqua eu laborum velit velit e",
+    "room_info": {
+      "number": 3,
+      "type": "Double Superior"
     },
-    {
-        "id": "e2a09791-c0ab-4542-af5e-b3b9d4c3642e",
-        "image": "https://i.pravatar.cc/150?img=47",
-        "full_name": "Cecilia Strosin",
-        "order_date": "21/08/2021",
-        "check_in": "12/01/2022",
-        "check_out": "21/01/2022",
-        "special_request": "sint proident laborum occaecat occaecat.",
-        "room_info": {
-            "number": 4,
-            "type": "Double Superior"
-        },
-        "price": "452,40 €",
-        "state": "Check Out"
+    "price": "809,27 €",
+    "facilities": [
+      "AC",
+      "Bath",
+      "Sea View",
+      "Late Checkout",
+      "City Tour",
+      "Led TV",
+      "Wifi",
+      "Breakfast"
+    ],
+    "state": "Check In"
+  },
+  {
+    "id": "e2a09791-c0ab-4542-af5e-b3b9d4c3642e",
+    "image": "https://i.pravatar.cc/150?img=47",
+    "full_name": "Cecilia Strosin",
+    "order_date": "21/08/2021",
+    "check_in": "12/01/2022",
+    "check_out": "21/01/2022",
+    "special_request": "sint proident laborum occaecat occaecat.",
+    "room_info": {
+      "number": 4,
+      "type": "Double Superior"
     },
-    {
-        "id": "b58c99c6-839f-4ea4-89a8-5500b62badb6",
-        "image": "https://i.pravatar.cc/150?img=15",
-        "full_name": "Pat Spencer",
-        "order_date": "22/12/2020",
-        "check_in": "17/01/2022",
-        "check_out": "27/01/2022",
-        "special_request": "do labore velit Lorem deserunt enim aliquip vo",
-        "room_info": {
-            "number": 5,
-            "type": "Suite"
-        },
-        "price": "651,43 €",
-        "state": "Check Out"
+    "price": "452,40 €",
+    "facilities": [
+      "AC",
+      "Bath",
+      "Late Checkout",
+      "City Tour",
+      "Led TV",
+      "Wifi",
+      "Breakfast"
+    ],
+    "state": "Check Out"
+  },
+  {
+    "id": "b58c99c6-839f-4ea4-89a8-5500b62badb6",
+    "image": "https://i.pravatar.cc/150?img=15",
+    "full_name": "Pat Spencer",
+    "order_date": "22/12/2020",
+    "check_in": "17/01/2022",
+    "check_out": "27/01/2022",
+    "special_request": "do labore velit Lorem deserunt enim aliquip vo",
+    "room_info": {
+      "number": 5,
+      "type": "Suite"
     },
-    {
-        "id": "f0ac63e7-1a67-46b5-b76d-476f774bbeda",
-        "image": "https://i.pravatar.cc/150?img=42",
-        "full_name": "Sabrina Keeling",
-        "order_date": "14/02/2021",
-        "check_in": "21/01/2022",
-        "check_out": "30/01/2022",
-        "special_request":"",
-        "room_info": {
-            "number": 6,
-            "type": "Double"
-        },
-        "price": "281,99 €",
-        "state": "Check In"
-    }
+    "price": "651,43 €",
+    "facilities": [
+      "AC",
+      "Bath",
+      "Sea View",
+      "Late Checkout",
+      "City Tour",
+      "Led TV",
+      "Wifi",
+      "Breakfast"
+    ],
+    "state": "Check Out"
+  },
+  {
+    "id": "f0ac63e7-1a67-46b5-b76d-476f774bbeda",
+    "image": "https://i.pravatar.cc/150?img=42",
+    "full_name": "Sabrina Keeling",
+    "order_date": "14/02/2021",
+    "check_in": "21/01/2022",
+    "check_out": "30/01/2022",
+    "special_request": "",
+    "room_info": {
+      "number": 6,
+      "type": "Double"
+    },
+    "price": "281,99 €",
+    "facilities": ["AC", "Bath", "Led TV", "Wifi", "Breakfast"],
+    "state": "Check In"
+  },
+  {
+    "id": "f0ac63e7-1a67-46b5-b76d-476f374cbeda",
+    "image": "https://i.pravatar.cc/150?img=43",
+    "full_name": "Jhoanna Kirby",
+    "order_date": "28/06/2021",
+    "check_in": "31/05/2022",
+    "check_out": "30/06/2022",
+    "special_request": "Asked for late hotel check out.",
+    "room_info": {
+      "number": 7,
+      "type": "Double"
+    },
+    "price": "320,99 €",
+    "facilities": [
+      "AC",
+      "Bath",
+      "Sea View",
+      "Late Checkout",
+      "City Tour",
+      "Led TV",
+      "Wifi",
+      "Breakfast"
+    ],
+    "state": "Check In"
+  },
+  {
+    "id": "f0ac63e7-1a37-46b5-b76d-476f774bbedc",
+    "image": "https://i.pravatar.cc/150?img=44",
+    "full_name": "Susan Mooring",
+    "order_date": "04/03/2021",
+    "check_in": "18/12/2022",
+    "check_out": "30/12/2022",
+    "special_request": "Asked for a hotel room with a view",
+    "room_info": {
+      "number": 2,
+      "type": "Double Superior"
+    },
+    "price": "481,99 €",
+    "facilities": [
+      "AC",
+      "Bath",
+      "Sea View",
+      "Late Checkout",
+      "City Tour",
+      "Led TV",
+      "Wifi",
+      "Breakfast"
+    ],
+    "state": "Check In"
+  },
+  {
+    "id": "f1ac63e7-1a67-46a5-b76d-476f774bbeda",
+    "image": "https://i.pravatar.cc/150?img=45",
+    "full_name": "Sophie Wilemann",
+    "order_date": "14/04/2021",
+    "check_in": "21/05/2022",
+    "check_out": "30/05/2022",
+    "special_request": "",
+    "room_info": {
+      "number": 8,
+      "type": "Single"
+    },
+    "price": "249,90 €",
+    "facilities": ["AC", "Bath", "Sea View", "Led TV", "Wifi", "Breakfast"],
+    "state": "Check Out"
+  },
+  {
+    "id": "f0ac63e7-2a37-46b5-b76d-476f7742weda",
+    "image": "https://i.pravatar.cc/150?img=60",
+    "full_name": "Marc Roosebelt",
+    "order_date": "15/04/2021",
+    "check_in": "12/08/2022",
+    "check_out": "30/08/2022",
+    "special_request": "Complimentary Hotel Toiletries",
+    "room_info": {
+      "number": 10,
+      "type": "Single"
+    },
+    "price": "241,99 €",
+    "facilities": ["AC", "Bath", "Sea View", "Led TV", "Wifi"],
+    "state": "In Progress"
+  },
+  {
+    "id": "f0ac63e1-1a67-46b5-b76d-698f774bbeda",
+    "image": "https://i.pravatar.cc/150?img=14",
+    "full_name": "Dave Matthews",
+    "order_date": "05/09/2021",
+    "check_in": "11/04/2022",
+    "check_out": "30/04/2022",
+    "special_request": "Asked about anti-allergy bedding",
+    "room_info": {
+      "number": 2,
+      "type": "Double"
+    },
+    "price": "381,99 €",
+    "facilities": [
+      "AC",
+      "Bath",
+      "Sea View",
+      "City Tour",
+      "Led TV",
+      "Wifi",
+      "Breakfast"
+    ],
+    "state": "Check Out"
+  },
+  {
+    "id": "f0ac63e7-1b67-46b5-b75d-476f774cceda",
+    "image": "https://i.pravatar.cc/150?img=18",
+    "full_name": "Keith Richards",
+    "order_date": "14/11/2021",
+    "check_in": "04/06/2022",
+    "check_out": "28/06/2022",
+    "special_request": "Asked for a quiet hotel room",
+    "room_info": {
+      "number": 79,
+      "type": "Double Superior"
+    },
+    "price": "281,99 €",
+    "facilities": [
+      "AC",
+      "Bath",
+      "Sea View",
+      "Late Checkout",
+      "City Tour",
+      "Led TV",
+      "Wifi",
+      "Breakfast"
+    ],
+    "state": "Check In"
+  },
+  {
+    "id": "g1ac63e7-1y67-46b5-b76d-476f444bbeda",
+    "image": "https://i.pravatar.cc/150?img=16",
+    "full_name": "Michele Gossiph",
+    "order_date": "14/02/2021",
+    "check_in": "21/01/2022",
+    "check_out": "30/01/2022",
+    "special_request": "",
+    "room_info": {
+      "number": 5,
+      "type": "Single"
+    },
+    "price": "281,99 €",
+    "facilities": ["AC", "Bath", "Wifi", "Breakfast"],
+    "state": "In Progress"
+  },
+  {
+    "id": "80ac33e7-1a67-46b5-b76d-416f774bbeda",
+    "image": "https://i.pravatar.cc/150?img=1",
+    "full_name": "Laura Trachtenberg",
+    "order_date": "07/11/2021",
+    "check_in": "01/01/2022",
+    "check_out": "30/01/2022",
+    "special_request": "Asked for extra clean linens",
+    "room_info": {
+      "number": 6,
+      "type": "Suite"
+    },
+    "price": "541,90 €",
+    "facilities": [
+      "AC",
+      "Bath",
+      "Late Checkout",
+      "City Tour",
+      "Led TV",
+      "Wifi",
+      "Breakfast"
+    ],
+    "state": "Check In"
+  },
+  {
+    "id": "f0ad63e7-1a63-46b5-b76d-476f774basda",
+    "image": "https://i.pravatar.cc/150?img=5",
+    "full_name": "Margaret Qualley",
+    "order_date": "03/12/2021",
+    "check_in": "14/09/2022",
+    "check_out": "18/09/2022",
+    "special_request": "",
+    "room_info": {
+      "number": 9,
+      "type": "Single"
+    },
+    "price": "145,99 €",
+    "facilities": ["AC", "Bath", "Sea View", "Late Checkout", "Led TV", "Wifi"],
+    "state": "Check Out"
+  },
+  {
+    "id": "f0ac12e7-1a67-46b5-b76d-476f774asdda",
+    "image": "https://i.pravatar.cc/150?img=23",
+    "full_name": "Sydney Sweeney",
+    "order_date": "14/05/2021",
+    "check_in": "21/05/2022",
+    "check_out": "30/05/2022",
+    "special_request": "Asked about netflix in the room",
+    "room_info": {
+      "number": 2,
+      "type": "Single"
+    },
+    "price": "420,00 €",
+    "facilities": [
+      "AC",
+      "Bath",
+      "Sea View",
+      "Late Checkout",
+      "City Tour",
+      "Led TV",
+      "Wifi",
+      "Breakfast"
+    ],
+    "state": "Check In"
+  },
+  {
+    "id": "b2ac33e7-1a67-46b5-b76d-476f774bbeda",
+    "image": "https://i.pravatar.cc/150?img=33",
+    "full_name": "Michael Scofield",
+    "order_date": "21/08/2021",
+    "check_in": "09/09/2022",
+    "check_out": "10/10/2022",
+    "special_request": "",
+    "room_info": {
+      "number": 101,
+      "type": "Single"
+    },
+    "price": "321,99 €",
+    "facilities": ["AC", "Led TV", "Wifi"],
+    "state": "In Progress"
+  },
+  {
+    "id": "a1ac63e7-1a67-55b5-b76d-476f774bbeda",
+    "image": "https://i.pravatar.cc/150?img=55",
+    "full_name": "Walter White",
+    "order_date": "14/04/2021",
+    "check_in": "21/06/2022",
+    "check_out": "30/06/2022",
+    "special_request": "",
+    "room_info": {
+      "number": 3,
+      "type": "Single"
+    },
+    "price": "281,99 €",
+    "facilities": ["AC", "Bath", "Sea View", "Led TV", "Wifi"],
+    "state": "Check In"
+  },
+  {
+    "id": "p4ac63e7-1a63-55b5-b76d-476f884bbeda",
+    "image": "https://i.pravatar.cc/150?img=35",
+    "full_name": "Linda Blair",
+    "order_date": "02/08/2021",
+    "check_in": "12/11/2022",
+    "check_out": "31/12/2022",
+    "special_request": "",
+    "room_info": {
+      "number": 4,
+      "type": "Single"
+    },
+    "facilities": [
+      "AC",
+      "Bath",
+      "Sea View",
+      "Late Checkout",
+      "Led TV",
+      "Wifi",
+      "Breakfast"
+    ],
+    "price": "181,99 €",
+    "state": "Check Out"
+  }
 ]

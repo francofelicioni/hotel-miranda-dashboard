@@ -216,7 +216,40 @@
     "contact": "4422332910",
     "description": "Senior Financial Analyst",
     "start_date": "31/08/2022",
-    "status": true,
+    "status": false,
     "password": "tSWLfMr5RW"
+  },
+  {
+    "id": 21,
+    "image": "https://robohash.org/etrerumcorrupti.jpg?size=50x50&set=set2",
+    "full_name": "Marc Gullem",
+    "email": "mgullem@rakuten.co.jp",
+    "contact": "4200241993",
+    "description": "Senior Web Developer",
+    "start_date": "04/06/2022",
+    "status": true,
+    "password": "aFLMfMt1TW"
+  },
+  {
+    "id": 22,
+    "image": "https://robohash.org/dolorumfugitut.jpg?size=50x50&set=set2",
+    "full_name": "Emerson Fittipaldi",
+    "email": "efittipaldi@rakuten.co.jp",
+    "contact": "3698245174",
+    "description": "HHRR Manager",
+    "start_date": "14/08/2022",
+    "status": false,
+    "password": "aFLMAsD1TW"
+  },
+  {
+    "id": 23,
+    "image": "https://robohash.org/nihilomnisiste.jpg?size=50x50&set=set2",
+    "full_name": "Satoshi Nakamoto",
+    "email": "snakamoto@rakuten.co.jp",
+    "contact": "637220197",
+    "description": "Blockchain Specialist",
+    "start_date": "31/10/2008",
+    "status": true,
+    "password": "Blmf7t1TW"
   }
 ]
