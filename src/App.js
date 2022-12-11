@@ -13,47 +13,36 @@ import Contact from "./views/Contact/Contact";
 
 import { LoginContext, initialState } from "./context/LoginContext";
 
-import { LoginReducer } from './context/LoginReducer';
+import { LoginReducer } from "./context/LoginReducer";
 import PrivateRoutes from "./utils/PrivateRoutes";
+import NewRoom from "./views/Rooms/NewRoom";
+import NewUser from "./views/Users/NewUser";
+import Booking from "./views/Bookings/Booking";
 
 function App() {
-  const contextValue = useReducer(LoginReducer, initialState)
+  const contextValue = useReducer(LoginReducer, initialState);
 
   return (
     <>
       <LoginContext.Provider value={contextValue}>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/login" element={<Login />} />
 
-            <Route element={<PrivateRoutes/>}>
-              <Route
-                path="/" element={<Dashboard/>}
-              />
+            <Route element={<PrivateRoutes />}>
+              <Route path="/" element={<Dashboard />} />
               <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/dashboard/reviews" element={<Dashboard />} />
-              <Route
-              
-                path="/dashboard/reviews/published"
-                element={<Dashboard />}
-              />
-              <Route
-              
-                path="/dashboard/reviews/archived"
-                element={<Dashboard />}
-              />
-
-              <Route path="/rooms" element={<Rooms />} />
-              <Route path="/rooms/active" element={<Rooms />} />
-              <Route path="/rooms/inactive" element={<Rooms />} />
-              <Route path="/rooms/new-room" element={<Rooms />} />
+              <Route path="/hotel-miranda-dashboard" element={<Dashboard />} />
 
               <Route path="/bookings" element={<Bookings />} />
+              <Route path="/bookings/:id" element={<Booking />} />
+
+              <Route path="/rooms" element={<Rooms />} />
+              <Route path="/new-room" element={<NewRoom />} />
+
 
               <Route path="/users" element={<Users />} />
-              <Route path="/users/active" element={<Users />} />
-              <Route path="/users/inactive" element={<Users />} />
-              <Route path="/users/new-user" element={<Users />} />
+              <Route path="/new-user" element={<NewUser />} />
 
               <Route path="/contact" element={<Contact />} />
 
