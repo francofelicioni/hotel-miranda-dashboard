@@ -39,13 +39,29 @@
 
   /*Reds*/
   --color-backGroundRed: #ffedec;
+  --color-yellowInProgress: #d5d568;
   --color-organgeStatus: #ffbb00;
-  --color-orangeLight: #fb9f44;
+  --color-orangeLight: #f1eb78;
   --color-orangeDark: #ff9c3a;
   --color-red: #e23428;
+  --color-pinkPale: #ec7f78;
 
   /* Darks */
   --color-brown: #5d5449;
   --color-black21: #212121;
   --color-black: #000000;
+
+  /* Navigation */
+  --primaryNav: #23adad;
+  --greyLightNav: #23adade1;
+  --greyLight-2Nav: #cbe0dd;
+  --greyDarkNav: #2d4848;
+
+}
+
+/* Navigation */
+.active {
+  background: var(--greyLightNav);
+  color: white;
+  transition: .5s all ease ;
 }
