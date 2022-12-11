@@ -19,6 +19,8 @@ import {
   LoginRigth,
   Image,
   Desc,
+  LoginInformation,
+  LoginP
 } from "./Login_sc";
 
 const Login = () => {
@@ -78,12 +80,16 @@ const Login = () => {
             <FormItem>
               <label style={{ height: "25px" }}>Enter name: </label>
               <input
-                type="name"
+                type="text"
                 name="name"
                 value={state.user.name}
                 onChange={(e) => dispatch(updateName(e.target.value))}
               />
             </FormItem>
+            <LoginInformation>
+              <LoginP>Email: fran@test.com</LoginP>
+              <LoginP>Name: Fran</LoginP>
+            </LoginInformation>
           </FormContent>
           <Button $type="login" type="submit">
             {" "}

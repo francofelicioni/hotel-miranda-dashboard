@@ -104,6 +104,19 @@ const Desc = styled.p`
   font-size: 1.2rem;
 `;
 
+const LoginInformation = styled.div`
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 250px;
+  border: 1px solid var(--color-silver);
+  display: flex;
+  flex-direction: column;
+`;
+
+const LoginP = styled.p`
+  color: var(--color-silver);
+  font-size: 14px;
+`;
 export {
   Container,
   LoginLeft,
@@ -117,4 +130,6 @@ export {
   LoginRigth,
   Image,
   Desc,
+  LoginInformation,
+  LoginP,
 };
