@@ -1,11 +1,11 @@
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import styled from "styled-components";
-import { calendarColors } from "../../styles/calendarColors";
+import { colors } from "../../styles/colors";
 
 const CalendarContainer = styled.div`
   min-width: 600px;
-  background-color: ${calendarColors.white};
+  background-color: ${colors.white};
   margin-top: 50px;
   border-radius: 20px;
   padding: 41px;
@@ -17,49 +17,49 @@ const CalendarContainer = styled.div`
     box-shadow: 0px 7px 20px #00000048;
   }
   .fc .fc-toolbar-title {
-    color: ${calendarColors.red};
+    color: ${colors.red};
     font-size: 25px;
   }
   .fc .fc-button-primary {
-    background-color: ${calendarColors.hardGreen};
+    background-color: ${colors.hardGreen};
     border-radius: 10px;
-    border: 1px solid ${calendarColors.hardGreen};
+    border: 1px solid ${colors.hardGreen};
     font-size: 14px;
     font-weight: 600;
   }
   .fc .fc-button-primary:disabled {
-    background-color: ${calendarColors.hardGreen};
+    background-color: ${colors.hardGreen};
   }
   .fc .fc-button:disabled {
     opacity: 1;
   }
   .fc .fc-button:hover {
-    background-color: ${calendarColors.lightGreen};
+    background-color: ${colors.lightGreen};
     opacity: 1;
-    color: ${calendarColors.hardGreen};
-    border: 1px solid ${calendarColors.hardGreen};
+    color: ${colors.hardGreen};
+    border: 1px solid ${colors.hardGreen};
   }
   .fc .fc-daygrid-day.fc-day-today {
-    background-color: ${calendarColors.lightRed};
-    color: ${calendarColors.hardGreen};
+    background-color: ${colors.lightRed};
+    color: ${colors.hardGreen};
     border-radius: 8px;
   }
   .fc .fc-daygrid-day.fc-day-today:hover {
-    background-color: ${calendarColors.redLess};
+    background-color: ${colors.redLess};
     color: white;
   }
   .fc .fc-daygrid-day-number {
-    color: ${calendarColors.green};
+    color: ${colors.green};
   }
   .fc .fc-scroller-harness {
-    color: ${calendarColors.hardGreen};
+    color: ${colors.hardGreen};
   }
   .fc .fc-view-harness {
     height: 500px;
   }
   .fc .fc-scrollgrid-liquid {
     border-radius: 12px;
-    border: 1px solid ${calendarColors.lightRed};
+    border: 1px solid ${colors.lightRed};
   }
   .fc-theme-standard td,
   .fc-theme-standard th,
@@ -73,7 +73,7 @@ const CalendarContainer = styled.div`
     margin: 5px;
   }
   .fc-daygrid-day .fc-day .fc-day-sun .fc-day-past {
-    background-color: ${calendarColors.lightViolet};
+    background-color: ${colors.lightViolet};
   }
 `;
 
