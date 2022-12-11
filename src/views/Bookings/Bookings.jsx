@@ -14,7 +14,7 @@ import {
   ListButtonsContainer,
   Selectors,
   Selector,
-} from '../../components/Blocks/FilterButtons'
+} from "../../components/Blocks/FilterButtons";
 
 import BookingButtons from "../../components/Blocks/BookingButtons";
 
@@ -23,6 +23,8 @@ import { Table, TableTitle } from "../../components/Blocks/TableBlocks";
 import Spinner from "../../components/Blocks/Spinner";
 
 import BookingsRow from "../../components/Blocks/BookingsRow";
+
+import Navigation from "../../components/Navigation/Navigation";
 
 const Bookings = () => {
   const dispatch = useDispatch();
@@ -33,19 +35,26 @@ const Bookings = () => {
   const [lengthFromRedux, setLengthFromRedux] = useState(true);
   const [bookingsFiltered, setBookingsFiltered] = useState([]);
 
+  //Navigation
+  const [itemsToShow, setItemsToShow] = useState(5);
+  const [pagesLength, setPagesLength] = useState(1);
+  const [initialIndex, setInitialIndex] = useState(5);
+
   useEffect(() => {
     dispatch(fetchBookings());
   }, [dispatch]);
 
   const setAllBookings = () => {
-      setLengthFromRedux(true);
-      dispatch(fetchBookings())
-  }
+    setLengthFromRedux(true);
+    dispatch(fetchBookings());
+  };
 
-  useEffect(()=> {
+  useEffect(() => {
     const bookingsToFilter = bookingsResult;
-    const bookingsFiltered = bookingsToFilter.filter((booking) => booking.state === bookingStatus)
-    setBookingsFiltered(bookingsFiltered)
+    const bookingsFiltered = bookingsToFilter.filter(
+      (booking) => booking.state === bookingStatus
+    );
+    setBookingsFiltered(bookingsFiltered);
   }, [bookingStatus, bookingsResult]);
 
   const bookingsSwitch = () => {
@@ -54,7 +63,7 @@ const Bookings = () => {
     } else {
       return bookingsFiltered;
     }
-  }
+  };
 
   return (
     <MainContainer>
@@ -69,7 +78,7 @@ const Bookings = () => {
           </Selector>
           <Selector
             onClick={() => {
-              setBookingStatus('Check In');
+              setBookingStatus("Check In");
               setLengthFromRedux(false);
             }}
           >
@@ -77,15 +86,15 @@ const Bookings = () => {
           </Selector>
           <Selector
             onClick={() => {
-              setBookingStatus('Check Out');
-              setLengthFromRedux(false);;
+              setBookingStatus("Check Out");
+              setLengthFromRedux(false);
             }}
           >
             Check Out
           </Selector>
           <Selector
             onClick={() => {
-              setBookingStatus('In Progress');
+              setBookingStatus("In Progress");
               setLengthFromRedux(false);
             }}
           >
@@ -115,12 +124,23 @@ const Bookings = () => {
 
         {appState === "fulfilled" && (
           <tbody>
-            {bookingsSwitch().map((guest) => (
-              <BookingsRow key={guest.id} guest={guest} />
-            ))}
+            {bookingsSwitch().map((guest, index) =>
+              index < initialIndex && index >= (initialIndex - itemsToShow) ? (
+                <BookingsRow key={guest.id} guest={guest} />
+              ) : (
+                false
+              )
+            )}
           </tbody>
         )}
       </Table>
+      <Navigation
+        info={bookingsSwitch()}
+        pagesLength={pagesLength}
+        setPagesLength={setPagesLength}
+        initialIndex={initialIndex}
+        setInitialIndex={setInitialIndex}
+      />
     </MainContainer>
   );
 };

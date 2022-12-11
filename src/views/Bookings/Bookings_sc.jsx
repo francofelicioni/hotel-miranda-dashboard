@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
-const GuestContainer = styled.td`
+export const Container = styled.div`
   display: flex;
   align-items: center;
   gap: 1.75rem;
+`;
+
+const GuestContainer = styled.td`
   padding: 1rem;
 `;
 
@@ -37,11 +40,5 @@ const Text = styled.p`
   max-width: 300px;
 `;
 
-export {
-  GuestContainer,
-  Img,
-  Name,
-  Id,
-  DataContainer,
-  Text,
-};
+
+export { GuestContainer, Img, Name, Id, DataContainer, Text };
