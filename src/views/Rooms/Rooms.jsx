@@ -22,6 +22,7 @@ import RoomsButtons from "../../components/Blocks/RoomsButtons";
 
 import RoomsRow from "../../components/Blocks/RoomsRow";
 import Spinner from "../../components/Blocks/Spinner";
+import Navigation from "../../components/Navigation/Navigation";
 
 const Rooms = () => {
   const dispatch = useDispatch();
@@ -32,6 +33,11 @@ const Rooms = () => {
   const [lengthFromRedux, setLengthFromRedux] = useState(true);
   const [roomsFiltered, setRoomsFiltered] = useState([]);
 
+  //Navigation
+  const [itemsToShow, setItemsToShow] = useState(5);
+  const [pagesLength, setPagesLength] = useState(1);
+  const [initialIndex, setInitialIndex] = useState(5);
+
   useEffect(() => {
     dispatch(fetchRooms());
   }, [dispatch]);
@@ -40,8 +46,6 @@ const Rooms = () => {
     setLengthFromRedux(true);
     dispatch(fetchRooms());
   };
-
-  console.log("ROOMS RESULT", roomsResult);
 
   useEffect(() => {
     const roomsToFilter = roomsResult;
@@ -95,7 +99,7 @@ const Rooms = () => {
             <tr>
               <TableTitle> Room Name </TableTitle>
               <TableTitle> Room Type </TableTitle>
-              <TableTitle> Amenities </TableTitle>
+              <TableTitle> Facilities </TableTitle>
               <TableTitle> Price </TableTitle>
               <TableTitle> Offer Price </TableTitle>
               <TableTitle> Status </TableTitle>
@@ -110,12 +114,24 @@ const Rooms = () => {
 
           {appState === "fulfilled" && (
             <tbody>
-              {roomsSwitch().map((room) => (
-                <RoomsRow key={room.id} room={room} />
-              ))}
+              {roomsSwitch().map((room, index) =>
+                index < initialIndex && index >= initialIndex - itemsToShow ? (
+                  <RoomsRow key={room.id} room={room} />
+                ) : (
+                  false
+                )
+              )}
             </tbody>
           )}
         </Table>
+
+        <Navigation
+          info={roomsSwitch()}
+          pagesLength={pagesLength}
+          setPagesLength={setPagesLength}
+          initialIndex={initialIndex}
+          setInitialIndex={setInitialIndex}
+        />
       </MainContainer>
     </>
   );
