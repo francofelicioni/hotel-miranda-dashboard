@@ -1,30 +1,11 @@
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import styled from "styled-components";
+import { calendarColors } from "../../styles/calendarColors";
 
-
-const colors = {
-    green: '#799283',
-    hardGreen: '#135846',
-    lightGreen: '#EBF1EF',
-    red: '#E23428',
-    lightRed: '#FFEDEC',
-    light: '#B2B2B2',
-    bgGray: '#F8F8F8',
-    gray: '#6E6E6E',
-    borderGray: '#D4D4D4',
-    white: 'white',
-    yellow: '#FFFF4E',
-    lightYellow: '#ffffcc',
-    hardYellow: '#a4a403',
-    lightViolet: '#eee6ff',
-    hardViolet: '#884dff',
-    redLess: "#e0564c",
-  };
- 
 const CalendarContainer = styled.div`
   min-width: 600px;
-  background-color: ${colors.white};
+  background-color: ${calendarColors.white};
   margin-top: 50px;
   border-radius: 20px;
   padding: 41px;
@@ -36,49 +17,49 @@ const CalendarContainer = styled.div`
     box-shadow: 0px 7px 20px #00000048;
   }
   .fc .fc-toolbar-title {
-    color: ${colors.red};
+    color: ${calendarColors.red};
     font-size: 25px;
   }
   .fc .fc-button-primary {
-    background-color: ${colors.hardGreen};
+    background-color: ${calendarColors.hardGreen};
     border-radius: 10px;
-    border: 1px solid ${colors.hardGreen};
+    border: 1px solid ${calendarColors.hardGreen};
     font-size: 14px;
     font-weight: 600;
   }
   .fc .fc-button-primary:disabled {
-    background-color: ${colors.hardGreen};
+    background-color: ${calendarColors.hardGreen};
   }
   .fc .fc-button:disabled {
     opacity: 1;
   }
   .fc .fc-button:hover {
-    background-color: ${colors.lightGreen};
+    background-color: ${calendarColors.lightGreen};
     opacity: 1;
-    color: ${colors.hardGreen};
-    border: 1px solid ${colors.hardGreen};
+    color: ${calendarColors.hardGreen};
+    border: 1px solid ${calendarColors.hardGreen};
   }
   .fc .fc-daygrid-day.fc-day-today {
-    background-color: ${colors.lightRed};
-    color: ${colors.hardGreen};
+    background-color: ${calendarColors.lightRed};
+    color: ${calendarColors.hardGreen};
     border-radius: 8px;
   }
   .fc .fc-daygrid-day.fc-day-today:hover {
-    background-color: ${colors.redLess};
+    background-color: ${calendarColors.redLess};
     color: white;
   }
   .fc .fc-daygrid-day-number {
-    color: ${colors.green};
+    color: ${calendarColors.green};
   }
   .fc .fc-scroller-harness {
-    color: ${colors.hardGreen};
+    color: ${calendarColors.hardGreen};
   }
-  .fc .fc-view-harness{
+  .fc .fc-view-harness {
     height: 500px;
   }
   .fc .fc-scrollgrid-liquid {
     border-radius: 12px;
-    //border: 1px solid ${colors.lightRed};
+    border: 1px solid ${calendarColors.lightRed};
   }
   .fc-theme-standard td,
   .fc-theme-standard th,
@@ -92,9 +73,8 @@ const CalendarContainer = styled.div`
     margin: 5px;
   }
   .fc-daygrid-day .fc-day .fc-day-sun .fc-day-past {
-    background-color: ${colors.lightViolet};
+    background-color: ${calendarColors.lightViolet};
   }
- 
 `;
 
 function Calendar() {
