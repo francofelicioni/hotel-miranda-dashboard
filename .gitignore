@@ -1,4 +1,3 @@
 /node_modules
 /cypress
-/src/components/Calendar
-/src/components/ReservationStats/ReservationsStats.jsx
+/build
