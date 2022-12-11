@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+
 import { useSelector, useDispatch } from "react-redux";
+
 import {
   fetchUsers,
-  selectState,
   selectUsers,
+  selectState,
 } from "../../features/users/usersSlice";
 
 import MainContainer from "../../components/MainContainer/MainContainer";
@@ -22,23 +24,33 @@ import {
   Checkbox,
 } from "../../components/Blocks/TableBlocks";
 
-import UsersRow from "../../components/Blocks/UsersRow";
 import Spinner from "../../components/Blocks/Spinner";
+
+import UsersRow from "../../components/Blocks/UsersRow";
+import Navigation from "../../components/Navigation/Navigation";
 
 const Users = () => {
   const dispatch = useDispatch();
   const usersResult = useSelector(selectUsers);
   const appState = useSelector(selectState);
 
-  console.log('UR',usersResult)
-
   const [userStatus, setUserStatus] = useState("");
   const [lengthFromRedux, setLengthFromRedux] = useState(true);
   const [filteredUsers, setFilteredUsers] = useState([]);
 
+  //Navigation
+  const [itemsToShow, setItemsToShow] = useState(5);
+  const [pagesLength, setPagesLength] = useState(1);
+  const [initialIndex, setInitialIndex] = useState(5);
+
   useEffect(() => {
     dispatch(fetchUsers());
   }, [dispatch]);
+
+  const setAllUsers = () => {
+    setLengthFromRedux(true);
+    dispatch(fetchUsers());
+  };
 
   useEffect(() => {
     const usersToFilter = usersResult;
@@ -48,18 +60,13 @@ const Users = () => {
     setFilteredUsers(usersFiltered);
   }, [userStatus, usersResult]);
 
-  const setAllUsers = () => {
-    setLengthFromRedux(true);
-    dispatch(fetchUsers());
-  };
-  
   const usersSwitch = () => {
     if (lengthFromRedux) {
       return usersResult;
     } else {
       return filteredUsers;
     }
-  }
+  };
 
   return (
     <>
@@ -116,12 +123,24 @@ const Users = () => {
 
           {appState === "fulfilled" && (
             <tbody>
-              {usersSwitch().map((user) => (
-                <UsersRow key={user.id} user={user} />
-              ))}
+              {usersSwitch().map((user, index) =>
+                index < initialIndex && index >= (initialIndex - itemsToShow) ? (
+                  <UsersRow key={user.id} user={user} />
+                ) : (
+                  false
+                )
+              )}
             </tbody>
           )}
         </Table>
+
+        <Navigation
+          info={usersSwitch()}
+          pagesLength={pagesLength}
+          setPagesLength={setPagesLength}
+          initialIndex={initialIndex}
+          setInitialIndex={setInitialIndex}
+        />
       </MainContainer>
     </>
   );
