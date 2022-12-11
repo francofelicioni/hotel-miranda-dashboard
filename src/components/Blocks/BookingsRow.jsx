@@ -1,6 +1,8 @@
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import {
+  Container,
   DataContainer,
   GuestContainer,
   Id,
@@ -30,22 +32,38 @@ const BookingsRow = ({ guest }) => {
   return (
     <Row key={guest.id}>
       <GuestContainer>
-        <Img src={guest.image} alt="Guest Image" />
-        <div>
-          <Name>{guest.full_name}</Name>
-          <Id># {guest.id}</Id>
-        </div>
+        <Link to={`/bookings/${guest.id}`} style={{ textDecoration: "none" }}>
+          <Container>
+            <Img src={guest.image} alt="Guest Image" />
+            <div>
+              <Name>{guest.full_name}</Name>
+              <Id># {guest.id}</Id>
+            </div>
+          </Container>
+        </Link>
       </GuestContainer>
-      <DataContainer>
-        <Text>{guest.order_date}</Text>
-      </DataContainer>
-      <DataContainer>
-        <Text>{guest.check_in}</Text>
-      </DataContainer>
-      <DataContainer>
-        <Text>{guest.check_out}</Text>
-      </DataContainer>
-      <td>
+      <GuestContainer>
+        <Link to={`/bookings/${guest.id}`} style={{ textDecoration: "none" }}>
+          <Container>
+            <Text>{guest.order_date}</Text>
+          </Container>
+        </Link>
+      </GuestContainer>
+      <GuestContainer>
+        <Link to={`/bookings/${guest.id}`} style={{ textDecoration: "none" }}>
+          <Container>
+            <Text>{guest.check_in}</Text>
+          </Container>
+        </Link>
+      </GuestContainer>
+      <GuestContainer>
+        <Link to={`/bookings/${guest.id}`} style={{ textDecoration: "none" }}>
+          <Container>
+            <Text>{guest.check_out}</Text>
+          </Container>
+        </Link>
+      </GuestContainer>
+      <GuestContainer>
         <Button
           $type="notes"
           $special_request={guest.special_request}
@@ -53,23 +71,31 @@ const BookingsRow = ({ guest }) => {
         >
           View Notes
         </Button>
-      </td>
-      <DataContainer>
-        <Text style={{ fontWeight: 600 }}>
-          {guest.room_info.type} - {guest.room_info.number}
-        </Text>
-      </DataContainer>
-      <td>
-        <Status $type="bookings" $typeStatus={guest.state}>
-          {" "}
-          {guest.state}
-        </Status>
-      </td>
-      <DataContainer>
+      </GuestContainer>
+      <GuestContainer>
+        <Link to={`/bookings/${guest.id}`} style={{ textDecoration: "none" }}>
+          <Container>
+            <Text style={{ fontWeight: 600 }}>
+              {guest.room_info.type} - {guest.room_info.number}
+            </Text>
+          </Container>
+        </Link>
+      </GuestContainer>
+      <GuestContainer>
+        <Link to={`/bookings/${guest.id}`} style={{ textDecoration: "none" }}>
+          <Container>
+            <Status $type="bookings" $typeStatus={guest.state}>
+              {" "}
+              {guest.state}
+            </Status>
+          </Container>
+        </Link>
+      </GuestContainer>
+      <GuestContainer>
         <Button $type="delete">
           <BsThreeDotsVertical />
         </Button>
-      </DataContainer>
+      </GuestContainer>
     </Row>
   );
 };

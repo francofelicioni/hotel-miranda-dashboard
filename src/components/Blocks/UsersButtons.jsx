@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 import { Button } from "./Button";
@@ -19,7 +20,7 @@ const UsersButtons = () => {
   return (
     <>
       <ButtonsContainer>
-          <Button $type="new">+ New User</Button>
+          <Link to='/new-user'><Button $type="new">+ New User</Button></Link>
           <Select>
             <option value="joined_AZ">Joined date: Newest first</option>
             <option value="joined_ZA">Joined date: Oldest first</option>

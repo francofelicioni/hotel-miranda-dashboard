@@ -1,8 +1,8 @@
 import React from "react";
-
-import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import { Select } from "./Select";
+import styled from "styled-components";
 
 const ButtonsContainer = styled.div`
   display: flex;
@@ -16,13 +16,15 @@ const RoomsButtons = () => {
   return (
     <>
       <ButtonsContainer>
+        <Link to='/new-room'>
           <Button $type="new">+ New Room</Button>
-          <Select>
-            <option value="room_number">Room Number</option>
-            <option value="state">State</option>
-            <option value="price_AZ">Price: Cheapest firts</option>
-            <option value="price_ZA">Price: Expensive first</option>
-          </Select>
+        </Link>
+        <Select>
+          <option value="room_number">Room Number</option>
+          <option value="state">State</option>
+          <option value="price_AZ">Price: Cheapest firts</option>
+          <option value="price_ZA">Price: Expensive first</option>
+        </Select>
       </ButtonsContainer>
     </>
   );

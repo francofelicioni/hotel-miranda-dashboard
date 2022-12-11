@@ -20,7 +20,7 @@ const RoomsRow = ({ room }) => {
     <>
       <Row key={room.id}>
         <NameContainer>
-          <Image src={`/rooms/${room.id + 1}.jpg`} />
+          <Image src={`rooms/${room.id + 1}.jpg`} />
           <NameInfo>
             <Id># {room.id}</Id>
             <Number>Room: {room.room_number}</Number>
@@ -33,18 +33,26 @@ const RoomsRow = ({ room }) => {
 
         <RoomData>
           <Info>
-            {room.amenities.map((amenity, index) => (
-              <span key={index}> {amenity}, </span>
+            {room.facilities.map((facility, index) => (
+              <span key={index}> {facility}, </span>
             ))}
           </Info>
         </RoomData>
 
         <RoomData>
-          <Info> € {room.price.toString()} /nigth </Info>
+          <Info> € {room.price} /nigth </Info>
         </RoomData>
 
         <RoomData>
-          <Info> € {room.offer.toString()} /nigth </Info>
+          {room.offer ? (
+            <Info>
+              €{" "}
+              {(room.price - room.price * (room.offer_price / 100)).toFixed(2)}
+               /nigth
+            </Info>
+          ) : (
+            <Info>Not in disccount</Info>
+          )}
         </RoomData>
         <td>
           <Status $type="rooms" $typeStatus={room.status}>
