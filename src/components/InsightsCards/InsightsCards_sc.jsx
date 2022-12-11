@@ -6,7 +6,7 @@ const Card = styled.div`
   box-shadow: 0px 16px 30px #00000014;
   border-radius: 12px;
 
-  @media (min-width: 1200px) {
+  @media (max-width: 1200px) {
     width: 220px;
     height: 100px;
   }
@@ -14,6 +14,7 @@ const Card = styled.div`
 
 const Container = styled.div`
   display: flex;
+  align-items: center;
   padding: 1.5rem 1.2rem;
   gap: 1rem;
 `;
@@ -22,10 +23,16 @@ const Icon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 65px;
-  height: 65px;
-  background: #ffedec 0% 0% no-repeat padding-box;
+  width: 35px;
+  height: 35px;
   border-radius: 8px;
+  background: #fee0e0;
+  color: #ea7070;
+
+  :hover {
+    color: white;
+    background: #ea7070;
+  }
 
   @media (min-width: 1200px) {
     width: 45px;
@@ -62,7 +69,7 @@ const Title = styled.h3`
   font-size: 14px;
   color: #787878;
 
-  @media (min-width: 1200px) {
+  @media (max-width: 1200px) {
     width: 100%;
     height: 15px;
   }
