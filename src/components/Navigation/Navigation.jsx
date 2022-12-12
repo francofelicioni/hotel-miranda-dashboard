@@ -86,11 +86,9 @@ const Navigation = ({
     for (let index = 0; index < btns.length; index++) {
       if (btns[index].classList.contains("active")) {
         if (index != btns.length - 1) {
-
           let activeDot = document.querySelector(".active");
           activeDot.classList.remove("active");
-          btns[(index+1)].classList.add("active");
-
+          btns[index + 1].classList.add("active");
           return;
         } else {
           let activeDot = document.querySelector(".active");
@@ -121,15 +119,14 @@ const Navigation = ({
     for (let index = btns.length - 1; index >= 0; index--) {
       if (btns[index].classList.contains("active")) {
         if (index != 0) {
-
           let activeDot = document.querySelector(".active");
           activeDot.classList.remove("active");
-          btns[(index-1)].classList.add("active");
+          btns[index - 1].classList.add("active");
           return;
         } else {
           let activeDot = document.querySelector(".active");
           activeDot.classList.remove("active");
-          btns[btns.length-1].classList.add("active");
+          btns[btns.length - 1].classList.add("active");
           return;
         }
       }

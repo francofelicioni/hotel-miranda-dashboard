@@ -104,9 +104,9 @@ const Users = () => {
         <Table>
           <thead>
             <tr>
-              <TableTitle style={{ paddingLeft: "10px" }}>
+              {/* <TableTitle style={{ paddingLeft: "10px" }}>
                 <Checkbox type="checkbox"></Checkbox>
-              </TableTitle>
+              </TableTitle> */}
               <TableTitle>Name</TableTitle>
               <TableTitle>Job Desk</TableTitle>
               <TableTitle>Contact</TableTitle>

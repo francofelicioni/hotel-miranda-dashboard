@@ -18,9 +18,9 @@ import { Checkbox, CheckboxContainer, Row } from "./TableBlocks";
 const UsersRow = ({ user }) => {
   return (
     <Row key={user.id}>
-      <CheckboxContainer>
+      {/* <CheckboxContainer>
         <Checkbox type="checkbox" />
-      </CheckboxContainer>
+      </CheckboxContainer> */}
 
       <UserDataName>
         <Image src={user.image} />

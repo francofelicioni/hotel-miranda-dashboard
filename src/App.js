@@ -28,6 +28,8 @@ function App() {
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/login" element={<Login />} />
+            <Route path="/hotel-miranda-dashboard/login" element={<Login />} />
+            {/* <Route path="/hotel-miranda-dashboard" element={<Dashboard />} /> */}
 
             <Route element={<PrivateRoutes />}>
               <Route path="/" element={<Dashboard />} />
@@ -39,7 +41,6 @@ function App() {
 
               <Route path="/rooms" element={<Rooms />} />
               <Route path="/new-room" element={<NewRoom />} />
-
 
               <Route path="/users" element={<Users />} />
               <Route path="/new-user" element={<NewUser />} />

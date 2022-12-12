@@ -56,12 +56,21 @@
   --greyLightNav: #23adade1;
   --greyLight-2Nav: #cbe0dd;
   --greyDarkNav: #2d4848;
-
 }
 
 /* Navigation */
 .active {
   background: var(--greyLightNav);
   color: white;
-  transition: .5s all ease ;
+  transition: 0.5s all ease;
+}
+
+.show {
+  width: 100% !important;
+  top: 7rem !important;
+  right: 0 !important;
+  padding: 1rem !important;
+  margin:0 !important;
+  height: 130% !important;
+  transition: .5s all ease-in-out;
 }

@@ -2,17 +2,39 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 250px;
-  height: 100%;
+  /* height: 100%; */
   background: white;
   position: absolute;
   top: 0;
   left: 0;
   /* display: flex; */
   /* flex-direction: column; */
+
+  @media (max-width: 1600px) {
+    width: 200px;
+  }
 `;
+
+// const Container = styled.div`
+//   position: absolute;
+//   width: ${(props) => (props.path === "/login" ? "100%" : "80%")};
+//   top: ${(props) => (props.path === "/login" ? "0" : "10rem")};
+//   right: 0;
+//   padding: ${(props) => (props.path === '/login' ? '0' : '1rem')};
+//   margin: ${(props) => (props.path === '/login' ? '0' : '1rem')};
+//   display: flex;
+//   flex-direction:column;
+//   background-color: var(--color-greyF8);
+//   border-radius: 10px;
+  
+
+// `;
 
 const LogoContainer = styled.div`
   padding: 2rem 2rem;
+  @media (max-width: 1600px) {
+    padding: 2rem 1rem;
+  }
 `;
 
 const Logo = styled.img`
@@ -22,6 +44,10 @@ const Logo = styled.img`
 
 const SideIconContainer = styled.div`
   padding: 2rem 2rem;
+  @media (max-width: 1600px) {
+    padding: 2rem 1rem;
+  }
+
 `;
 
 const User = styled.div`

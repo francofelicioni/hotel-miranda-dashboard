@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import {
   Navbar,
   Container,
+  LogoContainer,
   Title,
   SearchContainer,
   Input,
@@ -20,9 +21,11 @@ import { MdLogout } from "react-icons/md";
 
 import { logout } from "../../context/actions";
 import { LoginContext } from "../../context/LoginContext";
+import { Logo } from "../SideMenu/SideMenu_sc";
 
 const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [state, dispatch] = useContext(LoginContext);
 
   const setTitle = () => {
@@ -49,31 +52,58 @@ const Header = () => {
     }
   };
 
-  const handleClick = () => {
-    dispatch(logout({ isAuth: false }));
-    saveLocalStorage({ ...state, isAuth: false });
+  const handleWidth = () => {
+    let mainContainer = document.querySelector("#mainContainer");
+
+    if (mainContainer.classList.contains('show')) {
+        mainContainer.classList.remove("show");
+    } else {
+      mainContainer.classList.add('show')
+    }
   };
 
-  const styles = (theme) => ({
-    margin: {
-      margin: theme.spacing.unit * 2,
-    },
-    customBadge: {
-      backgroundColor: "#00AFD7",
-      color: "white",
-    },
-  });
+  // const handleClick = () => {
+  //   dispatch(logout({ isAuth: false }));
+  //   saveLocalStorage({ ...state, isAuth: false });
+  //   navigate('/login');
+  // };
+
+  const handleClick = (state) => {
+      dispatch(logout(!state.isAuth));
+      const currentItem = JSON.parse(localStorage.getItem("authenticated"));
+      currentItem.isAuth = false;
+      localStorage.setItem("authenticated", JSON.stringify(currentItem));
+      return navigate("/login");
+   };
+
+  // const styles = (theme) => ({
+  //   margin: {
+  //     margin: theme.spacing.unit * 2,
+  //   },
+  //   customBadge: {
+  //     backgroundColor: "#00AFD7",
+  //     color: "white",
+  //   },
+  // });
 
   return (
     location.pathname !== "/login" && (
       <Navbar>
         <Container>
-          <FaArrowsAltH style={{ width: "22px", height: "30px" }} />
+          <LogoContainer>
+            <Link to="/">
+              <Logo src="https://firebasestorage.googleapis.com/v0/b/phgrm-oxygen.appspot.com/o/HotelMiranda%2FhotelMiranda.svg?alt=media&token=d6e58e0f-17a9-4942-9506-d8be448f4121" />
+            </Link>
+          </LogoContainer>
+          <FaArrowsAltH
+            style={{ width: "24px", height: "40px" }}
+            onClick={handleWidth}
+          />
           <Title> {setTitle()} </Title>
-          <SearchContainer>
+          {/* <SearchContainer>
             <Input />
             <AiOutlineSearch style={{ width: "22px", height: "30px" }} />
-          </SearchContainer>
+          </SearchContainer> */}
         </Container>
 
         <Rigth>
@@ -86,7 +116,9 @@ const Header = () => {
               },
             }}
           >
-            <EmailOutlinedIcon />
+            <Link to="/contact">
+              <EmailOutlinedIcon style={{ cursor: "pointer" }} />
+            </Link>
           </Badge>
           <Badge
             badgeContent={87}
@@ -97,9 +129,11 @@ const Header = () => {
               },
             }}
           >
-            <NotificationsActiveOutlinedIcon />
+            <Link to="/bookings">
+              <NotificationsActiveOutlinedIcon style={{ cursor: "pointer" }} />
+            </Link>
           </Badge>
-          <Badge
+          {/* <Badge
             badgeContent={"!"}
             sx={{
               "& .MuiBadge-badge": {
@@ -108,10 +142,17 @@ const Header = () => {
               },
             }}
           >
-            <MessageOutlinedIcon />
-          </Badge>
+            <Link to="/contact">
+              <MessageOutlinedIcon style={{ cursor: "pointer" }} />
+            </Link>
+          </Badge> */}
           <MdLogout
-            style={{ width: "22px", height: "30px" }}
+            style={{
+              width: "24px",
+              height: "40px",
+              paddingBottom: "7px",
+              cursor: "pointer",
+            }}
             onClick={handleClick}
           />
         </Rigth>

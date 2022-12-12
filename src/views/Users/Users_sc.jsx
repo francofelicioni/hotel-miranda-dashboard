@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const UserDataName = styled.td`
   display: flex;
+  justify-content: flex-start;
   align-items: center;
 `;
 

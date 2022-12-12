@@ -5,10 +5,12 @@ import styled from "styled-components";
 import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
 
+import '../../App.css';
+
 const Container = styled.div`
   position: absolute;
-  width: ${(props) => (props.path === "/login" ? "100%" : "82%")};
-  top: ${(props) => (props.path === "/login" ? "0" : "7rem")};
+  width: ${(props) => (props.path === "/login" ? "100%" : "85%")};
+  top: ${(props) => (props.path === "/login" ? "0" : "10rem")};
   right: 0;
   padding: ${(props) => (props.path === '/login' ? '0' : '1rem')};
   margin: ${(props) => (props.path === '/login' ? '0' : '1rem')};
@@ -16,8 +18,10 @@ const Container = styled.div`
   flex-direction:column;
   background-color: var(--color-greyF8);
   border-radius: 10px;
-  @media (max-width: 1200px) {
-    padding: 0;
+  @media (max-width: 1600px) {
+    padding: 0 1rem ;
+    margin: 0;
+    top: 7rem;
   }
 
 `;
@@ -29,7 +33,7 @@ const MainContainer = ({ children }) => {
     <>
     <Header />
     <SideMenu />
-    <Container className="mainContainer" path={pathname}>
+    <Container id="mainContainer" path={pathname}>
       {children}
     </Container>
     </>

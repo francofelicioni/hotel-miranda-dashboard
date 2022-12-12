@@ -47,7 +47,7 @@ const Login = () => {
         })
       );
       saveLocalStorage({ ...state, isAuth: true });
-      navigate("/");
+      navigate("/dashboard");
     } else {
       Swal.fire({
         icon: "error",

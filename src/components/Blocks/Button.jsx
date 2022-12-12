@@ -22,7 +22,6 @@ const Button = styled.button`
             margin-top: 2rem;
           }
         `;
-
       case "notes":
         if (props.$special_request !== "") {
           return css`
@@ -118,6 +117,13 @@ const Button = styled.button`
             background: #f6f6f7;
             outline: 1px solid transparent;
           }
+        `;
+      case "delete":
+        return css`
+          background: transparent;
+          border: none;
+          padding: 0;
+          margin: 0;
         `;
       default: {
         return css`
