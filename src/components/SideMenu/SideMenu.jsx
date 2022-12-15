@@ -95,7 +95,7 @@ const SideMenu = () => {
             </Link>
             <Button $type="sidemenu">Edit</Button>
           </Card>
-          <Footer>
+          <Footer className="sideMenu__footer">
             <FooterTitle> HM Admin Dashboard</FooterTitle>
             <FooterCopyrigth> © 2022 All Rights Reserved</FooterCopyrigth>
             <FooterDescription> Made with ♥ by Fran</FooterDescription>

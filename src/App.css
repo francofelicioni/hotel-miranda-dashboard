@@ -65,12 +65,21 @@
   transition: 0.5s all ease;
 }
 
-.show {
+.full {
   width: 100% !important;
   top: 7rem !important;
-  right: 0 !important;
-  padding: 1rem !important;
   margin:0 !important;
-  height: 130% !important;
   transition: .5s all ease-in-out;
+}
+
+.normal {
+  width: 85% !important;
+  top: 10rem !important;
+  margin:1rem !important;
+  transition: .5s all ease-in-out;
+}
+
+
+.hide {
+  display: none !important;
 }

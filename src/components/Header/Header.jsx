@@ -54,11 +54,16 @@ const Header = () => {
 
   const handleWidth = () => {
     let mainContainer = document.querySelector("#mainContainer");
+    let sideMenu__footer = document.querySelector('.sideMenu__footer')
 
-    if (mainContainer.classList.contains('show')) {
-        mainContainer.classList.remove("show");
+    if (mainContainer.classList.contains("full")) {
+      mainContainer.classList.remove('full');
+      mainContainer.classList.add("normal");
+      sideMenu__footer.classList.remove('hide');
     } else {
-      mainContainer.classList.add('show')
+      mainContainer.classList.remove('normal');
+      mainContainer.classList.add("full");
+      sideMenu__footer.classList.add('hide');
     }
   };
 
@@ -69,12 +74,12 @@ const Header = () => {
   // };
 
   const handleClick = (state) => {
-      dispatch(logout(!state.isAuth));
-      const currentItem = JSON.parse(localStorage.getItem("authenticated"));
-      currentItem.isAuth = false;
-      localStorage.setItem("authenticated", JSON.stringify(currentItem));
-      return navigate("/login");
-   };
+    dispatch(logout(!state.isAuth));
+    const currentItem = JSON.parse(localStorage.getItem("authenticated"));
+    currentItem.isAuth = false;
+    localStorage.setItem("authenticated", JSON.stringify(currentItem));
+    return navigate("/login");
+  };
 
   // const styles = (theme) => ({
   //   margin: {
@@ -117,7 +122,9 @@ const Header = () => {
             }}
           >
             <Link to="/contact">
-              <EmailOutlinedIcon style={{ cursor: "pointer" }} />
+              <EmailOutlinedIcon
+                style={{ cursor: "pointer", textDecoration: "none" }}
+              />
             </Link>
           </Badge>
           <Badge
@@ -130,7 +137,9 @@ const Header = () => {
             }}
           >
             <Link to="/bookings">
-              <NotificationsActiveOutlinedIcon style={{ cursor: "pointer" }} />
+              <NotificationsActiveOutlinedIcon
+                style={{ cursor: "pointer", textDecoration: "none" }}
+              />
             </Link>
           </Badge>
           {/* <Badge
@@ -151,6 +160,7 @@ const Header = () => {
               width: "24px",
               height: "40px",
               paddingBottom: "7px",
+              textDecoration: "none",
               cursor: "pointer",
             }}
             onClick={handleClick}
