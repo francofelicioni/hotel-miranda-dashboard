@@ -5,12 +5,11 @@ import styled from "styled-components";
 import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
 
-import '../../App.css';
 
 const Container = styled.div`
   position: absolute;
   width: ${(props) => (props.path === "/login" ? "100%" : "85%")};
-  top: ${(props) => (props.path === "/login" ? "0" : "10rem")};
+  top: ${(props) => (props.path === "/login" ? "0" : "7rem")};
   right: 0;
   padding: ${(props) => (props.path === '/login' ? '0' : '1rem')};
   margin: ${(props) => (props.path === '/login' ? '0' : '1rem')};
@@ -19,9 +18,9 @@ const Container = styled.div`
   background-color: var(--color-greyF8);
   border-radius: 10px;
   @media (max-width: 1600px) {
-    padding: 0 1rem ;
+    padding: 1rem 2rem 1rem 3rem;
     margin: 0;
-    top: 7rem;
+    top: 5.5rem;
   }
 
 `;

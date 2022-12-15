@@ -25,7 +25,7 @@ const Card = styled.div`
   padding: 1rem;
   width: 431px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1600px) {
     width: 300px;
   }
 `;

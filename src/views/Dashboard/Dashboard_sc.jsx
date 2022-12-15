@@ -37,9 +37,9 @@ const ReviewsContainer = styled.div`
   grid-auto-rows: minmax(100px, auto);
   gap: 1rem;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1600px) {
     display: grid;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(100px, auto);
     padding:0;
   }
   

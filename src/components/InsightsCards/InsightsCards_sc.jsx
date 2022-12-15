@@ -6,9 +6,9 @@ const Card = styled.div`
   box-shadow: 0px 16px 30px #00000014;
   border-radius: 12px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1600px) {
     width: 220px;
-    height: 100px;
+    height: 120px;
   }
 `;
 

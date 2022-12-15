@@ -2,33 +2,16 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 250px;
-  /* height: 100%; */
   background: white;
   position: absolute;
   top: 0;
   left: 0;
-  /* display: flex; */
-  /* flex-direction: column; */
+
 
   @media (max-width: 1600px) {
     width: 200px;
   }
 `;
-
-// const Container = styled.div`
-//   position: absolute;
-//   width: ${(props) => (props.path === "/login" ? "100%" : "80%")};
-//   top: ${(props) => (props.path === "/login" ? "0" : "10rem")};
-//   right: 0;
-//   padding: ${(props) => (props.path === '/login' ? '0' : '1rem')};
-//   margin: ${(props) => (props.path === '/login' ? '0' : '1rem')};
-//   display: flex;
-//   flex-direction:column;
-//   background-color: var(--color-greyF8);
-//   border-radius: 10px;
-  
-
-// `;
 
 const LogoContainer = styled.div`
   padding: 2rem 2rem;
@@ -80,7 +63,6 @@ const IconDesc = styled.p`
 
 const Card = styled.div`
   width: 200px;
-  /* height: 300px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,7 +77,6 @@ const Card = styled.div`
 const Image = styled.img`
   width: 70px;
   height: 70px;
-  /* background: #c5c5c5 0% 0% no-repeat padding-box; */
   border-radius: 8px;
   opacity: 1;
 `;
