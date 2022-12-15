@@ -5,16 +5,16 @@ import { Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import Reviews from "./Reviews";
 
-const ReviewsSlider = ({ description, state }) => {
+const ReviewsSlider = () => {
   return (
     <Swiper
       modules={[Navigation, Autoplay]}
-      spaceBetween={50}
+      spaceBetween={20}
       slidesPerView={3}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
       autoplay={{ delay: 3000 }}
-      navigation
+    //   navigation
       style={{ height: "600px", borderRadius: "0 10px 10px 0" }}
       loop
     >
