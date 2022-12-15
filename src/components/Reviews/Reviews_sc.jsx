@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-    margin: 1rem;
+  padding-top: 2rem;
+  margin: 1rem 0;
 `;
 
 const Title = styled.h3`

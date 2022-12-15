@@ -3,10 +3,13 @@ import styled from "styled-components";
 const DashBoardContainer = styled.div``;
 
 const InsightsCardsContainer = styled.div`
-  display: grid;
+  /* display: grid;
   justify-content: left;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-rows: minmax(100px, auto); */
+  display: flex;
+  justify-content: space-evenly ;
+  align-items:center;
   gap: 1rem;
   padding-top: 2rem;
   width: 100%;
@@ -24,6 +27,8 @@ const InsightsCardsContainer = styled.div`
 const GeneralInsigths = styled.div`
   height: 100%;
   display: flex;
+  /* align-items: center; */
+  gap: 1rem;
 
   @media (max-width: 1200px) {
     flex-direction: column;
@@ -32,16 +37,17 @@ const GeneralInsigths = styled.div`
 
 const ReviewsContainer = styled.div`
   display: flex;
-  justify-content: center;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-auto-rows: minmax(100px, auto); */
+  /* gap: 1rem; */
 
-  @media (max-width: 1600px) {
+  /* @media (max-width: 1600px) {
     display: grid;
     grid-auto-columns: minmax(100px, auto);
     padding:0;
-  }
+  } */
   
 `;
 
