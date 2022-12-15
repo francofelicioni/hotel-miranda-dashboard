@@ -14,11 +14,11 @@ const ReviewsSlider = () => {
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
       autoplay={{ delay: 3000 }}
-    //   navigation
+      //   navigation
       style={{ height: "600px", borderRadius: "0 10px 10px 0" }}
       loop
     >
-      <SwiperSlide style={{ position: "relative" }}>
+      <SwiperSlide>
         <Reviews
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           image="https://i.pravatar.cc/150?img=31"
@@ -26,7 +26,7 @@ const ReviewsSlider = () => {
           time="0m ago"
         />
       </SwiperSlide>
-      <SwiperSlide style={{ position: "relative" }}>
+      <SwiperSlide>
         <Reviews
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           image="https://i.pravatar.cc/150?img=35"
