@@ -9,10 +9,10 @@ import SideMenu from '../SideMenu/SideMenu';
 const Container = styled.div`
   position: absolute;
   width: ${(props) => (props.path === "/login" ? "100%" : "85%")};
-  top: ${(props) => (props.path === "/login" ? "0" : "7rem")};
+  top: ${(props) => (props.path === "/login" ? "0" : "9rem")};
   right: 0;
   padding: ${(props) => (props.path === '/login' ? '0' : '1rem')};
-  margin: ${(props) => (props.path === '/login' ? '0' : '1rem')};
+  /* margin: ${(props) => (props.path === '/login' ? '0' : '1rem')}; */
   display: flex;
   flex-direction:column;
   background-color: var(--color-greyF8);
@@ -20,7 +20,7 @@ const Container = styled.div`
   @media (max-width: 1600px) {
     padding: 1rem 2rem 1rem;
     margin: 0;
-    top: 5.5rem;
+    top: ${(props) => (props.path === "/login" ? "0" : "6rem")};
   }
 
 `;

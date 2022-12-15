@@ -4,11 +4,12 @@ import styled from "styled-components";
 import { colors } from "../../styles/colors";
 
 const CalendarContainer = styled.div`
-  min-width: 600px;
+  width: 500px;
+  /* height: 00px; */
   background-color: ${colors.white};
   margin-top: 50px;
   border-radius: 20px;
-  padding: 41px;
+  padding: 30px;
   display: inline-block;
   flex: 1;
   font-family: "Poppins", sans-serif;

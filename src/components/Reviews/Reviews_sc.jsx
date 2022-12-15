@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-    margin: 1rem;
+  padding-top: 2rem;
+  margin: 1rem 0;
 `;
 
 const Title = styled.h3`
@@ -52,7 +53,7 @@ const CardInfo = styled.div`
   gap: 1rem;
 `;
 
-const Image = styled.div`
+const Image = styled.img`
   width: 56px;
   height: 56px;
   background: var(--color-greyC5);
