@@ -67,7 +67,8 @@
 
 .full {
   width: 100% !important;
-  margin:1rem !important;
+  padding:1rem 2rem !important;
+  top: 7rem !important;
   transition: .5s all ease-in-out;
 }
 
