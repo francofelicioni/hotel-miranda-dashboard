@@ -27,7 +27,7 @@ const Dashboard = () => {
     d3.select('.target').style('stroke-width', 5)
   },[]);
 
-  let description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
+  let description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 
   return (
     <>
@@ -44,9 +44,9 @@ const Dashboard = () => {
             <Calendar />
           </GeneralInsigths>
           <ReviewsContainer>
-            <Reviews description={description} name={'Kusnaidi Anderson'} time='4m ago' />
-            <Reviews description={description} name={'Bella Saphira'} time='4m ago' />
-            <Reviews description={description} name={'Thomas Al-Ghazali'} time='4m ago' />
+            <Reviews description={description} image='https://i.pravatar.cc/150?img=35' name='Susan Anderson' time='4m ago' />
+            <Reviews description={description} image='https://i.pravatar.cc/150?img=36' name='Bella Saphira' time='4m ago' />
+            <Reviews description={description} image='https://i.pravatar.cc/150?img=8' name='Thomas Al-Ghazali' time='4m ago' />
           </ReviewsContainer>
         {/* </DashBoardContainer> */}
       </MainContainer>

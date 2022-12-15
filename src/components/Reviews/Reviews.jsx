@@ -30,8 +30,8 @@ const Reviews = ({description, image, name, time }) => {
               </div>
             </CardInfo>
             <CardButtons>
-              <AiOutlineCheckCircle />
-              <AiOutlineCloseCircle />
+              <AiOutlineCheckCircle style={{color:'green'}}/>
+              <AiOutlineCloseCircle style={{color:'red'}}/>
             </CardButtons>
           </CardInfoContainer>
         </Card>

@@ -52,7 +52,7 @@ const CardInfo = styled.div`
   gap: 1rem;
 `;
 
-const Image = styled.div`
+const Image = styled.img`
   width: 56px;
   height: 56px;
   background: var(--color-greyC5);
