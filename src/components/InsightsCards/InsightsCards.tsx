@@ -9,7 +9,13 @@ import {
   Title,
 } from "./InsightsCards_sc";
 
-const InsightsCards = ({ icon, number, title }) => {
+interface KPIS {
+  icon: React.ReactNode,
+  number: number;
+  title: string;
+}
+
+const InsightsCards = ({ icon, number, title } : KPIS): JSX.Element => {
   return (
     <Card>
       <Container>

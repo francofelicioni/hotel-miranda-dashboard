@@ -18,7 +18,7 @@ const Container = styled.div`
   background-color: var(--color-greyF8);
   border-radius: 10px;
   @media (max-width: 1600px) {
-    padding: 1rem 2rem 1rem 3rem;
+    padding: 1rem 2rem 1rem;
     margin: 0;
     top: 5.5rem;
   }

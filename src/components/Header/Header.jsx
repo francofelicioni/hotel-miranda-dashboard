@@ -13,10 +13,10 @@ import {
 
 import { Badge } from "@mui/material";
 import { FaArrowsAltH } from "react-icons/fa";
-import { AiOutlineSearch } from "react-icons/ai";
+// import { AiOutlineSearch } from "react-icons/ai";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import NotificationsActiveOutlinedIcon from "@mui/icons-material/NotificationsActiveOutlined";
-import MessageOutlinedIcon from "@mui/icons-material/MessageOutlined";
+// import MessageOutlinedIcon from "@mui/icons-material/MessageOutlined";
 import { MdLogout } from "react-icons/md";
 
 import { logout } from "../../context/actions";

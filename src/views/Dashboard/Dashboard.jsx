@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import * as d3 from "d3";
 
-import InsightsCards from "../../components/InsightsCards/InsightsCards";
+import InsightsCards from "../../components/InsightsCards/InsightsCards.tsx";
 import Reviews from "../../components/Reviews/Reviews";
 import MainContainer from "../../components/MainContainer/MainContainer";
 // import ReservationsStats from "../../components/ReservationStats/ReservationsStats";

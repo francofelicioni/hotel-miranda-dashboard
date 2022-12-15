@@ -14,6 +14,12 @@ import {
 } from "./Reviews_sc";
 import { AiOutlineCheckCircle, AiOutlineCloseCircle } from "react-icons/ai";
 
+interface ReviewsInt {
+ descrption: string;
+ name: string;
+ time: number;
+}
+
 const Reviews = ({description, image, name, time }) => {
   return (
     <Container>
