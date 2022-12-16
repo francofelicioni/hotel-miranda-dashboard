@@ -23,12 +23,18 @@ import { logout } from "../../context/actions";
 import { LoginContext } from "../../context/LoginContext";
 import { Logo } from "../SideMenu/SideMenu_sc";
 
+
+interface IHeaderProps {
+	setShow: Function,
+	show: boolean
+}
+
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [state, dispatch] = useContext(LoginContext);
 
-  const setTitle = () => {
+  const setTitle = ():string | undefined => {
     if (location.pathname === "/dashboard") {
       return "Dashboard";
     } else if (location.pathname === "/bookings") {
@@ -42,30 +48,30 @@ const Header = () => {
     }
   };
 
-  const saveLocalStorage = (user) => {
+  const saveLocalStorage = (user:any) => {
     if (!localStorage.getItem("authenticated")) {
       return localStorage.setItem("authenticated", JSON.stringify(user));
     } else {
-      const currentUser = JSON.parse(localStorage.getItem("authenticated"));
+      const currentUser = JSON.parse(localStorage.getItem("authenticated")||'' );
       currentUser.isAuth = false;
       localStorage.setItem("authenticated", JSON.stringify(currentUser));
     }
   };
 
-  const handleWidth = () => {
-    let mainContainer = document.querySelector("#mainContainer");
-    let sideMenu__footer = document.querySelector('.sideMenu__footer')
+  // const handleWidth = () => {
+  //   let mainContainer = document.querySelector("#mainContainer");
+  //   let sideMenu__footer = document.querySelector('.sideMenu__footer')
 
-    if (mainContainer.classList.contains("full")) {
-      mainContainer.classList.remove('full');
-      mainContainer.classList.add("normal");
-      sideMenu__footer.classList.remove('hide');
-    } else {
-      mainContainer.classList.remove('normal');
-      mainContainer.classList.add("full");
-      sideMenu__footer.classList.add('hide');
-    }
-  };
+  //   if (mainContainer.classList.contains("full")) {
+  //     mainContainer.classList.remove('full');
+  //     mainContainer.classList.add("normal");
+  //     sideMenu__footer.classList.remove('hide');
+  //   } else {
+  //     mainContainer.classList.remove('normal');
+  //     mainContainer.classList.add("full");
+  //     sideMenu__footer.classList.add('hide');
+  //   }
+  // };
 
   // const handleClick = () => {
   //   dispatch(logout({ isAuth: false }));
@@ -73,13 +79,13 @@ const Header = () => {
   //   navigate('/login');
   // };
 
-  const handleClick = (state) => {
-    dispatch(logout(!state.isAuth));
-    const currentItem = JSON.parse(localStorage.getItem("authenticated"));
-    currentItem.isAuth = false;
-    localStorage.setItem("authenticated", JSON.stringify(currentItem));
-    return navigate("/login");
-  };
+  // const handleClick = ():void => {
+  //   dispatch(logout({isAuth: false}));
+  //   const currentItem = JSON.parse(localStorage.getItem("authenticated") ||'');
+  //   currentItem.isAuth = false;
+  //   localStorage.setItem("authenticated", JSON.stringify(currentItem));
+  //   return navigate("/login");
+  // };
 
   // const styles = (theme) => ({
   //   margin: {
@@ -102,7 +108,7 @@ const Header = () => {
           </LogoContainer>
           <FaArrowsAltH
             style={{ width: "24px", height: "40px" }}
-            onClick={handleWidth}
+            // onClick={handleWidth}
           />
           <Title> {setTitle()} </Title>
           {/* <SearchContainer>
@@ -163,7 +169,7 @@ const Header = () => {
               textDecoration: "none",
               cursor: "pointer",
             }}
-            onClick={handleClick}
+            // onClick={handleClick}
           />
         </Rigth>
       </Navbar>

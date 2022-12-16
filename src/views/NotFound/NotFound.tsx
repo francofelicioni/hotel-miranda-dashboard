@@ -4,7 +4,7 @@ import { Button } from "../../components/Blocks/Button";
 
 import { NotFoundContainer, Image } from "./NotFound_sc";
 
-const NotFound = () => {
+const NotFound = () :JSX.Element => {
 
   return (
     <NotFoundContainer>

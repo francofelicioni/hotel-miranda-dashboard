@@ -105,6 +105,6 @@
     "@emotion/core": ["node_modules/@emotion/react"]
   },
 
-  "include": ["**/*.ts*", "src/components/ReservationStats/ReservationsStats.tsx"],
+  "include": ["**/*.ts*"],
   "exclude": ["node_modules", "build/**/*"]
 }

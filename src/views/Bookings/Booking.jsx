@@ -37,6 +37,7 @@ import {
   ImageDetailsContainer,
 } from "./Booking_sc";
 
+
 const Booking = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
