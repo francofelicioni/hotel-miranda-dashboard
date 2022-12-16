@@ -5,7 +5,7 @@ import { Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import Reviews from "./Reviews";
 
-const ReviewsSlider = () => {
+const ReviewsSlider = (): JSX.Element => {
   return (
     <Swiper
       modules={[Navigation, Autoplay]}

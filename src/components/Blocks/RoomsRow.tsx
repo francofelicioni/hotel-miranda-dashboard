@@ -35,8 +35,6 @@ interface RoomRowInt {
   $type: string;
 }
 
-type InputProps = React.ComponentProps<typeof Button>;
-
 const RoomsRow = ({ room }: RoomObject): JSX.Element => {
   return (
     <>

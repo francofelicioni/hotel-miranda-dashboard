@@ -23,12 +23,6 @@ import { logout } from "../../context/actions";
 import { LoginContext } from "../../context/LoginContext";
 import { Logo } from "../SideMenu/SideMenu_sc";
 
-
-interface IHeaderProps {
-	setShow: Function,
-	show: boolean
-}
-
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();

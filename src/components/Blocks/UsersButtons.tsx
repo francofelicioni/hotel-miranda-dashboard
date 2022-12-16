@@ -13,7 +13,7 @@ const ButtonsContainer = styled.div`
   gap: 1rem;
 `;
 
-const UsersButtons = () => {
+const UsersButtons = (): JSX.Element => {
   return (
     <>
       <ButtonsContainer>

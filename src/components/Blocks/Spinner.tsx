@@ -19,7 +19,7 @@ const Loader = styled.div`
   }
 `;
 
-const Spinner = () => {
+const Spinner = (): JSX.Element => {
   return <Loader />;
 };
 

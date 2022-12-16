@@ -3,7 +3,7 @@ import MainContainer from "../../components/MainContainer/MainContainer";
 
 import { ContactContainer } from "./Contact_sc";
 
-const Contact = () => {
+const Contact = ():JSX.Element => {
   return (
     <MainContainer>
       <ContactContainer>

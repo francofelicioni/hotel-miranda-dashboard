@@ -20,7 +20,7 @@ import ReviewsSlider from "../../components/Reviews/Reviews_slider";
 
 
 
-const Dashboard = () => {
+const Dashboard = ():JSX.Element => {
 
   useEffect(()=> {
     d3.select('.target').style('stroke-width', 5)
