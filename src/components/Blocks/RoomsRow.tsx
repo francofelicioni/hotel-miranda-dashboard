@@ -1,5 +1,3 @@
-import React from "react";
-
 import {
   Id,
   Image,
@@ -15,7 +13,31 @@ import { Status } from "./Status";
 import { Row } from "./TableBlocks";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
-const RoomsRow = ({ room }) => {
+type RoomObject = {
+  room: RoomRowInt;
+};
+
+interface RoomRowInt {
+  id: string;
+  full_name: string;
+  order_date: string;
+  check_in: string;
+  check_out: string;
+  room_number: number;
+  bed_type: string;
+  price: number;
+  offer: number;
+  offer_price: number;
+  facilities: object[];
+  description: string;
+  status: boolean;
+  children?: JSX.Element | JSX.Element[];
+  $type: string;
+}
+
+type InputProps = React.ComponentProps<typeof Button>;
+
+const RoomsRow = ({ room }: RoomObject): JSX.Element => {
   return (
     <>
       <Row key={room.id}>
@@ -34,7 +56,9 @@ const RoomsRow = ({ room }) => {
         <RoomData>
           <Info>
             {room.facilities.map((facility, index) => (
-              <span key={index}> {facility}, </span>
+              <span key={index}>
+                <>{facility}, </>
+              </span>
             ))}
           </Info>
         </RoomData>
@@ -48,7 +72,7 @@ const RoomsRow = ({ room }) => {
             <Info>
               €{" "}
               {(room.price - room.price * (room.offer_price / 100)).toFixed(2)}
-               /nigth
+              /nigth
             </Info>
           ) : (
             <Info>Not in disccount</Info>
@@ -60,9 +84,9 @@ const RoomsRow = ({ room }) => {
           </Status>
         </td>
         <td>
-          <Button $type="delete">
+          {/* <Button $type="delete"> */}
             <BsThreeDotsVertical />
-          </Button>
+          {/* </Button> */}
         </td>
       </Row>
     </>

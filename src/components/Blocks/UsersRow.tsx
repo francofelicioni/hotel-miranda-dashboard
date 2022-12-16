@@ -15,13 +15,25 @@ import { Button } from "./Button";
 import { Status } from "./Status";
 import { Checkbox, CheckboxContainer, Row } from "./TableBlocks";
 
-const UsersRow = ({ user }) => {
+type UserObject = {
+  user: UserRowInt;
+}
+
+interface UserRowInt {
+  id: number;
+  image: string;
+  full_name: string;
+  email: string;
+  contact: string;
+  description: string;
+  start_date: string;
+  status: boolean;
+}
+
+
+const UsersRow = ({ user }: UserObject): JSX.Element => {
   return (
     <Row key={user.id}>
-      {/* <CheckboxContainer>
-        <Checkbox type="checkbox" />
-      </CheckboxContainer> */}
-
       <UserDataName>
         <Image src={user.image} />
         <UserInfo>
@@ -54,11 +66,10 @@ const UsersRow = ({ user }) => {
 
       <UserData
         style={{ width: "30px"}}
-        // className="userData-container__button"
       >
-        <Button $type="delete" style={{ margin: "0" }}>
+        {/* <Button $type="delete" style={{ margin: "0" }}> */}
           <BsThreeDotsVertical className="delete_icon" />
-        </Button>
+        {/* </Button> */}
       </UserData>
     </Row>
   );

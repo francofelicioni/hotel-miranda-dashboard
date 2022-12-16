@@ -15,12 +15,18 @@ import {
 import { AiOutlineCheckCircle, AiOutlineCloseCircle } from "react-icons/ai";
 
 interface ReviewsInt {
- descrption: string;
- name: string;
- time: number;
+  description: string;
+  image: string;
+  name: string;
+  time: string;
 }
 
-const Reviews = ({description, image, name, time }) => {
+const Reviews = ({
+  description,
+  image,
+  name,
+  time,
+}: ReviewsInt): JSX.Element => {
   return (
     <Container>
       {/* <Title> Latest Review by Customers </Title> */}
@@ -36,8 +42,8 @@ const Reviews = ({description, image, name, time }) => {
               </div>
             </CardInfo>
             <CardButtons>
-              <AiOutlineCheckCircle style={{color:'green'}}/>
-              <AiOutlineCloseCircle style={{color:'red'}}/>
+              <AiOutlineCheckCircle style={{ color: "green" }} />
+              <AiOutlineCloseCircle style={{ color: "red" }} />
             </CardButtons>
           </CardInfoContainer>
         </Card>

@@ -1,6 +1,9 @@
 import styled, { css } from "styled-components";
 
-export const StateFlag = styled.div`
+
+
+
+export const StateFlag = styled.div<{ state: string }>`
   font-family: var(--font-main);
   transform: rotate(45deg);
   position: absolute;

@@ -12,12 +12,13 @@ const ButtonsContainer = styled.div`
   gap: 1rem;
 `;
 
+
 const RoomsButtons = () => {
   return (
     <>
       <ButtonsContainer>
         <Link to='/new-room'>
-          <Button $type="new">+ New Room</Button>
+          {/* <Button $type="new">+ New Room</Button> */}
         </Link>
         <Select>
           <option value="room_number">Room Number</option>

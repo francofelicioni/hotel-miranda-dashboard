@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-const Button = styled.button`
+const Button = styled.button <{ $type: string, $special_request: string }>`
   ${(props) => {
     switch (props.$type) {
       case "login":

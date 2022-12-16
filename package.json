@@ -61,6 +61,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
+    "@types/styled-components": "^5.1.26",
     "gh-pages": "^4.0.0",
     "jest": "^27.5.1"
   }

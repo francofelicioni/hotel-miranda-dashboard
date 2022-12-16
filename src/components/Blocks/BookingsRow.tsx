@@ -14,8 +14,27 @@ import { Button } from "./Button";
 import { Status } from "./Status";
 import { Row } from "./TableBlocks";
 
-const BookingsRow = ({ guest }) => {
-  const handleClick = (special_request) => {
+type BookingObject = {
+  guest: BookingsRowInt;
+}
+
+interface BookingsRowInt {
+  id: string;
+  full_name: string;
+  order_date: string;
+  check_in: string;
+  check_out: string;
+  room_info: any;
+  price: number;
+  image: string;
+  special_request: string;
+  description: string;
+  state: boolean;
+}
+
+const BookingsRow = ({ guest }: BookingObject): JSX.Element => {
+  console.log(guest)
+  const handleClick = (special_request: string) => {
     if (special_request) {
       Swal.fire({
         title: `${special_request}`,
@@ -92,9 +111,9 @@ const BookingsRow = ({ guest }) => {
         </Link>
       </GuestContainer>
       <GuestContainer>
-        <Button $type="delete">
+        <button >
           <BsThreeDotsVertical />
-        </Button>
+        </button>
       </GuestContainer>
     </Row>
   );

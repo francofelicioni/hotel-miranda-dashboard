@@ -30,10 +30,10 @@ const Dashboard = () => {
     <>
       <MainContainer>
           <InsightsCardsContainer>
-            <InsightsCards icon={<BiBed style={{width:'50', height: '50'}}/>}  number='8,461' title='New Booking'/>
-            <InsightsCards icon={<AiOutlineCalendar style={{width:'50', height: '50'}}/>} number='963' title='Scheduled Room'/>
-            <InsightsCards icon={<IoMdExit style={{width:'50', height: '50'}} />} number='753' title='Check In'/>
-            <InsightsCards icon={<BiLogOut style={{width:'50', height: '50'}} />} number='516' title='Check Out'/>
+            <InsightsCards icon={<BiBed style={{width:'50', height: '50'}}/>}  number={8.461} title='New Booking'/>
+            <InsightsCards icon={<AiOutlineCalendar style={{width:'50', height: '50'}}/>} number={963} title='Scheduled Room'/>
+            <InsightsCards icon={<IoMdExit style={{width:'50', height: '50'}} />} number={753} title='Check In'/>
+            <InsightsCards icon={<BiLogOut style={{width:'50', height: '50'}} />} number={516} title='Check Out'/>
           </InsightsCardsContainer>
           <GeneralInsigths>
             <ReservationsStats />

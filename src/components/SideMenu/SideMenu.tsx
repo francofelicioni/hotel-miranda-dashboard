@@ -94,7 +94,7 @@ const SideMenu = () => {
               {" "}
               <CiLinkedin style={{ height: "25px", width: "25px" }} />
             </Link>
-            <Button $type="sidemenu">Edit</Button>
+            {/* <Button $type="sidemenu">Edit</Button> */}
           </Card>
           <Footer className="sideMenu__footer">
             <FooterTitle> HM Admin Dashboard</FooterTitle>

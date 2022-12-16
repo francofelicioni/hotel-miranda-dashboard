@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-const Status = styled.button`
+const Status = styled.button<{ $type: string, $typeStatus: string | boolean }>`
   width: 100px;
   border-radius: 12px;
   /* text-align: center; */
