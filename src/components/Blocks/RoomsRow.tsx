@@ -31,8 +31,6 @@ interface RoomRowInt {
   facilities: object[];
   description: string;
   status: boolean;
-  children?: JSX.Element | JSX.Element[];
-  $type: string;
 }
 
 const RoomsRow = ({ room }: RoomObject): JSX.Element => {

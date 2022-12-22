@@ -1,5 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
+import type { PayloadAction } from '@reduxjs/toolkit'
+import type { RootState } from '../../app/store'
+
 import fetchFrom from "../../utils/fetchFrom";
+
+import { BookingsInt } from "../../interfaces/bookinsgInt";
 
 export const fetchBookings = createAsyncThunk(
   "bookings/fetchBookings",
@@ -10,12 +16,12 @@ export const fetchBookings = createAsyncThunk(
   }
 );
 
-export const fetchBooking = createAsyncThunk(
+export const fetchBooking = createAsyncThunk <BookingsInt[], number> (
   "booking/fetchBooking",
 
   async (id) => {
-    const response = await fetchFrom("guests");
-    const result = response.filter(guest => guest.id === id);
+    const  response: Promise <BookingsInt[]> = await fetchFrom("guests");
+    const result: BookingsInt[] = await response.filter(guest => guest.id === id);
     return result;
   }
 );

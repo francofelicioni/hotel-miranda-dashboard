@@ -14,22 +14,10 @@ import { Button } from "./Button";
 import { Status } from "./Status";
 import { Row } from "./TableBlocks";
 
-type BookingObject = {
-  guest: BookingsRowInt;
-}
+import { BookingsInt } from "../../interfaces/bookinsgInt";
 
-interface BookingsRowInt {
-  id: string;
-  full_name: string;
-  order_date: string;
-  check_in: string;
-  check_out: string;
-  room_info: any;
-  price: number;
-  image: string;
-  special_request: string;
-  description: string;
-  state: boolean;
+type BookingObject = {
+  guest: BookingsInt;
 }
 
 const BookingsRow = ({ guest }: BookingObject): JSX.Element => {
