@@ -10,7 +10,7 @@ import {
   Name,
   Text,
 } from "../../views/Bookings/Bookings_sc";
-import { Button } from "./Button";
+import { DeleteButton, NotesButton } from "./Button";
 import { Status } from "./Status";
 import { Row } from "./TableBlocks";
 
@@ -64,13 +64,12 @@ const BookingsRow = ({ guest }) => {
         </Link>
       </GuestContainer>
       <GuestContainer>
-        <Button
-          $type="notes"
-          $special_request={guest.special_request}
+        <NotesButton
+          specialRequest={guest.special_request}
           onClick={() => handleClick(guest.special_request)}
         >
           View Notes
-        </Button>
+        </NotesButton>
       </GuestContainer>
       <GuestContainer>
         <Link to={`/bookings/${guest.id}`} style={{ textDecoration: "none" }}>
@@ -92,9 +91,9 @@ const BookingsRow = ({ guest }) => {
         </Link>
       </GuestContainer>
       <GuestContainer>
-        <Button $type="delete">
+        <DeleteButton>
           <BsThreeDotsVertical />
-        </Button>
+        </DeleteButton>
       </GuestContainer>
     </Row>
   );

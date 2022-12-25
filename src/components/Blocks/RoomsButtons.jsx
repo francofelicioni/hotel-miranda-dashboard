@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "./Button";
+import { NewButton } from "./Button";
 import { Select } from "./Select";
 import styled from "styled-components";
 
@@ -17,7 +17,7 @@ const RoomsButtons = () => {
     <>
       <ButtonsContainer>
         <Link to='/new-room'>
-          <Button $type="new">+ New Room</Button>
+          <NewButton>+ New Room</NewButton>
         </Link>
         <Select>
           <option value="room_number">Room Number</option>

@@ -10,7 +10,7 @@ import {
   RoomData,
 } from "../../views/Rooms/Rooms_sc";
 
-import { Button } from "./Button";
+import { DeleteButton } from "./Button";
 import { Status } from "./Status";
 import { Row } from "./TableBlocks";
 import { BsThreeDotsVertical } from "react-icons/bs";
@@ -60,9 +60,9 @@ const RoomsRow = ({ room }) => {
           </Status>
         </td>
         <td>
-          <Button $type="delete">
+          <DeleteButton>
             <BsThreeDotsVertical />
-          </Button>
+          </DeleteButton>
         </td>
       </Row>
     </>

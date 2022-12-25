@@ -11,9 +11,9 @@ import {
   UserInfo,
   UserName,
 } from "../../views/Users/Users_sc";
-import { Button } from "./Button";
+import { DeleteButton } from "./Button";
 import { Status } from "./Status";
-import { Checkbox, CheckboxContainer, Row } from "./TableBlocks";
+import { Row } from "./TableBlocks";
 
 const UsersRow = ({ user }) => {
   return (
@@ -56,9 +56,9 @@ const UsersRow = ({ user }) => {
         style={{ width: "30px"}}
         // className="userData-container__button"
       >
-        <Button $type="delete" style={{ margin: "0" }}>
+        <DeleteButton style={{ margin: "0" }}>
           <BsThreeDotsVertical className="delete_icon" />
-        </Button>
+        </DeleteButton>
       </UserData>
     </Row>
   );
