@@ -14,7 +14,7 @@ import {
   Select,
   ButtonContainer,
 } from "./NewRoom_sc";
-import { Button } from "../../components/Blocks/Button";
+import { ClearButton, NewButton } from "../../components/Blocks/Button";
 
 const NewRoom = () => {
   const [imageLoaded, setImageLoaded] = useState(null);
@@ -56,11 +56,10 @@ const NewRoom = () => {
 
   const handleSave = (e) => {
     e.preventDefault();
-  }
+  };
   const handleClear = (e) => {
     e.preventDefault();
-  }
-
+  };
 
   return (
     <MainContainer>
@@ -75,7 +74,7 @@ const NewRoom = () => {
             style={{ width: "32%" }}
             onChange={(e) => setImageLoaded(e.target.files[0])}
           />
-          <Button $type='newClear' onClick={imageHandler}>Upload</Button>
+          <ClearButton onClick={imageHandler}>Upload</ClearButton>
         </Container>
 
         <Container>
@@ -98,7 +97,13 @@ const NewRoom = () => {
         </Container>
         <Container>
           <Label htmlFor="roomNumber">Room number :</Label>
-          <Input name="roomNumber" type="number" min={100}  placeholder={'Add a room number'} style={{ width: "250px", textAlign: "center"}}/>
+          <Input
+            name="roomNumber"
+            type="number"
+            min={100}
+            placeholder={"Add a room number"}
+            style={{ width: "250px", textAlign: "center" }}
+          />
         </Container>
         <Container>
           <Label htmlFor="description">
@@ -108,14 +113,20 @@ const NewRoom = () => {
             name="description"
             type="text"
             maxLength={100}
-            placeholder={'Add a room description'}
-            style={{ width: "600px", textAlign: "left", paddingLeft: '1rem'}}
+            placeholder={"Add a room description"}
+            style={{ width: "600px", textAlign: "left", paddingLeft: "1rem" }}
           />
         </Container>
         <Container>
           <Label htmlFor="price">Room rate : </Label>
           <div>
-            € <Input name="price" type="number" placeholder={'Add a room rate'} style={{ width: "200px", textAlign: "center"}}/>
+            €{" "}
+            <Input
+              name="price"
+              type="number"
+              placeholder={"Add a room rate"}
+              style={{ width: "200px", textAlign: "center" }}
+            />
           </div>
         </Container>
         <Container>
@@ -124,20 +135,31 @@ const NewRoom = () => {
         </Container>
         <Container>
           <Label htmlFor="offer-percentage">Room offer percentage :</Label>
-          <Input name="offer-percentage" type="number" placeholder={'Add a discount (%)'} style={{ width: "220px", textAlign: "center"}}/>
+          <Input
+            name="offer-percentage"
+            type="number"
+            placeholder={"Add a discount (%)"}
+            style={{ width: "220px", textAlign: "center" }}
+          />
         </Container>
         <Container>
           <Label htmlFor="cancellation">Room cancellation policy :</Label>
-          <Input name="cancellation" type="text" placeholder={'Add a cancellation policy'} style={{ width: "600px", textAlign: "left", paddingLeft: '1rem'}}s/>
+          <Input
+            name="cancellation"
+            type="text"
+            placeholder={"Add a cancellation policy"}
+            style={{ width: "600px", textAlign: "left", paddingLeft: "1rem" }}
+            s
+          />
         </Container>
 
         <ButtonContainer>
-          <Button $type="newSave" type="submit" onClick={handleSave}>
+          <NewButton type="submit" onClick={handleSave}>
             Save
-          </Button>
-          <Button $type="newClear" type="submit" onClick={handleClear}>
+          </NewButton>
+          <ClearButton type="submit" onClick={handleClear}>
             Clear
-          </Button>
+          </ClearButton>
         </ButtonContainer>
       </Form>
     </MainContainer>

@@ -14,7 +14,7 @@ import Contact from "./views/Contact/Contact";
 import { LoginContext, initialState } from "./context/LoginContext";
 
 import { LoginReducer } from "./context/LoginReducer";
-import PrivateRoutes from "./utils/PrivateRoutes";
+import PrivateRoutes from "./utils/privateRoutes";
 import NewRoom from "./views/Rooms/NewRoom";
 import NewUser from "./views/Users/NewUser";
 import Booking from "./views/Bookings/Booking";
@@ -28,13 +28,13 @@ function App() {
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/login" element={<Login />} />
-            <Route path="/hotel-miranda-dashboard/login" element={<Login />} />
+            {/* <Route path="/hotel-miranda-dashboard/login" element={<Login />} /> */}
             {/* <Route path="/hotel-miranda-dashboard" element={<Dashboard />} /> */}
 
             <Route element={<PrivateRoutes />}>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/hotel-miranda-dashboard" element={<Dashboard />} />
+              {/* <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/hotel-miranda-dashboard" element={<Dashboard />} /> */}
 
               <Route path="/bookings" element={<Bookings />} />
               <Route path="/bookings/:id" element={<Booking />} />

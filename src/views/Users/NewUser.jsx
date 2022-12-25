@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "../../components/Blocks/Button";
+import { ClearButton, NewButton } from "../../components/Blocks/Button";
 import MainContainer from "../../components/MainContainer/MainContainer";
 
 import {
@@ -56,9 +56,9 @@ const NewUser = () => {
             style={{ width: "32%" }}
             onChange={(e) => setImageLoaded(e.target.files[0])}
           />
-          <Button $type="newClear" onClick={imageHandler}>
+          <ClearButton onClick={imageHandler}>
             Upload
-          </Button>
+          </ClearButton>
         </Container>
 
         <Container>
@@ -126,12 +126,12 @@ const NewUser = () => {
         </Container>
 
         <ButtonContainer>
-          <Button $type="newSave" type="submit" onClick={handleSave}>
+          <NewButton type="submit" onClick={handleSave}>
             Save
-          </Button>
-          <Button $type="newClear" type="submit" onClick={handleClear}>
+          </NewButton>
+          <ClearButton type="submit" onClick={handleClear}>
             Clear
-          </Button>
+          </ClearButton>
         </ButtonContainer>
       </Form>
     </MainContainer>

@@ -25,7 +25,7 @@ import {
   FooterDescription,
 } from "./SideMenu_sc";
 import { Link, useLocation } from "react-router-dom";
-import { Button } from "../Blocks/Button";
+import { SideMenuButton } from "../Blocks/Button";
 
 
 const SideMenu = () => {
@@ -40,7 +40,7 @@ const SideMenu = () => {
         </LogoContainer>
         <SideIconContainer>
           <Link
-            to="/dashboard"
+            to="/"
             style={{ textDecoration: "none", color: "var(--color-greenGrey)" }}
           >
             <IconContainer>
@@ -94,7 +94,7 @@ const SideMenu = () => {
               {" "}
               <CiLinkedin style={{ height: "25px", width: "25px" }} />
             </Link>
-            <Button $type="sidemenu">Edit</Button>
+            <SideMenuButton>Edit</SideMenuButton>
           </Card>
           <Footer className="sideMenu__footer">
             <FooterTitle> HM Admin Dashboard</FooterTitle>

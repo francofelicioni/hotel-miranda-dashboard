@@ -6,7 +6,7 @@ import { LoginContext } from "../context/LoginContext";
 const PrivateRoutes = () => {
   const [state] = useContext(LoginContext);
 
-  return state.isAuth ? <Outlet /> : <Navigate to="/" replace/>;
+  return state.isAuth ? <Outlet /> : <Navigate to="/login" replace/>;
 };
 
 export default PrivateRoutes;

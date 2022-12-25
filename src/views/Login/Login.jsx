@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { Button } from "../../components/Blocks/Button";
+import { Button, LoginButton } from "../../components/Blocks/Button";
 
 import { login, updateEmail, updateName } from "../../context/actions";
 
@@ -20,7 +20,7 @@ import {
   Image,
   Desc,
   LoginInformation,
-  LoginP
+  LoginP,
 } from "./Login_sc";
 
 const Login = () => {
@@ -47,7 +47,7 @@ const Login = () => {
         })
       );
       saveLocalStorage({ ...state, isAuth: true });
-      navigate("/dashboard");
+      navigate("/");
     } else {
       Swal.fire({
         icon: "error",
@@ -91,10 +91,7 @@ const Login = () => {
               <LoginP>Name: Fran</LoginP>
             </LoginInformation>
           </FormContent>
-          <Button $type="login" type="submit">
-            {" "}
-            Login{" "}
-          </Button>
+          <LoginButton type="submit">Login</LoginButton>
         </Form>
       </LoginLeft>
       <LoginRigth className="login-rigth">

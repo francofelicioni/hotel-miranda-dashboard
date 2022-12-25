@@ -13,15 +13,15 @@ import {
 
 import { Badge } from "@mui/material";
 import { FaArrowsAltH } from "react-icons/fa";
-import { AiOutlineSearch } from "react-icons/ai";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import NotificationsActiveOutlinedIcon from "@mui/icons-material/NotificationsActiveOutlined";
-import MessageOutlinedIcon from "@mui/icons-material/MessageOutlined";
 import { MdLogout } from "react-icons/md";
 
 import { logout } from "../../context/actions";
 import { LoginContext } from "../../context/LoginContext";
 import { Logo } from "../SideMenu/SideMenu_sc";
+
+const LOCAL_AUTH = "authenticated";
 
 const Header = () => {
   const location = useLocation();
@@ -42,54 +42,38 @@ const Header = () => {
     }
   };
 
-  const saveLocalStorage = (user) => {
-    if (!localStorage.getItem("authenticated")) {
-      return localStorage.setItem("authenticated", JSON.stringify(user));
-    } else {
-      const currentUser = JSON.parse(localStorage.getItem("authenticated"));
-      currentUser.isAuth = false;
-      localStorage.setItem("authenticated", JSON.stringify(currentUser));
-    }
-  };
+  // const saveLocalStorage = (user) => {
+  //   if (!localStorage.getItem(LOCAL_AUTH)) {
+  //     return localStorage.setItem(LOCAL_AUTH, JSON.stringify(user));
+  //   } else {
+  //     const currentUser = JSON.parse(localStorage.getItem(LOCAL_AUTH));
+  //     currentUser.isAuth = false;
+  //     localStorage.setItem(LOCAL_AUTH, JSON.stringify(currentUser));
+  //   }
+  // };
 
   const handleWidth = () => {
     let mainContainer = document.querySelector("#mainContainer");
-    let sideMenu__footer = document.querySelector('.sideMenu__footer')
+    let sideMenu__footer = document.querySelector(".sideMenu__footer");
 
     if (mainContainer.classList.contains("full")) {
-      mainContainer.classList.remove('full');
+      mainContainer.classList.remove("full");
       mainContainer.classList.add("normal");
-      sideMenu__footer.classList.remove('hide');
+      sideMenu__footer.classList.remove("hide");
     } else {
-      mainContainer.classList.remove('normal');
+      mainContainer.classList.remove("normal");
       mainContainer.classList.add("full");
-      sideMenu__footer.classList.add('hide');
+      sideMenu__footer.classList.add("hide");
     }
   };
 
-  // const handleClick = () => {
-  //   dispatch(logout({ isAuth: false }));
-  //   saveLocalStorage({ ...state, isAuth: false });
-  //   navigate('/login');
-  // };
-
   const handleClick = (state) => {
     dispatch(logout(!state.isAuth));
-    const currentItem = JSON.parse(localStorage.getItem("authenticated"));
+    const currentItem = JSON.parse(localStorage.getItem(LOCAL_AUTH));
     currentItem.isAuth = false;
     localStorage.setItem("authenticated", JSON.stringify(currentItem));
-    return navigate("/login");
+    // navigate("/login");
   };
-
-  // const styles = (theme) => ({
-  //   margin: {
-  //     margin: theme.spacing.unit * 2,
-  //   },
-  //   customBadge: {
-  //     backgroundColor: "#00AFD7",
-  //     color: "white",
-  //   },
-  // });
 
   return (
     location.pathname !== "/login" && (
@@ -105,10 +89,6 @@ const Header = () => {
             onClick={handleWidth}
           />
           <Title> {setTitle()} </Title>
-          {/* <SearchContainer>
-            <Input />
-            <AiOutlineSearch style={{ width: "22px", height: "30px" }} />
-          </SearchContainer> */}
         </Container>
 
         <Rigth>
@@ -142,19 +122,6 @@ const Header = () => {
               />
             </Link>
           </Badge>
-          {/* <Badge
-            badgeContent={"!"}
-            sx={{
-              "& .MuiBadge-badge": {
-                color: "white",
-                backgroundColor: "black",
-              },
-            }}
-          >
-            <Link to="/contact">
-              <MessageOutlinedIcon style={{ cursor: "pointer" }} />
-            </Link>
-          </Badge> */}
           <MdLogout
             style={{
               width: "24px",
