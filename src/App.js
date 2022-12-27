@@ -33,8 +33,8 @@ function App() {
 
             <Route element={<PrivateRoutes />}>
               <Route path="/" element={<Dashboard />} />
-              {/* <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/hotel-miranda-dashboard" element={<Dashboard />} /> */}
+              <Route path="/dashboard" element={<Dashboard />}
+              <Route path="/hotel-miranda-dashboard" element={<Dashboard />}
 
               <Route path="/bookings" element={<Bookings />} />
               <Route path="/bookings/:id" element={<Booking />} />

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { Button, LoginButton } from "../../components/Blocks/Button";
+import { LoginButton } from "../../components/Blocks/Button";
 
 import { login, updateEmail, updateName } from "../../context/actions";
 
@@ -23,17 +23,27 @@ import {
   LoginP,
 } from "./Login_sc";
 
+const LOCAL_AUTH = "authenticated";
+
 const Login = () => {
   const navigate = useNavigate();
   const [state, dispatch] = useContext(LoginContext);
+  let currentUser = {
+    isAuth: "",
+    user: {
+      email: "",
+      name: "",
+    },
+  };
 
   const saveLocalStorage = (user) => {
-    if (!localStorage.getItem("authenticated")) {
-      return localStorage.setItem("authenticated", JSON.stringify(user));
+    if (!localStorage.getItem(LOCAL_AUTH)) {
+      currentUser = localStorage.setItem(LOCAL_AUTH, JSON.stringify(user));
+      return localStorage.setItem(LOCAL_AUTH, JSON.stringify(user));
     } else {
-      const currentUser = JSON.parse(localStorage.getItem("authenticated"));
+      currentUser = JSON.parse(localStorage.getItem(LOCAL_AUTH));
       currentUser.isAuth = true;
-      localStorage.setItem("authenticated", JSON.stringify(currentUser));
+      localStorage.setItem(LOCAL_AUTH, JSON.stringify(currentUser));
     }
   };
 
@@ -73,7 +83,9 @@ const Login = () => {
               <input
                 type="text"
                 name="email"
-                value={state.user.email}
+                value={
+                  state.user.email ? state.user.email : currentUser.user.email
+                }
                 onChange={(e) => dispatch(updateEmail(e.target.value))}
               />
             </FormItem>
