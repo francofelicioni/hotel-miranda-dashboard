@@ -108,7 +108,6 @@ const Navigation = ({
         setInitialIndex(
           parseInt(info.length / itemsToShow) * itemsToShow + itemsToShow
         );
-        console.log(parseInt(info.length / itemsToShow));
       } else {
         setInitialIndex((info.length / itemsToShow) * itemsToShow);
       }

@@ -27,14 +27,11 @@ function App() {
       <LoginContext.Provider value={contextValue}>
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/hotel-miranda-dashboard/login" element={<Login />} />
-            <Route path="/hotel-miranda-dashboard" element={<Dashboard />} />
+            <Route exact path="/login" element={<Login />} />
 
             <Route element={<PrivateRoutes />}>
               <Route path="/" element={<Dashboard />} />
               <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/hotel-miranda-dashboard" element={<Dashboard />} />
 
               <Route path="/bookings" element={<Bookings />} />
               <Route path="/bookings/:id" element={<Booking />} />

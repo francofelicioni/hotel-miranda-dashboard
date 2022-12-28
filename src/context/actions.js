@@ -8,7 +8,7 @@ export const login = ({ isAuth, user }) => ({
   },
 });
 
-export const logout = ({ isAuth }) => ({
+export const logout = ( isAuth ) => ({
   type: LOGOUT,
   payload: isAuth,
 });

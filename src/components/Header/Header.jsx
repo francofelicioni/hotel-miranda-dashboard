@@ -61,8 +61,8 @@ const Header = () => {
     dispatch(logout(!state.isAuth));
     const currentItem = JSON.parse(localStorage.getItem(LOCAL_AUTH));
     currentItem.isAuth = false;
-    localStorage.setItem("authenticated", JSON.stringify(currentItem));
-    navigate("/login");
+    localStorage.setItem(LOCAL_AUTH, JSON.stringify(currentItem));
+    return navigate('/login')
   };
 
   return (

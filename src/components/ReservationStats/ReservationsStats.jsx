@@ -91,9 +91,6 @@ function ReservationsStats() {
   ]);
 
   useEffect(() => {
-    console.log(data.map((v, i) => v.sales));
-    console.log(data.map((v, i) => v.occupancy));
-
     const days = [
       "Monday",
       "Tuesday",
