@@ -62,7 +62,7 @@ const Header = () => {
     const currentItem = JSON.parse(localStorage.getItem(LOCAL_AUTH));
     currentItem.isAuth = false;
     localStorage.setItem("authenticated", JSON.stringify(currentItem));
-    navigate("/hotel-miranda-dashboard");
+    navigate("/login");
   };
 
   return (
