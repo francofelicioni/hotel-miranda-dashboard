@@ -42,16 +42,6 @@ const Header = () => {
     }
   };
 
-  // const saveLocalStorage = (user) => {
-  //   if (!localStorage.getItem(LOCAL_AUTH)) {
-  //     return localStorage.setItem(LOCAL_AUTH, JSON.stringify(user));
-  //   } else {
-  //     const currentUser = JSON.parse(localStorage.getItem(LOCAL_AUTH));
-  //     currentUser.isAuth = false;
-  //     localStorage.setItem(LOCAL_AUTH, JSON.stringify(currentUser));
-  //   }
-  // };
-
   const handleWidth = () => {
     let mainContainer = document.querySelector("#mainContainer");
     let sideMenu__footer = document.querySelector(".sideMenu__footer");
@@ -72,7 +62,7 @@ const Header = () => {
     const currentItem = JSON.parse(localStorage.getItem(LOCAL_AUTH));
     currentItem.isAuth = false;
     localStorage.setItem("authenticated", JSON.stringify(currentItem));
-    navigate("/dashboard");
+    navigate("/hotel-miranda-dashboard");
   };
 
   return (
