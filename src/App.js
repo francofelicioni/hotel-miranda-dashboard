@@ -5,11 +5,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Login from "./views/Login/Login";
 import Dashboard from "./views/Dashboard/Dashboard";
-import Rooms from "./views/Rooms/Rooms";
 import Bookings from "./views/Bookings/Bookings";
+import Rooms from "./views/Rooms/Rooms";
 import Users from "./views/Users/Users";
-import NotFound from "./views/NotFound/NotFound";
 import Contact from "./views/Contact/Contact";
+import NotFound from "./views/NotFound/NotFound";
 
 import { LoginContext, initialState } from "./context/LoginContext";
 
@@ -28,13 +28,13 @@ function App() {
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/login" element={<Login />} />
-            {/* <Route path="/hotel-miranda-dashboard/login" element={<Login />} /> */}
-            {/* <Route path="/hotel-miranda-dashboard" element={<Dashboard />} /> */}
+            <Route path="/hotel-miranda-dashboard/login" element={<Login />} />
+            <Route path="/hotel-miranda-dashboard" element={<Dashboard />} />
 
             <Route element={<PrivateRoutes />}>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/dashboard" element={<Dashboard />}
-              <Route path="/hotel-miranda-dashboard" element={<Dashboard />}
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/hotel-miranda-dashboard" element={<Dashboard />} />
 
               <Route path="/bookings" element={<Bookings />} />
               <Route path="/bookings/:id" element={<Booking />} />
