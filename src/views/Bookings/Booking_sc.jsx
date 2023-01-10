@@ -149,7 +149,6 @@ export const FacilitiesGrid = styled.div`
 export const Facility = styled.div`
   padding: 1rem;
   text-align: center;
-  /* margin: 0 auto; */
   color: #528678;
   font-weight: 600;
   border-radius: 10px;
