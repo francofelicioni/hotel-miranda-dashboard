@@ -37,9 +37,9 @@ export const StateFlag = styled.div`
 `;
 
 export const ImageSlider = styled.img`
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
   height: 100%;
   background-image: linear-gradient(
     to bottom,

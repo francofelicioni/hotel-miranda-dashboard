@@ -1,10 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import {Autoplay, Navigation} from 'swiper';
 
-import roomImg1 from './1.jpg'
-import roomImg2 from './2.jpg'
-import roomImg3 from './3.jpg'
-import roomImg4 from './4.jpg'
+import roomImg1 from './4.jpg'
+import roomImg2 from './5.jpg'
+import roomImg3 from './7.jpg'
+import roomImg4 from './8.jpg'
 
 // Import Swiper styles
 import "swiper/css";
@@ -26,7 +26,7 @@ const Slider = ({description, state}) => {
          // onSwiper={(swiper) => console.log(swiper)}
          autoplay={{ delay: 5000 }}
          navigation
-         style={{ height: "600px", borderRadius: "0 10px 10px 0" }}
+         style={{ height: "100%", borderRadius: "0 10px 10px 0" }}
          loop
       >
          <SwiperSlide style={{ position: "relative" }}>
