@@ -87,7 +87,7 @@ const SideMenu = () => {
         </SideIconContainer>
         <User>
           <Card>
-            <Image src="https://firebasestorage.googleapis.com/v0/b/phgrm-oxygen.appspot.com/o/HotelMiranda%2F1591881944995.jpg?alt=media&token=50e30c7a-dcfd-43d1-9c29-65e26884d00f" />
+            <Image src="https://firebasestorage.googleapis.com/v0/b/hotel-miranda-1e6f1.appspot.com/o/150fc14f-e1d5-458a-9581-1b5e9bc91a80.jpg?alt=media&token=e9d31684-00bb-423c-b0dd-aec9bfd0cbc4" />
             <CardTitle> Franco Felicioni</CardTitle>
             <CardEmail> fran.felicioni@gmail.com</CardEmail>
             <Link to="https://www.linkedin.com/in/francofelicioni/">
