@@ -150,10 +150,15 @@ export const Facility = styled.div`
   padding: 1rem;
   text-align: center;
   /* margin: 0 auto; */
-  background-color: #e8f2ef;
   color: #528678;
   font-weight: 600;
   border-radius: 10px;
+  background-color: #e8f2ef;
+
+  :hover {
+    color: #e8f2ef;
+    background: #528678;
+  }
 `;
 
 export const Icon = styled.img``;

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -33,7 +32,6 @@ import {
   Image,
   FacilitiesGrid,
   Facility,
-  Icon,
   ImageDetailsContainer,
 } from "./Booking_sc";
 
@@ -96,7 +94,7 @@ const Booking = () => {
               <Column>
                 <p>Price</p>
                 <Price>
-                  {booking.price} <Span>/nigth</Span>
+                  {booking.price} <Span>/night</Span>
                 </Price>
               </Column>
             </Container>
@@ -114,8 +112,8 @@ const Booking = () => {
           <Column>
             <p>Facilities</p>
             <FacilitiesGrid>
-              {booking.facilities.map((facility) => (
-                <Facility>{facility}</Facility>
+              {booking.facilities.map((facility, index) => (
+                <Facility key={index}>{facility}</Facility>
               ))}
             </FacilitiesGrid>
             <Container></Container>

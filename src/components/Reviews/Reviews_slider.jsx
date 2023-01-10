@@ -15,7 +15,7 @@ const ReviewsSlider = () => {
       // onSwiper={(swiper) => console.log(swiper)}
       autoplay={{ delay: 3000 }}
       //   navigation
-      style={{ height: "600px", borderRadius: "0 10px 10px 0" }}
+      style={{ height: "300px", borderRadius: "0 10px 10px 0" }}
       loop
     >
       <SwiperSlide>

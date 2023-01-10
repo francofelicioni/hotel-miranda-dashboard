@@ -7,7 +7,7 @@ import MainContainer from "../../components/MainContainer/MainContainer";
 import {
   InsightsCardsContainer,
   ReviewsContainer,
-  GeneralInsigths
+  GeneralInsights
 } from "./Dashboard_sc";
 
 import { BiBed } from 'react-icons/bi';
@@ -35,10 +35,10 @@ const Dashboard = () => {
             <InsightsCards icon={<IoMdExit style={{width:'50', height: '50'}} />} number='753' title='Check In'/>
             <InsightsCards icon={<BiLogOut style={{width:'50', height: '50'}} />} number='516' title='Check Out'/>
           </InsightsCardsContainer>
-          <GeneralInsigths>
+          <GeneralInsights>
             <ReservationsStats />
             <Calendar />
-          </GeneralInsigths>
+          </GeneralInsights>
           <ReviewsContainer>
             <ReviewsSlider />
           </ReviewsContainer>

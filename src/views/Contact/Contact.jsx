@@ -21,15 +21,15 @@ import {
 import ContactRow from "../../components/Blocks/ContactsRow";
 import Spinner from "../../components/Blocks/Spinner";
 import Navigation from "../../components/Navigation/Navigation";
-
-
+import { ReviewsContainer } from "../Dashboard/Dashboard_sc";
+import ReviewsSlider from "../../components/Reviews/Reviews_slider";
 
 const Contact = () => {
   const dispatch = useDispatch();
   const contactsResult = useSelector(selectContacts);
   const appState = useSelector(contactsStatus);
 
-  //Status Handeling
+  //Status Handling
   const [contactStatus, setContactStatus] = useState("");
   const [lengthFromRedux, setLengthFromRedux] = useState(true);
   const [contactsFiltered, setContactsFiltered] = useState([]);
@@ -66,6 +66,9 @@ const Contact = () => {
 
   return (
     <MainContainer>
+      <ReviewsContainer>
+        <ReviewsSlider />
+      </ReviewsContainer>
       <ListButtonsContainer>
         <Selectors>
           <Selector
