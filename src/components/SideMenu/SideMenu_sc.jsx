@@ -110,7 +110,7 @@ const FooterTitle = styled.p`
   color: #212121;
 `;
 
-const FooterCopyrigth = styled.p`
+const FooterCopyright = styled.p`
   width: 100%;
   font-weight: 300;
   font-size: 14px;
@@ -139,6 +139,6 @@ export {
   CardEmail,
   Footer,
   FooterTitle,
-  FooterCopyrigth,
+  FooterCopyright,
   FooterDescription,
 };

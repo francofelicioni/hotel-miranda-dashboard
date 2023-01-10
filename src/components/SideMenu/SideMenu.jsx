@@ -21,7 +21,7 @@ import {
   CardEmail,
   Footer,
   FooterTitle,
-  FooterCopyrigth,
+  FooterCopyrigth as FooterCopyright,
   FooterDescription,
 } from "./SideMenu_sc";
 import { Link, useLocation } from "react-router-dom";
@@ -87,7 +87,7 @@ const SideMenu = () => {
         </SideIconContainer>
         <User>
           <Card>
-            <Image src="https://firebasestorage.googleapis.com/v0/b/hotel-miranda-1e6f1.appspot.com/o/150fc14f-e1d5-458a-9581-1b5e9bc91a80.jpg?alt=media&token=e9d31684-00bb-423c-b0dd-aec9bfd0cbc4" />
+            <Image src="https://firebasestorage.googleapis.com/v0/b/hotel-miranda-1e6f1.appspot.com/o/profile_photo.jpg?alt=media&token=b84dd432-56e9-45d5-9beb-a980d09a1290" />
             <CardTitle> Franco Felicioni</CardTitle>
             <CardEmail> fran.felicioni@gmail.com</CardEmail>
             <Link to="https://www.linkedin.com/in/francofelicioni/">
@@ -98,7 +98,7 @@ const SideMenu = () => {
           </Card>
           <Footer className="sideMenu__footer">
             <FooterTitle> HM Admin Dashboard</FooterTitle>
-            <FooterCopyrigth> © 2022 All Rights Reserved</FooterCopyrigth>
+            <FooterCopyright> © 2022 All Rights Reserved</FooterCopyright>
             <FooterDescription> Made with ♥ by Fran</FooterDescription>
           </Footer>
         </User>
