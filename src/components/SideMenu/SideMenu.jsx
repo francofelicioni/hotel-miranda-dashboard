@@ -21,7 +21,7 @@ import {
   CardEmail,
   Footer,
   FooterTitle,
-  FooterCopyrigth as FooterCopyright,
+  FooterCopyright,
   FooterDescription,
 } from "./SideMenu_sc";
 import { Link, useLocation } from "react-router-dom";
