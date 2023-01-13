@@ -8,7 +8,7 @@ import Dashboard from "./views/Dashboard/Dashboard";
 import Bookings from "./views/Bookings/Bookings";
 import Rooms from "./views/Rooms/Rooms";
 import Users from "./views/Users/Users";
-import Contact from "./views/Contact/Contact";
+import Contacts from "./views/Contacts/Contacts";
 import NotFound from "./views/NotFound/NotFound";
 
 import { LoginContext, initialState } from "./context/LoginContext";
@@ -42,7 +42,7 @@ function App() {
               <Route path="/users" element={<Users />} />
               <Route path="/new-user" element={<NewUser />} />
 
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/contacts" element={<Contacts />} />
 
               <Route path="*" element={<NotFound />} />
             </Route>
