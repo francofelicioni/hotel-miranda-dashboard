@@ -77,7 +77,7 @@ const CheckboxContainer = styled.div`
   width: 300px;
 `;
 
-const LoginRigth = styled.div`
+const LoginRight = styled.div`
   background-color: #eee;
   display: flex;
   flex-direction: column;
@@ -127,7 +127,7 @@ export {
   FormContent,
   FormItem,
   CheckboxContainer,
-  LoginRigth,
+  LoginRight,
   Image,
   Desc,
   LoginInformation,

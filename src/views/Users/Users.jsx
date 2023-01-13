@@ -68,6 +68,9 @@ const Users = () => {
     }
   };
 
+  console.log("UR", usersResult);
+  console.log("US", usersSwitch());
+
   return (
     <>
       <MainContainer>
@@ -104,9 +107,6 @@ const Users = () => {
         <Table>
           <thead>
             <tr>
-              {/* <TableTitle style={{ paddingLeft: "10px" }}>
-                <Checkbox type="checkbox"></Checkbox>
-              </TableTitle> */}
               <TableTitle>Name</TableTitle>
               <TableTitle>Job Desk</TableTitle>
               <TableTitle>Contact</TableTitle>
@@ -117,15 +117,19 @@ const Users = () => {
 
           {appState === "pending" && (
             <tbody>
-              <Spinner />
+              <tr>
+                <td>
+                  <Spinner />
+                </td>
+              </tr>
             </tbody>
           )}
 
           {appState === "fulfilled" && (
             <tbody>
               {usersSwitch().map((user, index) =>
-                index < initialIndex && index >= (initialIndex - itemsToShow) ? (
-                  <UsersRow key={user.id} user={user} />
+                index < initialIndex && index >= initialIndex - itemsToShow ? (
+                  <UsersRow key={user._id} user={user} />
                 ) : (
                   false
                 )

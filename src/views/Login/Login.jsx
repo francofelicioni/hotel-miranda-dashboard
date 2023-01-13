@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { LoginButton } from "../../components/Blocks/Button";
 
-import { login, updateEmail, updateName } from "../../context/actions";
+import { login } from "../../context/actions";
 
 import { LoginContext } from "../../context/LoginContext";
 
@@ -16,7 +16,7 @@ import {
   Form,
   FormContent,
   FormItem,
-  LoginRigth,
+  LoginRight as LoginRight,
   Image,
   Desc,
   LoginInformation,
@@ -28,35 +28,49 @@ const LOCAL_AUTH = "authenticated";
 const Login = () => {
   const navigate = useNavigate();
   const [state, dispatch] = useContext(LoginContext);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   let currentUser = {
-    isAuth: "",
-    user: {
-      email: "",
-      name: "",
-    },
-  };
+    isAuth: '',
+    email: ''
+  }
 
-  const saveLocalStorage = (user) => {
-    if (!localStorage.getItem(LOCAL_AUTH)) {
-      currentUser = localStorage.setItem(LOCAL_AUTH, JSON.stringify(user));
-      return localStorage.setItem(LOCAL_AUTH, JSON.stringify(user));
-    } else {
-      currentUser = JSON.parse(localStorage.getItem(LOCAL_AUTH));
-      currentUser.isAuth = true;
-      localStorage.setItem(LOCAL_AUTH, JSON.stringify(currentUser));
-    }
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (state.user.email === "fran@test.com" && state.user.name === "Fran") {
+
+    const response = await fetch(process.env.REACT_APP_BACKEND_URL + "login", {
+      method: "POST",
+      mode: "cors",
+      cache: "no-cache",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      redirect: "follow",
+      referrerPolicy: "no-referrer",
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    });
+
+    const { token } = await response.json();
+
+    if (token) {
+      localStorage.setItem("token", token);
       dispatch(
         login({
           isAuth: true,
-          user: { email: state.user.email, name: state.user.name },
+          user: {
+            email: email,
+          },
         })
       );
-      saveLocalStorage({ ...state, isAuth: true });
+      saveLocalStorage({
+        ...state,
+        isAuth: true,
+      });
       navigate("/");
     } else {
       Swal.fire({
@@ -64,6 +78,17 @@ const Login = () => {
         title: "Failed authentication",
         text: "Wrong username and/or password",
       });
+    }
+  };
+
+  const saveLocalStorage = (user) => {
+    if (!localStorage.getItem(LOCAL_AUTH)) {
+      currentUser = localStorage.setItem(LOCAL_AUTH, JSON.stringify(user));
+      return localStorage.setItem(LOCAL_AUTH, JSON.stringify(user));
+    } else {
+      currentUser = JSON.parse(localStorage.getItem(LOCAL_AUTH) || "");
+      currentUser.isAuth = true;
+      localStorage.setItem(LOCAL_AUTH, JSON.stringify(currentUser));
     }
   };
 
@@ -83,33 +108,31 @@ const Login = () => {
               <input
                 type="text"
                 name="email"
-                value={
-                  state.user.email ? state.user.email : currentUser.user.email
-                }
-                onChange={(e) => dispatch(updateEmail(e.target.value))}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </FormItem>
             <FormItem>
-              <label style={{ height: "25px" }}>Enter name: </label>
+              <label style={{ height: "25px" }}>Enter password: </label>
               <input
-                type="text"
-                name="name"
-                value={state.user.name}
-                onChange={(e) => dispatch(updateName(e.target.value))}
+                type="password"
+                name="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </FormItem>
             <LoginInformation>
               <LoginP>Email: fran@test.com</LoginP>
-              <LoginP>Name: Fran</LoginP>
+              <LoginP>Password: 1234</LoginP>
             </LoginInformation>
           </FormContent>
           <LoginButton type="submit">Login</LoginButton>
         </Form>
       </LoginLeft>
-      <LoginRigth className="login-rigth">
+      <LoginRight className="login-right">
         <Image src="icons\hotelMiranda.svg" />
         <Desc>Welcome to the Hotel Miranda Dashboard</Desc>
-      </LoginRigth>
+      </LoginRight>
     </Container>
   );
 };

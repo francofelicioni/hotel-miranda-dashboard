@@ -24,7 +24,7 @@ import Navigation from "../../components/Navigation/Navigation";
 import { ReviewsContainer } from "../Dashboard/Dashboard_sc";
 import ReviewsSlider from "../../components/Reviews/Reviews_slider";
 
-const Contact = () => {
+const Contacts = () => {
   const dispatch = useDispatch();
   const contactsResult = useSelector(selectContacts);
   const appState = useSelector(contactsStatus);
@@ -48,21 +48,24 @@ const Contact = () => {
     dispatch(fetchContacts());
   };
 
-  useEffect(() => {
-    const contactsToFilter = contactsResult;
-    const contactsFiltered = contactsToFilter.filter(
-      (contact) => !contact.archived === contactStatus
-    );
-    setContactsFiltered(contactsFiltered);
-  }, [contactStatus, contactsResult]);
+  // useEffect(() => {
+  //   const contactsToFilter = contactsResult;
+  //   const contactsFiltered = contactsToFilter.filter((contact) => !contact.archived === contactStatus
+  //   );
+  //   setContactsFiltered(contactsFiltered);
+  // }, [contactStatus, contactsResult]);
 
-  const contactsSwitch = () => {
+  const contactsSwitch =  () => {
     if (lengthFromRedux) {
       return contactsResult;
     } else {
       return contactsFiltered;
     }
   };
+
+  console.log('CR', contactsResult)
+  console.log('CS', contactsSwitch())
+  console.log('CS', typeof(contactsResult));
 
   return (
     <MainContainer>
@@ -101,19 +104,29 @@ const Contact = () => {
 
         {appState === "pending" && (
           <tbody>
-            <Spinner />
+            <tr>
+              <td>
+                <Spinner />
+              </td>
+            </tr>
           </tbody>
         )}
 
         {appState === "fulfilled" && (
           <tbody>
-            {contactsSwitch().map((contact, index) =>
+            {/* {contactsSwitch().map((contact, index) =>
               index < initialIndex && index >= initialIndex - itemsToShow ? (
-                <ContactRow key={contact.id} contact={contact} />
+                <ContactRow key={contact._id} contact={contact} />
               ) : (
                 false
               )
-            )}
+            )} */}
+            {
+              contactsResult.map((contact, index) => 
+                <ContactRow key={contact._id} contact={contact} />
+              )
+            }
+            {console.log('SWITCH',contactsSwitch())}
           </tbody>
         )}
       </Table>
@@ -129,4 +142,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contacts;

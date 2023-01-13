@@ -63,6 +63,9 @@ const Rooms = () => {
     }
   };
 
+  console.log('RR', roomsResult)
+  console.log('RS', roomsSwitch())
+
   return (
     <>
       <MainContainer>
@@ -108,7 +111,11 @@ const Rooms = () => {
 
           {appState === "pending" && (
             <tbody>
-              <Spinner />
+              <tr>
+                <td>
+                  <Spinner />
+                </td>
+              </tr>
             </tbody>
           )}
 
@@ -116,7 +123,7 @@ const Rooms = () => {
             <tbody>
               {roomsSwitch().map((room, index) =>
                 index < initialIndex && index >= initialIndex - itemsToShow ? (
-                  <RoomsRow key={room.id} room={room} />
+                  <RoomsRow key={room._id} room={room} />
                 ) : (
                   false
                 )

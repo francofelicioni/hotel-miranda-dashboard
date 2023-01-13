@@ -18,8 +18,6 @@ import Calendar from "../../components/Calendar/Calendar";
 import ReservationsStats from "../../components/ReservationStats/ReservationsStats";
 import ReviewsSlider from "../../components/Reviews/Reviews_slider";
 
-
-
 const Dashboard = () => {
 
   useEffect(()=> {

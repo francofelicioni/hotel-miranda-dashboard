@@ -65,6 +65,10 @@ const Bookings = () => {
     }
   };
 
+  console.log('BR', bookingsResult)
+  console.log('BS', bookingsSwitch())
+  console.log('TYPEOF BR', typeof(bookingsResult));
+
   return (
     <MainContainer>
       <ListButtonsContainer>
@@ -118,15 +122,19 @@ const Bookings = () => {
 
         {appState === "pending" && (
           <tbody>
-            <Spinner />
+            <tr>
+              <td>
+                <Spinner />
+              </td>
+            </tr>
           </tbody>
         )}
 
         {appState === "fulfilled" && (
           <tbody>
-            {bookingsSwitch().map((guest, index) =>
-              index < initialIndex && index >= (initialIndex - itemsToShow) ? (
-                <BookingsRow key={guest.id} guest={guest} />
+            {bookingsSwitch().map((booking, index) =>
+              index < initialIndex && index >= initialIndex - itemsToShow ? (
+                <BookingsRow key={booking._id} booking={booking} />
               ) : (
                 false
               )
