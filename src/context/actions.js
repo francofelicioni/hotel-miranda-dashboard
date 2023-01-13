@@ -18,7 +18,7 @@ export const updateEmail = (email) => ({
   payload: email,
 });
 
-export const updateName = (name) => ({
-  type: UPDATE_NAME,
-  payload: name,
-});
+// export const updateName = (name) => ({
+//   type: UPDATE_NAME,
+//   payload: name,
+// });
