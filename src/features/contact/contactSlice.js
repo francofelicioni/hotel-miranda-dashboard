@@ -1,11 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import fetchFrom from "../../utils/fetchFrom";
+import { getAllData } from "../../utils/fetchData";
 
 export const fetchContacts = createAsyncThunk(
-  "contact/fetchContact",
+  "contact/fetchContacts",
 
   async () => {
-    const response = await fetchFrom("contact");
+    const response = await getAllData(process.env.REACT_APP_BACKEND_URL+'contacts');
+    console.log('response', response)
     return response;
   }
 );

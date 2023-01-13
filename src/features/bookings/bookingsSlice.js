@@ -1,11 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import fetchFrom from "../../utils/fetchFrom";
+import { getAllData, getUniqueData } from '../../utils/fetchData';
+
 
 export const fetchBookings = createAsyncThunk(
   "bookings/fetchBookings",
 
   async () => {
-    const response = await fetchFrom("guests");
+    const response = await getAllData(process.env.REACT_APP_BACKEND_URL+'bookings');
     return response;
   }
 );
@@ -14,8 +16,8 @@ export const fetchBooking = createAsyncThunk(
   "booking/fetchBooking",
 
   async (id) => {
-    const response = await fetchFrom("guests");
-    const result = response.filter(guest => guest.id === id);
+    const response = await getUniqueData(process.env.REACT_APP_BACKEND_URL+'bookings/'+{id})
+    const result = response.filter(booking => booking.id === id);
     return result;
   }
 );
