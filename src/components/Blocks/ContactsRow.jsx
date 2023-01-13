@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Id, Info, ContactData } from "../../views/Contact/Contact_sc";
+import { Id, Info, ContactData } from "../../views/Contacts/Contacts_sc";
 
 import { ArchiveButton } from "./Button";
 import { Row } from "./TableBlocks";
@@ -21,9 +21,9 @@ const showComment = (comment) => {
 const ContactRow = ({ contact }) => {
   return (
     <>
-      <Row key={contact.id}>
+      <Row key={contact._id}>
         <ContactData onClick={() => showComment(contact.comment)}>
-          <Id># {contact.id}</Id>
+          <Id># {contact._id}</Id>
         </ContactData>
 
         <ContactData onClick={() => showComment(contact.comment)}>

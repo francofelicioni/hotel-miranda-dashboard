@@ -12,7 +12,6 @@ const Container = styled.div`
   top: ${(props) => (props.path === "/login" ? "0" : "9rem")};
   right: 0;
   padding: ${(props) => (props.path === '/login' ? '0' : '1rem')};
-  /* margin: ${(props) => (props.path === '/login' ? '0' : '1rem')}; */
   display: flex;
   flex-direction:column;
   background-color: var(--color-greyF8);

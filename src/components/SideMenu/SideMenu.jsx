@@ -67,7 +67,7 @@ const SideMenu = () => {
             </IconContainer>
           </Link>
           <Link
-            to="/contact"
+            to="/contacts"
             style={{ textDecoration: "none", color: "var(--color-greenGrey)" }}
           >
             <IconContainer>

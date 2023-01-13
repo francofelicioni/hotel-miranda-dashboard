@@ -62,6 +62,7 @@ const Header = () => {
     const currentItem = JSON.parse(localStorage.getItem(LOCAL_AUTH));
     currentItem.isAuth = false;
     localStorage.setItem(LOCAL_AUTH, JSON.stringify(currentItem));
+    localStorage.removeItem('token');
     return navigate('/login')
   };
 

@@ -17,11 +17,7 @@ import { Row } from "./TableBlocks";
 
 const UsersRow = ({ user }) => {
   return (
-    <Row key={user.id}>
-      {/* <CheckboxContainer>
-        <Checkbox type="checkbox" />
-      </CheckboxContainer> */}
-
+    <Row key={user._id}>
       <UserDataName>
         <Image src={user.image} />
         <UserInfo>
@@ -47,14 +43,13 @@ const UsersRow = ({ user }) => {
       </UserData>
 
       <UserData style={{ maxWidth: "100px" }}>
-        <Status $type="users" $typeStatus={user.status}>
+        <Status type="users" typeStatus={user.status}>
           {user.status ? "ACTIVE" : "INACTIVE"}
         </Status>
       </UserData>
 
       <UserData
         style={{ width: "30px"}}
-        // className="userData-container__button"
       >
         <DeleteButton style={{ margin: "0" }}>
           <BsThreeDotsVertical className="delete_icon" />

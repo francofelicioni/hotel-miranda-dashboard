@@ -18,11 +18,11 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 const RoomsRow = ({ room }) => {
   return (
     <>
-      <Row key={room.id}>
+      <Row key={room._id}>
         <NameContainer>
-          <Image src={`rooms/${room.id + 1}.jpg`} />
+          <Image src={room.images} />
           <NameInfo>
-            <Id># {room.id}</Id>
+            <Id># {room._id}</Id>
             <Number>Room: {room.room_number}</Number>
           </NameInfo>
         </NameContainer>
@@ -33,14 +33,15 @@ const RoomsRow = ({ room }) => {
 
         <RoomData>
           <Info>
-            {room.facilities.map((facility, index) => (
+            {room.facilities.split()}
+            {/* {room.facilities.map((facility, index) => (
               <span key={index}> {facility}, </span>
-            ))}
+            ))} */}
           </Info>
         </RoomData>
 
         <RoomData>
-          <Info> € {room.price} /nigth </Info>
+          <Info> € {room.price} /night </Info>
         </RoomData>
 
         <RoomData>
@@ -48,14 +49,14 @@ const RoomsRow = ({ room }) => {
             <Info>
               €{" "}
               {(room.price - room.price * (room.offer_price / 100)).toFixed(2)}
-               /nigth
+               /nigh
             </Info>
           ) : (
-            <Info>Not in disccount</Info>
+            <Info>Not in discount</Info>
           )}
         </RoomData>
         <td>
-          <Status $type="rooms" $typeStatus={room.status}>
+          <Status type="rooms" typeStatus={room.status}>
             {room.status ? "Available" : "Booked"}
           </Status>
         </td>

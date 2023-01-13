@@ -14,7 +14,7 @@ import { DeleteButton, NotesButton } from "./Button";
 import { Status } from "./Status";
 import { Row } from "./TableBlocks";
 
-const BookingsRow = ({ guest }) => {
+const BookingsRow = ({ booking }) => {
   const handleClick = (special_request) => {
     if (special_request) {
       Swal.fire({
@@ -30,62 +30,62 @@ const BookingsRow = ({ guest }) => {
   };
 
   return (
-    <Row key={guest.id}>
+    <Row key={booking._id}>
       <GuestContainer>
-        <Link to={`/bookings/${guest.id}`} style={{ textDecoration: "none" }}>
+        <Link to={`/bookings/${booking._id}`} style={{ textDecoration: "none" }}>
           <Container>
-            <Img src={guest.image} alt="Guest Image" />
+            <Img src={booking.image} alt="Guest Image" />
             <div>
-              <Name>{guest.full_name}</Name>
-              <Id># {guest.id}</Id>
+              <Name>{booking.full_name}</Name>
+              <Id># {booking._id}</Id>
             </div>
           </Container>
         </Link>
       </GuestContainer>
       <GuestContainer>
-        <Link to={`/bookings/${guest.id}`} style={{ textDecoration: "none" }}>
+        <Link to={`/bookings/${booking._id}`} style={{ textDecoration: "none" }}>
           <Container>
-            <Text>{guest.order_date}</Text>
+            <Text>{booking.order_date}</Text>
           </Container>
         </Link>
       </GuestContainer>
       <GuestContainer>
-        <Link to={`/bookings/${guest.id}`} style={{ textDecoration: "none" }}>
+        <Link to={`/bookings/${booking._id}`} style={{ textDecoration: "none" }}>
           <Container>
-            <Text>{guest.check_in}</Text>
+            <Text>{booking.check_in}</Text>
           </Container>
         </Link>
       </GuestContainer>
       <GuestContainer>
-        <Link to={`/bookings/${guest.id}`} style={{ textDecoration: "none" }}>
+        <Link to={`/bookings/${booking._id}`} style={{ textDecoration: "none" }}>
           <Container>
-            <Text>{guest.check_out}</Text>
+            <Text>{booking.check_out}</Text>
           </Container>
         </Link>
       </GuestContainer>
       <GuestContainer>
         <NotesButton
-          specialRequest={guest.special_request}
-          onClick={() => handleClick(guest.special_request)}
+          specialRequest={booking.special_request}
+          onClick={() => handleClick(booking.special_request)}
         >
           View Notes
         </NotesButton>
       </GuestContainer>
       <GuestContainer>
-        <Link to={`/bookings/${guest.id}`} style={{ textDecoration: "none" }}>
+        <Link to={`/bookings/${booking._id}`} style={{ textDecoration: "none" }}>
           <Container>
             <Text style={{ fontWeight: 600 }}>
-              {guest.room_info.type} - {guest.room_info.number}
+              {booking.room_type} - {'100'}
             </Text>
           </Container>
         </Link>
       </GuestContainer>
       <GuestContainer>
-        <Link to={`/bookings/${guest.id}`} style={{ textDecoration: "none" }}>
+        <Link to={`/bookings/${booking._id}`} style={{ textDecoration: "none" }}>
           <Container>
-            <Status $type="bookings" $typeStatus={guest.state}>
+            <Status $type="bookings" $typeStatus={booking.state}>
               {" "}
-              {guest.state}
+              {booking.state}
             </Status>
           </Container>
         </Link>

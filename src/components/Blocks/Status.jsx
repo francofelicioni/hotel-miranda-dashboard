@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 const Status = styled.button`
   width: 100px;
   border-radius: 12px;
-  /* text-align: center; */
   font-size: 16px;
   font-weight: 600;
   padding: 1rem 0;
@@ -12,12 +11,12 @@ const Status = styled.button`
   background: transparent;
 
   ${(props) => {
-    switch (props.$type) {
+    switch (props.type) {
       case "bookings":
-        switch (props.$typeStatus) {
+        switch (props.typeStatus) {
           case "Check In":
             return css`
-              background-color: var(--color-greenExtraLigth2);
+              background-color: var(--color-greenExtraLight2);
               color: var(--color-greenLight);
               font-weight: 600;
             `;
@@ -40,7 +39,7 @@ const Status = styled.button`
             `;
         }
       case "rooms": {
-        switch (props.$typeStatus) {
+        switch (props.typeStatus) {
           case true:
             return css`
               color: var(--color-white);
@@ -59,7 +58,7 @@ const Status = styled.button`
         }
       }
       case "users": {
-        switch (props.$typeStatus) {
+        switch (props.typeStatus) {
           case true:
             return css`
               color: var(--color-greenLight);

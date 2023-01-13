@@ -27,7 +27,7 @@ export const NotesButton = styled.button`
       return css`
         width: 160px;
         height: 48px;
-        background: var(--color-greenExtraLigth);
+        background: var(--color-greenExtraLight);
         border-radius: 12px;
         max-width: 200px;
         color: var(--color-black21);
@@ -140,7 +140,7 @@ export const ArchiveButton = styled.button`
       return css`
         width: 140px;
         height: 48px;
-        background: var(--color-greenExtraLigth);
+        background: var(--color-greenExtraLight);
         border-radius: 12px;
         max-width: 200px;
         color: var(--color-black21);
