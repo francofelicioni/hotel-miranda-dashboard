@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+:root {
+  /* FONTS VARIABLES */
+  --font-main: "Poppins", sans-serif;
+
+  /* Colors */
+  /* Whites */
+  --color-white: #ffffff;
+  --color-whiteFC: #fcfcfc;
+  --color-silver: #ebf1ef;
+  --color-white33: #ffffff33;
+
+  /* Greys */
+  --color-greyDC: #ebf1ef;
+  --color-greyF8: #f8f8f8;
+  --color-greyEB: #ebebeb;
+  --color-greyDC: #dcdcdc;
+  --color-backGroundGrey: #e2e2e2;
+  --color-greyD4: #d4d4d4;
+  --color-greyC5: #c5c5c5;
+  --color-greyB2: #b2b2b2;
+  --color-greyA1: #a1a1a1;
+  --color-grey78: #787878;
+  --color-grey6E: #6e6e6e;
+  --color-grey6D: #6d6d6d;
+  --color-grey4E: #4e4e4e;
+  --color-grey39: #393939;
+  --color-grey26: #262626;
+  --color-grey014: #00000014;
+  --color-grey12: #00000012;
+  --color-grey05: #00000005;
+
+  /* Greens */
+  --color-greenExtraLight: #eef9f2;
+  --color-greenExtraLight2: #e8ffee;
+  --color-greenGrey: #799283;
+  --color-greenLight: #5ad07a;
+  --color-greenDark: #135846;
+
+  /*Reds*/
+  --color-backGroundRed: #ffedec;
+  --color-yellowInProgress: #d5d568;
+  --color-organgeStatus: #ffbb00;
+  --color-orangeLight: #f1eb78;
+  --color-orangeDark: #ff9c3a;
+  --color-red: #e23428;
+  --color-pinkPale: #ec7f78;
+
+  /* Darks */
+  --color-brown: #5d5449;
+  --color-black21: #212121;
+  --color-black: #000000;
+
+  /* Navigation */
+  --primaryNav: #23adad;
+  --greyLightNav: #23adade1;
+  --greyLight-2Nav: #cbe0dd;
+  --greyDarkNav: #2d4848;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Navigation */
+.active {
+  background: var(--greyLightNav);
   color: white;
+  transition: 0.5s all ease;
 }
 
-.App-link {
-  color: #61dafb;
+.full {
+  width: 100% !important;
+  padding:1rem 2rem !important;
+  top: 7rem !important;
+  transition: .5s all ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.normal {
+  width: 82% !important;
+  margin:1rem !important;
+  transition: .5s all ease-in-out;
+}
+
+
+.hide {
+  display: none !important;
 }
